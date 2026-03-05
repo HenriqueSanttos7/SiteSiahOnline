@@ -1,0 +1,52 @@
+<nav class="navbar">
+  <div class="navbar__inner container">
+    <a routerLink="/" class="navbar__logo" (click)="close()">SIAH</a>
+    <div class="navbar__center">
+      <div class="nav-item"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link" (click)="close()">Início</a></div>
+      <div class="nav-item">
+        <a routerLink="/siah-soft" routerLinkActive="active" class="nav-link" (click)="close()">SIAH Soft <i class="fas fa-chevron-down chev"></i></a>
+        <div class="nav-drop">
+          <a routerLink="/siah-soft" (click)="close()"><i class="fas fa-laptop-code"></i> Sistema A7 — ERP</a>
+          <a routerLink="/siah-soft" (click)="close()"><i class="fas fa-mobile-alt"></i> Aplicações Mobile</a>
+          <a routerLink="/siah-soft" (click)="close()"><i class="fas fa-globe"></i> E-commerce</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a routerLink="/siah-cert" routerLinkActive="active" class="nav-link" (click)="close()">SIAH Cert <i class="fas fa-chevron-down chev"></i></a>
+        <div class="nav-drop">
+          <a routerLink="/siah-cert" (click)="close()"><i class="fas fa-id-card"></i> Certificado A1 e A3</a>
+          <a routerLink="/siah-cert" (click)="close()"><i class="fas fa-file-signature"></i> Assinatura Digital</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a routerLink="/siah-tech" routerLinkActive="active" class="nav-link" (click)="close()">SIAH Tech <i class="fas fa-chevron-down chev"></i></a>
+        <div class="nav-drop">
+          <a routerLink="/siah-tech" (click)="close()"><i class="fas fa-tools"></i> Assistência Técnica</a>
+          <a routerLink="/siah-tech" (click)="close()"><i class="fas fa-cloud"></i> Backup em Nuvem</a>
+        </div>
+      </div>
+      <div class="nav-item"><a routerLink="/sobre" routerLinkActive="active" class="nav-link" (click)="close()">Sobre</a></div>
+      <div class="nav-item"><a routerLink="/contato" routerLinkActive="active" class="nav-link" (click)="close()">Contatos</a></div>
+    </div>
+    <div class="navbar__right">
+      <button class="nav-search" aria-label="Buscar"><i class="fas fa-search"></i></button>
+      <a routerLink="/contato" class="btn-cta" (click)="close()">Agendar Demonstração</a>
+    </div>
+    <button class="nav-mob-toggle" (click)="toggle()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="mob-menu" [class.open]="mobileOpen">
+  <div class="mob-header">
+    <span class="mob-logo">SIAH</span>
+    <button class="mob-close" (click)="close()"><i class="fas fa-times"></i></button>
+  </div>
+  <ul class="mob-list">
+    <li><a routerLink="/" (click)="close()">Início</a></li>
+    <li><a routerLink="/siah-soft" (click)="close()">SIAH Soft</a></li>
+    <li><a routerLink="/siah-cert" (click)="close()">SIAH Cert</a></li>
+    <li><a routerLink="/siah-tech" (click)="close()">SIAH Tech</a></li>
+    <li><a routerLink="/sobre" (click)="close()">Sobre</a></li>
+    <li><a routerLink="/contato" (click)="close()">Contatos</a></li>
+  </ul>
+  <a routerLink="/contato" class="btn-cta mob-cta" (click)="close()">Agendar Demonstração</a>
+</div>

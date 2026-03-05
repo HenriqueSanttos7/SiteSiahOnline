@@ -1,0 +1,35 @@
+<section class="sol-hero cert">
+  <div class="sol-circ c1"></div><div class="sol-circ c2"></div><div class="sol-circ c3"></div>
+  <div class="container"><div class="sol-hero-c">
+    <div class="sol-logo-area reveal"><div class="sol-logo-icon"><i class="fas fa-certificate"></i></div><div class="sol-logo-name">SIAH<span>Cert</span></div></div>
+    <h1 class="reveal d1">Certificado Digital com segurança e agilidade</h1>
+    <p class="hdesc reveal d2">Mais rapidez, segurança e comodidade. Proteja sua identidade digital e garanta conformidade em todas as suas transações e obrigações fiscais.</p>
+  </div></div>
+</section>
+<section class="white-sec">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">SIAH Cert</span><span class="e-line"></span></div>
+    <h2 class="sec-title reveal">Certificado Digital</h2>
+    <div class="ct-grid reveal d1">
+      <div *ngFor="let c of cards" class="ct-card">
+        <div class="ct-thumb" [style.background]="c.bg"><i [class]="c.icon"></i></div>
+        <div class="ct-body"><h5>{{c.title}}</h5><p>{{c.sub}}</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gray-sec">
+  <div class="container">
+    <h2 class="sec-title reveal">Tipos de Certificado</h2>
+    <div class="tipos-grid reveal d1">
+      <div *ngFor="let t of tipos" class="seg12-card">
+        <div class="seg12-icon"><i [class]="t.icon"></i></div>
+        <div class="seg12-label">{{t.label}}</div>
+        <p class="tipo-desc">{{t.desc}}</p>
+      </div>
+    </div>
+    <p class="wpp-note reveal d2"><i class="fab fa-whatsapp"></i> Dúvidas? Chame no WhatsApp: <a href="https://wa.me/5592993946188">(92) 99394-6188</a></p>
+  </div>
+</section>
+<app-email-cta title="Pronto para proteger seu negócio?" subtitle="Entre em contato e emita seu certificado hoje." [showSelect]="false"></app-email-cta>
+<app-footer [columns]="footerColumns"></app-footer>

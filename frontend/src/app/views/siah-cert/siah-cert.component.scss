@@ -1,0 +1,31 @@
+.tipos-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+
+  @media(max-width:768px){
+   grid-template-columns:repeat(2,1fr);
+  }
+}
+.tipo-desc {
+  font-size:.75rem;
+  color:#5a6480;
+  margin-top:6px;
+}
+.wpp-note {
+  text-align:center;
+   color:#5a6480;
+   font-size:.95rem;
+   margin-top:2rem;
+
+   a{
+    color:#1a1f2e;
+    font-weight:700;
+    text-decoration:none;
+  }
+
+  i{
+    color:#00c896;
+    margin-right:6px;
+  }
+}

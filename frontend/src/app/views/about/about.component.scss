@@ -1,0 +1,10 @@
+.sobre-hero-wrap { background: linear-gradient(to bottom, #f8f6f0, #fff); padding-top: 0; }
+.container-fluid-pad { padding: 2rem 2rem 0; }
+.sobre-content { padding: 64px 0 80px; }
+.sobre-top-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem; align-items: start; @media(max-width:768px){grid-template-columns:1fr;} }
+.sobre-label { font-size: clamp(1.1rem,2vw,1.5rem); font-weight: 400; color: #1a1f2e; margin-bottom: .2rem; }
+.sobre-big-row { display: flex; align-items: center; gap: .5rem; }
+.sobre-big-t { font-size: clamp(3rem,7vw,6rem); font-weight: 900; color: #00b4d8; line-height: 1; }
+.sobre-pg-desc { font-size: 1.1rem; line-height: 1.75; color: #1a1f2e; font-weight: 600; }
+.sobre-body { max-width: 700px; p { font-size: 1rem; color: #5a6480; line-height: 1.8; margin-bottom: 1.4rem; } }
+.hist-sub { color: #5a6480; font-size: 1rem; margin-bottom: 3rem; }

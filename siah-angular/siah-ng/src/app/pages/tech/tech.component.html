@@ -1,0 +1,35 @@
+<section class="sol-hero tech">
+  <div class="sol-circ c1"></div><div class="sol-circ c2"></div><div class="sol-circ c3"></div>
+  <div class="container"><div class="sol-hero-c">
+    <div class="sol-logo-area reveal"><div class="sol-logo-icon"><i class="fas fa-screwdriver-wrench"></i></div><div class="sol-logo-name">SIAH<span>Tech</span></div></div>
+    <h1 class="reveal d1">Assistência técnica para manter seu negócio sempre no ar</h1>
+    <p class="hdesc reveal d2">O melhor suporte em T.I da região. Atendimento na sua empresa ou na nossa sede. Av. Cláudio Portinho, 365, Miranda Mall, Bloco C, Sala 105.</p>
+  </div></div>
+</section>
+<section class="white-sec">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">SIAH Tech</span><span class="e-line"></span></div>
+    <h2 class="sec-title reveal">Assistência Técnica</h2>
+    <div class="ct-grid reveal d1">
+      <div *ngFor="let c of cards" class="ct-card">
+        <div class="ct-thumb" [style.background]="c.bg"><i [class]="c.icon" [style.color]="c.icolor"></i></div>
+        <div class="ct-body"><h5>{{c.title}}</h5><p>{{c.sub}}</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gray-sec">
+  <div class="container">
+    <h2 class="sec-title reveal">Nossos Serviços</h2>
+    <div class="serv-grid reveal d1">
+      <div *ngFor="let s of servicos" class="seg12-card">
+        <div class="seg12-icon"><i [class]="s.icon"></i></div>
+        <div class="seg12-label">{{s.label}}</div>
+        <p class="serv-desc">{{s.desc}}</p>
+      </div>
+    </div>
+    <p class="addr-note reveal d2"><i class="fas fa-map-marker-alt"></i> Av. Cláudio Portinho, 365, Miranda Mall, Bloco C, Sala 105 — <a href="https://wa.me/5592993947451">(92) 99394-7451</a></p>
+  </div>
+</section>
+<app-email-cta title="Precisa de suporte técnico?" subtitle="Fale com nossa equipe e resolva agora." [showSelect]="false"></app-email-cta>
+<app-footer [columns]="footerColumns"></app-footer>
