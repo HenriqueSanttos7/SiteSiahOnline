@@ -1,0 +1,15 @@
+.email-cta { background: #1e2330; padding: 80px 0; position: relative; overflow: hidden;
+  &::before { content: ''; position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; border-radius: 50%; background: rgba(0,180,216,.07); pointer-events: none; }
+}
+.email-cta__title { font-size: clamp(1.8rem,3.5vw,3rem); font-weight: 900; color: #fff; margin-bottom: .7rem; }
+.email-cta__sub   { color: rgba(255,255,255,.55); font-size: 1rem; margin-bottom: 2.5rem; }
+.cta-form {
+  display: flex; gap: 12px; flex-wrap: wrap; max-width: 680px; margin: 0 auto;
+  input, select { flex: 1; min-width: 185px; background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,255,255,.12); border-radius: 8px; padding: 13px 16px; color: #fff; font-size: .9rem; font-family: 'Inter',sans-serif; outline: none; transition: border-color .2s;
+    &::placeholder { color: rgba(255,255,255,.35); } &:focus { border-color: #00b4d8; } }
+  select { color: rgba(255,255,255,.5); option { background: #1e2330; color: #fff; } }
+}
+.cta-btn { background: #f5c518; color: #1a1a1a; font-weight: 800; font-size: .95rem; padding: 13px 28px; border-radius: 8px; border: none; cursor: pointer; font-family: 'Inter',sans-serif; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; transition: all .2s; &:hover { background: #e6b800; transform: translateY(-1px); } }
+.cta-contacts { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; a { font-weight: 600; font-size: .95rem; text-decoration: none; display: flex; align-items: center; gap: 6px; } }
+.cta-wpp { color: #00c896; } .cta-email { color: rgba(255,255,255,.6); } .divider { color: rgba(255,255,255,.2); }
+.text-center { text-align: center; }

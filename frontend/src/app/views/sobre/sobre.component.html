@@ -1,0 +1,134 @@
+<!-- COLLAGE + INTRO -->
+<div class="sobre-wrap">
+  <div class="collage-pad">
+    <div class="collage-img reveal">
+      <img src="assets/images/sobre-banner.jpg" alt="Equipe SIAH">
+    </div>
+  </div>
+  <div class="container sobre-body-sec">
+    <div class="sobre-top">
+      <div class="reveal">
+        <p class="sobre-label">Sobre</p>
+        <div class="sobre-big-row"><h2 class="sobre-big-t">a SIAH</h2></div>
+      </div>
+      <p class="sobre-pg-desc reveal d1">A SIAH é uma empresa especializada no desenvolvimento de soluções de software, certificação digital e suporte técnico para empresas.</p>
+    </div>
+    <div class="sobre-text reveal">
+      <p>Surgimos do sonho de transformar a gestão das empresas da nossa região por meio da tecnologia. Fundada em Manaus/AM, a SIAH acredita que tecnologia de qualidade deve ser acessível para empresas de todos os portes.</p>
+      <p>De lá pra cá muita coisa mudou, mas seguimos trabalhando pelo mesmo propósito.</p>
+      <p>São mais de 15 anos criando soluções inovadoras que ajudam nossos clientes a superar os desafios e aproveitar as oportunidades do mercado, melhorando a gestão e o resultado de seus negócios.</p>
+    </div>
+  </div>
+</div>
+
+<!-- NÚMEROS -->
+<section class="nums-sec">
+  <div class="container">
+    <div class="nums-row reveal"><span class="nums-light">Nossos</span><span class="nums-bold">números</span></div>
+    <p class="nums-sub reveal d1">O sonho de um, agora é o sonho de muitos</p>
+    <div class="nums-grid reveal d2">
+      <div class="num-item"><div class="num-icon"><i class="fas fa-calendar-alt"></i></div><div><div class="num-val">+DE 15</div><div class="num-label">Anos de mercado</div><div class="num-pill"></div></div></div>
+      <div class="num-item"><div class="num-icon"><i class="fas fa-store"></i></div><div><div class="num-val">+DE 300</div><div class="num-label">Clientes ativos</div><div class="num-pill"></div></div></div>
+      <div class="num-item"><div class="num-icon"><i class="fas fa-cubes"></i></div><div><div class="num-val">3</div><div class="num-label">Soluções integradas</div><div class="num-pill"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section class="hist-sec">
+  <div class="container">
+    <div class="hist-row reveal"><span class="hist-light">Nossa</span><span class="hist-bold">história</span></div>
+    <p class="hist-sub reveal d1">Saiba como chegamos até aqui</p>
+    <div class="tl-wrap reveal d2">
+      <div class="tl-years">
+        <div class="tl-col"><div class="tl-year">2009</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-text">Fundação da SIAH em Manaus/AM com foco em software para pequenas empresas.</div></div>
+        <div class="tl-col"><div class="tl-year">2012</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-text">Lançamento do Sistema A7, nosso ERP completo para gestão de negócios.</div></div>
+        <div class="tl-col"><div class="tl-year">2016</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-text">Alcançamos 100 clientes e expandimos para certificação digital.</div></div>
+        <div class="tl-col"><div class="tl-year">2019</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-text">Criação da SIAH Tech — assistência e consultoria tecnológica especializada.</div></div>
+        <div class="tl-col"><div class="tl-year">2024</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-text">Mais de 300 clientes ativos e 15 anos transformando negócios com tecnologia.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSÃO VISÃO VALORES — 3 cards -->
+<section class="mvv-sec">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">Quem somos</span><span class="e-line"></span></div>
+    <h2 class="sec-title reveal">Missão, Visão e Valores</h2>
+    <div class="mvv-grid">
+      <div *ngFor="let m of mvv; let i = index" class="mvv-card reveal" [class]="'d' + i">
+        <div class="mvv-icon-wrap" [style.background]="m.color + '18'" [style.color]="m.color">
+          <i [class]="m.icon"></i>
+        </div>
+        <span class="mvv-tag" [style.color]="m.color">{{ m.tag }}</span>
+        <h3 class="mvv-title">{{ m.title }}</h3>
+        <p class="mvv-text">{{ m.text }}</p>
+        <div class="mvv-bar" [style.background]="m.color"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLABORADORES -->
+<section class="colab-sec">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">Time SIAH</span><span class="e-line"></span></div>
+    <h2 class="sec-title reveal">Nossos Colaboradores</h2>
+    <div class="colab-wrapper">
+      <div *ngFor="let dept of departamentos; let i = index" class="colab-dept reveal" [class]="'d' + i">
+        <div class="dept-header" [style.background]="dept.color">
+          <span class="dept-label">{{ dept.area }}</span>
+        </div>
+        <div class="dept-cards">
+          <div *ngFor="let p of dept.pessoas" class="colab-card">
+            <div class="colab-avatar" [style.border-color]="dept.color">
+              <img [src]="p.foto" [alt]="p.nome"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="colab-avatar-fallback" [style.color]="dept.color">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <div class="colab-info">
+              <strong>{{ p.nome }}</strong>
+              <span>{{ p.cargo }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE ESTAMOS -->
+<section class="onde-sec">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">Localização</span><span class="e-line"></span></div>
+    <h2 class="sec-title reveal">Onde estamos</h2>
+    <div class="onde-grid">
+      <div class="onde-map reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.0!2d-60.0294!3d-3.1019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1bc30f8a07e3%3A0x85b9b2a3dbf53d16!2sAv.%20Prof.%20Cl%C3%A1udio%20Portinho%2C%20365%20-%20Japiim%2C%20Manaus%20-%20AM!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Localização SIAH">
+        </iframe>
+      </div>
+      <div class="onde-info reveal d1">
+        <h3 class="onde-title">Onde<br>estamos</h3>
+        <ul class="onde-list">
+          <li><i class="fas fa-map-marker-alt"></i> Av. Prof. Cláudio Portinho, 365</li>
+          <li><i class="fas fa-building"></i> Eliza Miranda Mall, Bloco C</li>
+          <li><i class="fas fa-door-open"></i> Salas 105, 106 e 107</li>
+          <li><i class="fas fa-city"></i> Bairro: Japiim</li>
+          <li><i class="fas fa-envelope"></i> CEP: 69077-738</li>
+          <li><i class="fas fa-flag"></i> Manaus — AM, Brasil</li>
+        </ul>
+        <a href="https://maps.google.com/?q=Av.+Prof.+Cláudio+Portinho,+365,+Manaus" target="_blank" class="onde-btn">
+          <i class="fas fa-directions"></i> Como chegar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

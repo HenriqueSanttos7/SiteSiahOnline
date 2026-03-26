@@ -1,0 +1,98 @@
+/* ── INTRO ── */
+.sobre-wrap   { background: #fff; }
+.collage-pad  { padding: 2rem 2rem 0; }
+.collage-img  { border-radius:16px; overflow:hidden; width:100%; max-height:420px;
+  img { width:100%; height:100%; object-fit:cover; display:block; } }
+.sobre-body-sec { padding: 64px 0 80px; }
+.sobre-top      { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; margin-bottom:3rem; @media(max-width:768px){grid-template-columns:1fr;} }
+.sobre-label    { font-size:clamp(1.1rem,2vw,1.5rem); font-weight:400; color:#1a1f2e; margin-bottom:.2rem; }
+.sobre-big-row  { display:flex; align-items:center; gap:.5rem; }
+.sobre-big-t    { font-size:clamp(3rem,7vw,6rem); font-weight:900; color:#00b4d8; line-height:1; }
+.sobre-pg-desc  { font-size:1.1rem; line-height:1.75; color:#1a1f2e; font-weight:600; }
+.sobre-text     { max-width:700px; p { font-size:1rem; color:#5a6480; line-height:1.8; margin-bottom:1.4rem; } }
+.hist-sub       { color:#5a6480; font-size:1rem; margin-bottom:3rem; }
+
+/* ── MISSÃO VISÃO VALORES ── */
+.mvv-sec  { background: #fff; padding: 90px 0; }
+.mvv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; @media(max-width:768px){grid-template-columns:1fr;} }
+
+.mvv-card {
+  background: #fff; border-radius: 16px; padding: 2.5rem 2rem;
+  border: 1px solid #e0e4ef; position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: .6rem;
+  transition: transform .3s, box-shadow .3s;
+  &:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
+}
+.mvv-icon-wrap { width:64px; height:64px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; margin-bottom:.4rem; }
+.mvv-tag   { font-size:.72rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; }
+.mvv-title { font-size:1.3rem; font-weight:900; color:#1a1f2e; margin-bottom:.2rem; }
+.mvv-text  { font-size:.95rem; color:#5a6480; line-height:1.7; flex:1; }
+.mvv-bar   { position:absolute; bottom:0; left:0; width:100%; height:4px; }
+
+/* ── COLABORADORES ── */
+.colab-sec { background: #f4f4f4; padding: 90px 0; }
+.colab-wrapper { display:flex; flex-direction:column; gap:2.5rem; }
+.colab-dept    { background:#fff; border-radius:16px; overflow:hidden; border:1px solid #e0e4ef; }
+
+.dept-header { padding:1rem 1.8rem; }
+.dept-label  { color:#fff; font-size:1rem; font-weight:800; letter-spacing:.5px; }
+
+.dept-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem 1.8rem;
+}
+
+.colab-card {
+  display:flex; align-items:center; gap:14px; padding:1rem;
+  border-radius:12px; background:#fafafa; border:1px solid #e0e4ef;
+  transition:all .2s;
+  &:hover { border-color:#00b4d8; box-shadow:0 4px 12px rgba(0,180,216,.1); transform:translateY(-2px); }
+}
+
+.colab-avatar {
+  width:56px; height:56px; border-radius:50%;
+  border:2.5px solid; overflow:hidden; flex-shrink:0;
+  position:relative;
+  img { width:100%; height:100%; object-fit:cover; display:block; }
+}
+
+.colab-avatar-fallback {
+  display: none;
+  position: absolute; inset: 0;
+  align-items: center; justify-content: center;
+  background: #f0f4ff;
+  font-size: 1.4rem;
+}
+
+.colab-info {
+  display:flex; flex-direction:column; gap:2px;
+  strong { font-size:.92rem; font-weight:700; color:#1a1f2e; }
+  span   { font-size:.78rem; color:#5a6480; }
+}
+
+/* ── ONDE ESTAMOS ── */
+.onde-sec  { background:#fff; padding:90px 0; }
+.onde-grid { display:grid; grid-template-columns:3fr 2fr; gap:3rem; align-items:center; @media(max-width:768px){grid-template-columns:1fr;} }
+
+.onde-map {
+  border-radius:16px; overflow:hidden; height:380px;
+  box-shadow:0 8px 32px rgba(0,0,0,.12); border:1px solid #e0e4ef;
+}
+
+.onde-title { font-size:clamp(2rem,4vw,3rem); font-weight:900; color:#00b4d8; line-height:1.1; margin-bottom:1.5rem; }
+
+.onde-list {
+  list-style:none; padding:0; margin:0 0 2rem;
+  display:flex; flex-direction:column; gap:.9rem;
+  li { font-size:1rem; color:#1a1f2e; font-weight:500; display:flex; align-items:center; gap:10px;
+    i { color:#00b4d8; width:18px; text-align:center; flex-shrink:0; } }
+}
+
+.onde-btn {
+  display:inline-flex; align-items:center; gap:8px;
+  background:#0d2b6b; color:#fff; font-weight:700; font-size:.95rem;
+  padding:12px 28px; border-radius:8px; text-decoration:none; transition:all .2s;
+  &:hover { background:#00b4d8; transform:translateY(-1px); }
+}
