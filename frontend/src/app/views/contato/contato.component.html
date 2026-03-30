@@ -1,7 +1,8 @@
 <section class="ctt-hero">
   <div class="container">
     <h1 class="reveal">Vamos conversar sobre o seu negócio?</h1>
-    <p class="reveal d1">Escolha a melhor forma de entrar em contato com nossa equipe. Estamos prontos para te atender.</p>
+    <p class="reveal d1">Escolha a melhor forma de entrar em contato com nossa equipe. Estamos prontos para te atender.
+    </p>
   </div>
 </section>
 
@@ -36,10 +37,10 @@
       <div class="form-card reveal">
         <h4>Solicite uma demonstração gratuita</h4>
         <div class="form-grid">
-          <div><label>Nome completo</label><input type="text"  placeholder="Seu nome"             [(ngModel)]="nome"></div>
-          <div><label>E-mail</label>        <input type="email" placeholder="seu@email.com"         [(ngModel)]="email"></div>
-          <div><label>WhatsApp</label>      <input type="tel"   placeholder="(92) 9 0000-0000"      [(ngModel)]="whatsapp"></div>
-          <div><label>Empresa</label>       <input type="text"  placeholder="Nome da empresa"       [(ngModel)]="empresa"></div>
+          <div><label>Nome completo</label><input type="text" placeholder="Seu nome" [(ngModel)]="nome"></div>
+          <div><label>E-mail</label> <input type="email" placeholder="seu@email.com" [(ngModel)]="email"></div>
+          <div><label>WhatsApp</label> <input type="tel" placeholder="(92) 9 0000-0000" [(ngModel)]="whatsapp"></div>
+          <div><label>Empresa</label> <input type="text" placeholder="Nome da empresa" [(ngModel)]="empresa"></div>
           <div class="form-full">
             <label>Interesse</label>
             <select [(ngModel)]="interesse">
@@ -50,22 +51,54 @@
               <option value="all">Todas as soluções</option>
             </select>
           </div>
-          <div class="form-full"><label>Mensagem (opcional)</label><textarea placeholder="Conte um pouco sobre sua empresa..." [(ngModel)]="mensagem"></textarea></div>
+          <div class="form-full"><label>Mensagem (opcional)</label><textarea
+              placeholder="Conte um pouco sobre sua empresa..." [(ngModel)]="mensagem"></textarea></div>
           <div class="form-full"><button class="btn-submit" (click)="submit()">Enviar mensagem</button></div>
         </div>
       </div>
       <div class="info-block reveal d1">
         <h5>Informações de contato</h5>
-        <div class="info-item"><div class="info-icon"><i class="fas fa-phone"></i></div><div><h6>Telefone / WhatsApp</h6><p>(92) 98182-6512</p></div></div>
-        <div class="info-item"><div class="info-icon"><i class="fab fa-whatsapp"></i></div><div><h6>SIAH Tech — Suporte</h6><p>(92) 99394-7451</p></div></div>
-        <div class="info-item"><div class="info-icon"><i class="fas fa-certificate"></i></div><div><h6>SIAH Cert — Certificados</h6><p>(92) 99394-6188</p></div></div>
-        <div class="info-item"><div class="info-icon"><i class="fas fa-envelope"></i></div><div><h6>E-mail</h6><p>contato&#64;siahonline.com.br</p></div></div>
-        <div class="info-item"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><div><h6>Endereço — SIAH Tech</h6><p>Av. Cláudio Portinho, 365<br>Miranda Mall, Bloco C, Sala 105<br>Manaus — AM</p></div></div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h6>Telefone / WhatsApp</h6>
+            <p>(92) 98182-6512</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <h6>SIAH Tech — Suporte</h6>
+            <p>(92) 99394-7451</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-certificate"></i></div>
+          <div>
+            <h6>SIAH Cert — Certificados</h6>
+            <p>(92) 99394-6188</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h6>E-mail</h6>
+            <p>contato&#64;siahonline.com.br</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h6>Endereço — SIAH Tech</h6>
+            <p>Av. Cláudio Portinho, 365<br>Miranda Mall, Bloco C, Sala 105<br>Manaus — AM</p>
+          </div>
+        </div>
         <div class="socials-mini">
           <p class="socials-mini-label">Redes Sociais</p>
-          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/siahonline/" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/siahonline/" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/siah/?originalSubdomain=br" class="social-btn"><i
+              class="fab fa-linkedin-in"></i></a>
           <a href="https://wa.me/5592981826512" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>

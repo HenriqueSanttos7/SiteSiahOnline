@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-email-cta',
   standalone: true,
-  imports: [FormsModule, NgIf],
+  imports: [RouterLink,FormsModule, NgIf],
   templateUrl: './email-cta.component.html',
   styleUrls: ['./email-cta.component.scss']
 })
