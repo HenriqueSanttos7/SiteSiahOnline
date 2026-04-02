@@ -122,6 +122,10 @@ body {
   &.tech {
     background: linear-gradient(135deg, #1a6e1a 0%, #00c896 100%);
   }
+
+  &.sobre {
+    background: linear-gradient(135deg, #004aad 0%, #0077cc 100%);
+  }
 }
 
 .sol-circ {
@@ -613,7 +617,7 @@ body {
 
 .tl-dot {
   position: absolute;
-  top: 50%;
+  top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 14px;
@@ -797,7 +801,7 @@ body {
 .num-pill {
   width: 40px;
   height: 14px;
-  border: 2px solid var(--cyan);
+  border: #9ed441;
   border-radius: 100px;
   margin-top: 6px;
 }

@@ -1,16 +1,16 @@
 .footer-address {
   background: #0a0e18;
-  border-top: 1px solid rgba(255, 255, 255, .06);
   padding: 14px 0;
-  
 
   &__inner {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: rgba(255, 255, 255, .45);
-    font-size: .82rem;
     justify-content: center;
+    gap: 10px;
+    color: rgba(255, 255, 255);
+    font-size: 15px;
+    border-top: 1px solid rgba(255, 255, 255);
+    padding-top: 25px;
 
     i {
       color: #00b4d8;
@@ -22,7 +22,6 @@
 .footer-links {
   background: #0a0e18;
   padding: 48px 0 24px;
-  border-top: 1px solid rgba(255, 255, 255, .05);
 }
 
 .footer-grid {
@@ -84,8 +83,7 @@
 
 .footer-bar {
   background: #0a0e18;
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, .06);
+  padding: 18px 0 28px;
 }
 
 .footer-bar__inner {
@@ -107,8 +105,8 @@
 }
 
 .footer-copy {
-  color: rgba(255, 255, 255, .3);
-  font-size: .8rem;
+  color: rgba(255, 255, 255);
+  font-size: 14px;
   margin: 0;
   position: absolute;
   left: 50%;
@@ -124,7 +122,7 @@
   height: 34px;
   border-radius: 8px;
   background: rgba(255, 255, 255, .07);
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255);
   font-size: .9rem;
   text-decoration: none;
   transition: all .2s;

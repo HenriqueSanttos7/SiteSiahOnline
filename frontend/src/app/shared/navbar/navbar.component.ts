@@ -10,8 +10,12 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  mobileOpen = false;
+  mobileOpen: boolean = false;
+  mobOpen: string = '';
+
   toggle(): void { this.mobileOpen = !this.mobileOpen; }
-  close(): void  { this.mobileOpen = false; }
+  close(): void  { this.mobileOpen = false; this.mobOpen = ''; }
+  mobToggle(key: string): void { this.mobOpen = this.mobOpen === key ? '' : key; }
+
   @HostListener('document:keydown.escape') onEsc(): void { this.close(); }
 }
