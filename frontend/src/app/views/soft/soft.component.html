@@ -1,73 +1,281 @@
 <section class="sol-hero soft">
-  <div class="sol-circ c1"></div><div class="sol-circ c2"></div><div class="sol-circ c3"></div>
-  <div class="container"><div class="sol-hero-c">
-    <div class="sol-logo-area reveal"><div class="sol-logo-icon"><i class="fas fa-laptop-code"></i></div><div class="sol-logo-name">SIAH<span>Soft</span></div></div>
-    <h1 class="reveal d1">O ERP completo para a gestão do seu negócio</h1>
-    <p class="hdesc reveal d2">O Sistema A7 une gerenciamento de vendas, módulo fiscal, mobile e financeiro em um só lugar. Tudo integrado, tudo em tempo real.</p>
-  </div></div>
-</section>
-
-<section class="white-sec">
+  <div class="sol-circ c1"></div>
+  <div class="sol-circ c2"></div>
+  <div class="sol-circ c3"></div>
   <div class="container">
-    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">Sistema A7</span><span class="e-line"></span></div>
-    <h2 class="sec-title reveal">Serviço de Gestão Empresarial</h2>
-    <div class="media-grid reveal d1">
-      <div class="media-card large"><img src="assets/images/soft/gestao.jpg" alt="Sistema A7"><div class="mc-content"><h5>Sistema A7</h5><p>Conta com inúmeros serviços</p></div></div>
-      <div class="media-card"><img src="assets/images/soft/financas.jpg" alt="Finanças"><div class="mc-content"><h5>Finanças</h5><p>Um melhor controle financeiro no dia a dia</p></div></div>
-      <div class="media-card"><img src="assets/images/soft/colaboracao.jpg" alt="Colaboração"><div class="mc-content"><h5>Colaboração</h5><p>Sistema A7 envolve o time por completo</p></div></div>
-      <div class="media-card"><img src="assets/images/soft/relatorios.jpg" alt="Relatórios"><div class="mc-content"><h5>Relatórios</h5><p>Mais de 20 relatórios disponíveis</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="gray-sec">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">Atuação</span><span class="e-line"></span></div>
-    <h2 class="sec-title reveal">Segmentos em que atuamos</h2>
-    <div class="seg12 reveal d1">
-      <div *ngFor="let s of seg12" class="seg12-card">
-        <div class="seg12-icon"><i [class]="s.icon"></i></div>
-        <div class="seg12-label">{{s.label}}</div>
+    <div class="sol-hero-c">
+      <div class="sol-logo-area reveal">
+        <div class="sol-logo-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="sol-logo-name">SIAH<span>Soft</span></div>
       </div>
+      <h1 class="reveal d1">O ERP completo para a gestão do seu negócio</h1>
+      <p class="hdesc reveal d2">O Sistema A7 une gerenciamento de vendas, módulo fiscal, mobile e financeiro em um só
+        lugar. Tudo integrado, tudo em tempo real.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SIAH SOFT — Intro Features
+     ══════════════════════════════════════════════ -->
+<section class="intro-feat-sec">
+  <div class="container">
+
+    <div class="intro-feat-heading reveal">
+      <h2>O ERP completo para a gestão do seu negócio</h2>
+      <p>O Sistema A7 une gerenciamento de vendas, módulo fiscal, mobile e financeiro em um só lugar. Tudo integrado,
+        tudo em tempo real.</p>
+    </div>
+
+    <div class="intro-feat-grid">
+
+      <div class="intro-feat-item reveal">
+        <div class="intro-feat-top">
+          <div class="intro-feat-icon"><i class="fas fa-cash-register"></i></div>
+          <h3 class="intro-feat-title">Gerencie suas vendas com agilidade</h3>
+        </div>
+        <p class="intro-feat-text">Frente de caixa rápida, controle de pedidos e integração com estoque em tempo real
+          para que você nunca perca uma venda.</p>
+      </div>
+
+      <div class="intro-feat-item reveal d1">
+        <div class="intro-feat-top">
+          <div class="intro-feat-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h3 class="intro-feat-title">Emita notas fiscais sem complicação</h3>
+        </div>
+        <p class="intro-feat-text">Módulo fiscal completo para NF-e, NFC-e e MDF-e, com transmissão automática e
+          conformidade com a legislação vigente.</p>
+      </div>
+
+      <div class="intro-feat-item reveal d2">
+        <div class="intro-feat-top">
+          <div class="intro-feat-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="intro-feat-title">Controle financeiro na palma da mão</h3>
+        </div>
+        <p class="intro-feat-text">Contas a pagar e receber, fluxo de caixa e DRE integrados para uma visão clara da
+          saúde financeira do seu negócio.</p>
+      </div>
+
+      <div class="intro-feat-item reveal d3">
+        <div class="intro-feat-top">
+          <div class="intro-feat-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="intro-feat-title">Acesse de qualquer lugar com o mobile</h3>
+        </div>
+        <p class="intro-feat-text">Acompanhe indicadores, aprove pedidos e consulte relatórios pelo celular, com
+          segurança e sincronização em tempo real.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+      BANNER A7
+     ══════════════════════════════════════════════ -->
+<section class="highlight-sec">
+  <div class="container">
+    <div class="highlight-card reveal">
+      <h2 class="highlight-title">Tudo que sua empresa precisa em um único sistema</h2>
+      <p class="highlight-desc">O Sistema A7 foi desenvolvido para integrar todas as áreas do seu negócio — vendas,
+        estoque, fiscal e financeiro — em uma plataforma completa, acessível e fácil de usar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     MÓDULOS DO SISTEMA A7
+     ══════════════════════════════════════════════ -->
+<section class="modulo-sec">
+  <div class="container">
+
+    <div class="modulo-header reveal">
+      <div class="modulo-icon-box"><i class="fas fa-cubes"></i></div>
+      <h2 class="modulo-title">Recursos feitos para o seu negócio</h2>
+    </div>
+
+    <div class="modulo-grid reveal d1">
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">PDV rápido com leitor de código de barras</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Múltiplas formas de pagamento</span>
+          <span class="modulo-item-sub">PIX, cartão, dinheiro, vale e carteiras digitais</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Controle de operadores e turnos de caixa</span>
+          <span class="modulo-item-sub">sangria, suprimento e fechamento integrados</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Venda por peso e tabelas de preço diferenciadas</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Emissão de NFC-e e cupom fiscal</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Vendas em modo offline</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Entrada de mercadorias via XML da NF-e</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Alertas de estoque mínimo e máximo</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Cadastro de produtos com estrutura mercadológica</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Inventário e ajuste de estoque</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Controle de validade e lote</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Cadastro automático de fornecedores via XML</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Contas a pagar e a receber</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Fluxo de caixa diário e mensal</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">DRE e relatórios gerenciais</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Controle de comissões de vendedores</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Emissão de NF-e, NFC-e e MDF-e</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Cálculo automático de impostos</span>
+          <span class="modulo-item-sub">ICMS, PIS, COFINS e IPI</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Transmissão automática para a SEFAZ</span>
+        </div>
+      </div>
+
+      <div class="modulo-item">
+        <div class="modulo-check"><i class="fas fa-check"></i></div>
+        <div>
+          <span class="modulo-item-title">Parametrização por estado e regime tributário</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section class="white-sec">
   <div class="container">
-    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">Nossas Aplicações</span><span class="e-line"></span></div>
     <h2 class="sec-title reveal">Aplicações Disponíveis</h2>
-    <div class="apps-grid reveal d1">
-      <div *ngFor="let a of apps" class="app-card">
-        <div class="app-thumb">
-          <img [src]="a.img" [alt]="a.title">
+ 
+    <div class="apps-carousel reveal d1">
+ 
+      <!-- Viewport: overflow hidden aqui -->
+      <div class="apps-viewport">
+        <div class="apps-track" #appsTrack>
+          <div *ngFor="let a of apps" class="app-card">
+            <div class="app-header">
+              <div class="app-icon-box"><img [src]="a.icon" [alt]="a.name"></div>
+              <span class="app-name"><strong>{{ a.name }}</strong>{{ a.suffix }}</span>
+            </div>
+            <div class="app-divider"></div>
+            <p class="app-desc">{{ a.desc }}</p>
+          </div>
         </div>
-        <div class="app-body"><h6>{{a.title}}</h6><p>{{a.sub}}</p></div>
       </div>
+ 
+      <!-- Dots -->
+      <div class="apps-dots">
+        <span
+          *ngFor="let a of apps; let i = index"
+          class="apps-dot"
+          [class.active]="i === activeApp"
+          (click)="goToApp(i)">
+        </span>
+      </div>
+ 
     </div>
   </div>
 </section>
 
-<section class="gray-sec">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="e-line"></span><span class="e-label">Novidades</span><span class="e-line"></span></div>
-    <h2 class="sec-title reveal">Agora com Módulos</h2>
-    <div class="nov-grid reveal d1">
-      <div class="nov-card">
-        <div class="nov-thumb"><img src="assets/images/soft/ecommerce.jpg" alt="E-commerce"><div class="nov-tags"><span class="nov-tag">Simples</span><span class="nov-tag">Prático</span></div></div>
-        <div class="nov-body"><h4>E-commerce</h4><div class="nov-rating">★★★★★ <small>(123)</small></div><p>Mantenha sua empresa atualizada na internet e alcance mais clientes</p>
-          <div class="nov-links"><a><i class="fas fa-info-circle"></i> Conheça</a><a><i class="fas fa-bolt"></i> Agilize</a><a><i class="fas fa-chart-line"></i> Venda mais</a></div>
-        </div>
-      </div>
-      <div class="nov-card">
-        <div class="nov-thumb"><img src="assets/images/soft/mobile.jpg" alt="Mobile"><div class="nov-tags"><span class="nov-tag">Na Play Store</span><span class="nov-tag">Na palma da mão</span></div></div>
-        <div class="nov-body"><h4>Mobile*</h4><div class="nov-rating">★★★★★ <small>(123)</small></div><p>Faça suas vendas diretamente do seu celular com o nosso aplicativo</p>
-          <div class="nov-links"><a><i class="fas fa-mobile-alt"></i> Pré-venda*</a><a><i class="fas fa-clipboard-list"></i> Comanda*</a><a><i class="fas fa-briefcase"></i> Força de venda*</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<app-email-cta title="Quer ver o Sistema A7 funcionando?" subtitle="Agende uma demonstração gratuita com nosso time." [showSelect]="false"></app-email-cta>
+<app-email-cta title="Quer ver o Sistema A7 funcionando?" subtitle="Agende uma demonstração gratuita com nosso time."
+  [showSelect]="false"></app-email-cta>
 <app-footer></app-footer>

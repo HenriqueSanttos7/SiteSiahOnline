@@ -1,1 +1,313 @@
-// estilos globais em src/styles/globals.scss
+// ── INTRO FEATURES (modelo CISS) ─────────────────────────
+.intro-feat-sec {
+    background: #fff;
+    padding: 80px 0 100px;
+}
+
+.intro-feat-heading {
+    max-width: 760px;
+    margin-bottom: 3.5rem;
+
+    h2 {
+        font-size: clamp(2rem, 4.5vw, 3.2rem);
+        font-weight: 900;
+        color: #004aad;
+        line-height: 1.1;
+        margin: 0 0 1.4rem;
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: 600;
+        color: #404c59;
+        line-height: 1.65;
+        margin: 0;
+    }
+}
+
+.intro-feat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem 4rem;
+
+    @media(max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+.intro-feat-item {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.intro-feat-top {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.intro-feat-icon {
+    font-size: 3rem;
+    color: #0077cc;
+    flex-shrink: 0;
+    width: 56px;
+    text-align: center;
+}
+
+.intro-feat-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0077cc;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.intro-feat-text {
+    font-size: 20px;
+    color: #404c59;
+    line-height: 1.75;
+    margin: 0;
+    padding-left: calc(56px + 1.4rem);
+}
+
+// ── BANNER HIGHLIGHT ─────────────────────────────────────
+.highlight-sec {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #0077cc 0%, #00b4d8 100%);
+    border-radius: 20px;
+    padding: 56px 64px;
+    max-width: 100%;
+
+    @media(max-width: 768px) {
+        padding: 40px 28px;
+    }
+}
+
+.highlight-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    margin: 0 0 1.4rem;
+    max-width: 600px;
+}
+
+.highlight-desc {
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.75;
+    margin: 0;
+    max-width: 720px;
+}
+
+// ── FUNCIONALIDADES ───────────────────────────────────────
+.modulo-sec {
+  background: #fff;
+  padding: 80px 0 100px;
+}
+ 
+// Cada bloco de módulo dentro da section
+.modulo-block {
+  padding: 60px 0;
+}
+ 
+// Linha separadora entre módulos
+.modulo-divider {
+  border: none;
+  border-top: 1px solid #e0e4ef;
+}
+ 
+// Cabeçalho: icon-box + título lado a lado, alinhados ao centro
+.modulo-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+ 
+.modulo-icon-box {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: 16px;
+  border: 2.5px solid #004aad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #004aad;
+  flex-shrink: 0;
+  align-self: center;
+}
+ 
+.modulo-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #004aad;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+ 
+// Grid 2 colunas de itens
+.modulo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem 4rem;
+  @media(max-width: 768px) { grid-template-columns: 1fr; gap: 1.4rem; }
+}
+ 
+.modulo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+ 
+.modulo-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #9ed441;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+ 
+  i { font-size: .7rem; color: #9ed441; }
+}
+ 
+.modulo-item-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1f2e;
+  line-height: 1.5;
+}
+ 
+.modulo-item-sub {
+  display: block;
+  font-size: .85rem;
+  color: #5a6480;
+  line-height: 1.5;
+  margin-top: .15rem;
+}
+
+// ── APLICAÇÕES DISPONÍVEIS ────────────────────────────────
+.white-sec {
+  background: #f4f6fb;
+  padding: 80px 0 100px;
+}
+
+.apps-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// Viewport: largura 100%, corta o que ultrapassar
+.apps-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+// Track: flex em linha sem quebra
+.apps-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  transition: transform .4s ease;
+  will-change: transform;
+}
+
+// Card: largura baseada no container pai via CSS custom property
+// O container do site tem max-width definido — usamos isso
+// flex: 0 0 valor fixo garante que não cresce nem encolhe
+.app-card {
+  flex: 0 0 calc((100vw - 2 * var(--container-padding, 40px) - 4rem) / 3);
+  width: calc((100vw - 2 * var(--container-padding, 40px) - 4rem) / 3);
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-sizing: border-box;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 2px solid #004aad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+}
+
+.app-name {
+  font-size: 1.25rem;
+  color: #1a1f2e;
+  line-height: 1;
+
+  strong {
+    font-weight: 900;
+    color: #004aad;
+  }
+}
+
+.app-divider {
+  border: none;
+  border-top: 1px solid #e0e4ef;
+}
+
+.app-desc {
+  font-size: .97rem;
+  color: #5a6480;
+  line-height: 1.7;
+  margin: 0;
+}
+
+// Dots
+.apps-dots {
+  display: flex;
+  justify-content: center;
+  gap: .6rem;
+}
+
+.apps-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d0d5e8;
+  cursor: pointer;
+  transition: background .25s, transform .25s;
+
+  &.active {
+    background: #004aad;
+    transform: scale(1.2);
+  }
+}
