@@ -6,12 +6,7 @@ import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
 @Component({
   selector: 'app-soft',
   standalone: true,
-  imports: [
-    NgFor,
-    NgIf,
-    FooterComponent,
-    EmailCtaComponent
-  ],
+  imports: [ NgFor, FooterComponent, EmailCtaComponent ],
   templateUrl: './soft.component.html',
   styleUrls: ['./soft.component.scss']
 })
@@ -19,22 +14,10 @@ export class SoftComponent implements AfterViewInit {
 
   @ViewChild('appsTrack') appsTrack!: ElementRef;
 
-  seg12 = [
-    { icon: 'fas fa-store', label: 'Varejo em Geral' },
-    { icon: 'fas fa-warehouse', label: 'Atacarejo' },
-    { icon: 'fas fa-tshirt', label: 'Confecções e Calçados' },
-    { icon: 'fas fa-truck', label: 'Distribuidoras' },
-    { icon: 'fas fa-pills', label: 'Drogarias' },
-    { icon: 'fas fa-anchor', label: 'Marinas' },
-    { icon: 'fas fa-hard-hat', label: 'Materiais de Construção' },
-    { icon: 'fas fa-bread-slice', label: 'Padarias' },
-    { icon: 'fas fa-industry', label: 'Pequenas Indústrias' },
-    { icon: 'fas fa-gas-pump', label: 'Postos e Conveniências' },
-    { icon: 'fas fa-utensils', label: 'Restaurantes' },
-    { icon: 'fas fa-shopping-cart', label: 'Supermercados' },
-  ];
+  readonly perPage = 3;
+  activePage = 0;
 
-  apps = [
+   apps = [
     { img: 'assets/images/soft/pre_vendas.webp', title: 'Sistema A7', sub: 'Gestão de Vendas' },
     { img: 'assets/images/soft/app-web.jpg', title: 'A7 Web', sub: 'Relatórios de qualquer lugar' },
     { img: 'assets/images/soft/app-prevenda.jpg', title: 'Pré-Venda', sub: 'Vendas Internas' },
@@ -45,30 +28,25 @@ export class SoftComponent implements AfterViewInit {
     { img: 'assets/images/soft/app-ecommerce.jpg', title: 'E-commerce', sub: 'Integrado ao A7' },
   ];
 
-  activeApp = 0;
-
-  get cardWidth(): number {
-    const viewport = document.querySelector('.apps-viewport') as HTMLElement;
-    if (!viewport) return 0;
-    const gap = 32;
-    return (viewport.offsetWidth - gap * 2) / 3;
+  // Número de páginas baseado em 3 cards por vez
+  get dots(): number[] {
+    return Array.from({ length: Math.ceil(this.apps.length / this.perPage) });
   }
 
-  goToApp(index: number): void {
-    this.activeApp = index;
+  goToPage(page: number): void {
+    this.activePage = page;
     const track = this.appsTrack.nativeElement as HTMLElement;
-    const gap = 32;
-    const cw = this.cardWidth;
-    track.style.transform = `translateX(-${index * (cw + gap)}px)`;
+    const cards = track.querySelectorAll('.app-card');
+    const start = page * this.perPage;
+    const end = start + this.perPage;
+    cards.forEach((card, i) => {
+      card.classList.toggle('visible-card', i >= start && i < end);
+    });
   }
 
   ngAfterViewInit(): void {
-    // Aplica largura real nos cards após render
-    const cw = this.cardWidth;
-    if (cw > 0) {
-      const cards = this.appsTrack.nativeElement.querySelectorAll('.app-card') as NodeListOf<HTMLElement>;
-      cards.forEach(c => { c.style.flex = `0 0 ${cw}px`; c.style.width = `${cw}px`; });
-    }
+    // Mostra a primeira página ao iniciar
+    this.goToPage(0);
 
     const o = new IntersectionObserver(e => {
       e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); });

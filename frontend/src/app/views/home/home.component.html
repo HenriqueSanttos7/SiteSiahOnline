@@ -46,7 +46,7 @@
       <p class="seg-desc-p">Nossos produtos e serviços são desenvolvidos para os desafios e oportunidades de cada segmento de mercado.</p>
     </div>
     <div class="seg-cards reveal d1">
-      <div *ngFor="let s of segments" class="seg-card {{s.cls}}" routerLink="/siah-soft">
+      <div *ngFor="let s of segments" class="seg-card {{s.cls}}" [routerLink]="['/segmentos', s.slug]">
         <div class="si"><i [class]="s.icon"></i></div>
         <span class="sl">{{s.label}}</span>
       </div>

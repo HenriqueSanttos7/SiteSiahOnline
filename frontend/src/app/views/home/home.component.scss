@@ -1,7 +1,7 @@
 .hero-sec {
   background-color: #0d2b6b;
   background-image: radial-gradient(ellipse at 50% 120%, rgba(26, 79, 168, .8) 0%, transparent 60%);
-  min-height: 66vh;
+  min-height: 64vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
 
 .hero-circle {
   position: absolute;
-  top: -362px;
+  top: -371px;
   left: 50%;
   transform: translateX(-50%);
   width: 680px;
@@ -331,9 +331,9 @@
 }
 
 .sc6 {
-  border-color: #0099e5;
-  .si, .sl { color: #0099e5; }
-  &:hover { background: #0099e5; }
+  border-color: #DB2777;
+  .si, .sl { color: #DB2777; }
+  &:hover { background: #DB2777; }
 }
 
 .cli-sec {

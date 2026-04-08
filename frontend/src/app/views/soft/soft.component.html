@@ -244,35 +244,32 @@
 
 <section class="white-sec">
   <div class="container">
-    <h2 class="sec-title reveal">Aplicações Disponíveis</h2>
- 
+    <h2 class="title reveal">Aplicações Disponíveis</h2>
+
     <div class="apps-carousel reveal d1">
- 
-      <!-- Viewport: overflow hidden aqui -->
-      <div class="apps-viewport">
-        <div class="apps-track" #appsTrack>
-          <div *ngFor="let a of apps" class="app-card">
-            <div class="app-header">
-              <div class="app-icon-box"><img [src]="a.icon" [alt]="a.name"></div>
-              <span class="app-name"><strong>{{ a.name }}</strong>{{ a.suffix }}</span>
-            </div>
-            <div class="app-divider"></div>
-            <p class="app-desc">{{ a.desc }}</p>
+      <div class="apps-track" #appsTrack>
+        <div *ngFor="let a of apps" class="app-card">
+          <div class="app-thumb">
+            <img [src]="a.img" [alt]="a.title">
+          </div>
+          <div class="app-divider"></div>
+          <div class="app-body">
+            <h6>{{ a.title }}</h6>
+            <p>{{ a.sub }}</p>
           </div>
         </div>
       </div>
- 
-      <!-- Dots -->
+
       <div class="apps-dots">
         <span
-          *ngFor="let a of apps; let i = index"
+          *ngFor="let dot of dots; let i = index"
           class="apps-dot"
-          [class.active]="i === activeApp"
-          (click)="goToApp(i)">
+          [class.active]="i === activePage"
+          (click)="goToPage(i)">
         </span>
       </div>
- 
     </div>
+
   </div>
 </section>
 

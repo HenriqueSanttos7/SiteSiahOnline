@@ -11,12 +11,12 @@ import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
 })
 export class HomeComponent implements AfterViewInit {
   segments = [
-    { icon: 'fas fa-store', label: 'Varejo em Geral', cls: 'sc1' },
-    { icon: 'fas fa-hard-hat', label: 'Materiais de Construção', cls: 'sc2' },
-    { icon: 'fas fa-boxes-stacked', label: 'Importadoras', cls: 'sc3' },
-    { icon: 'fas fa-utensils', label: 'Food Service', cls: 'sc4' },
-    { icon: 'fas fa-industry', label: 'Pequenas Indústrias', cls: 'sc5' },
-    { icon: 'fas fa-shopping-cart', label: 'Supermercados', cls: 'sc6' },
+    { icon: 'fas fa-store', label: 'Varejo em Geral', cls: 'sc1', slug: 'varejo' },
+    { icon: 'fas fa-hard-hat', label: 'Materiais de Construção', cls: 'sc2', slug: 'materiais-construcao' },
+    { icon: 'fas fa-boxes-stacked', label: 'Importadoras', cls: 'sc3', slug: 'importadoras' },
+    { icon: 'fas fa-utensils', label: 'Food Service', cls: 'sc4', slug: 'food-service' },
+    { icon: 'fas fa-industry', label: 'Pequenas Indústrias', cls: 'sc5', slug: 'pequenas-industrias' },
+    { icon: 'fas fa-shopping-cart', label: 'Supermercados', cls: 'sc6', slug: 'supermercados' },
   ];
   clients = [
     { nome: 'Grupo Tintão', img: 'tintao.svg' },

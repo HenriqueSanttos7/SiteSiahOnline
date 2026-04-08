@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-email-cta',
   standalone: true,
-  imports: [RouterLink,FormsModule, NgIf],
+  imports: [RouterLink,FormsModule],
   templateUrl: './email-cta.component.html',
   styleUrls: ['./email-cta.component.scss']
 })

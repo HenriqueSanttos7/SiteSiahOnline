@@ -9,20 +9,20 @@ export interface Departamento { area: string; color: string; pessoas: Colaborado
 @Component({
   selector: 'app-sobre',
   standalone: true,
-  imports: [NgFor, NgIf, FooterComponent, RouterLink],
+  imports: [NgFor, FooterComponent, RouterLink],
   templateUrl: './sobre.component.html',
   styleUrls: ['./sobre.component.scss']
 })
 export class SobreComponent implements AfterViewInit {
   [x: string]: any;
 
-  segments = [
-    { icon: 'fas fa-store',          label: 'Varejo em Geral',        cls: 'sc1' },
-    { icon: 'fas fa-hard-hat',       label: 'Materiais de Construção', cls: 'sc2' },
-    { icon: 'fas fa-boxes-stacked',  label: 'Importadoras',           cls: 'sc3' },
-    { icon: 'fas fa-utensils',       label: 'Food Service',           cls: 'sc4' },
-    { icon: 'fas fa-industry',       label: 'Pequenas Indústrias',    cls: 'sc5' },
-    { icon: 'fas fa-shopping-cart',  label: 'Supermercados',          cls: 'sc6' },
+ segments = [
+    { icon: 'fas fa-store', label: 'Varejo em Geral', cls: 'sc1', slug: 'varejo' },
+    { icon: 'fas fa-hard-hat', label: 'Materiais de Construção', cls: 'sc2', slug: 'materiais-construcao' },
+    { icon: 'fas fa-boxes-stacked', label: 'Importadoras', cls: 'sc3', slug: 'importadoras' },
+    { icon: 'fas fa-utensils', label: 'Food Service', cls: 'sc4', slug: 'food-service' },
+    { icon: 'fas fa-industry', label: 'Pequenas Indústrias', cls: 'sc5', slug: 'pequenas-industrias' },
+    { icon: 'fas fa-shopping-cart', label: 'Supermercados', cls: 'sc6', slug: 'supermercados' },
   ];
 
   departamentos: Departamento[] = [

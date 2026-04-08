@@ -1,0 +1,56 @@
+<!-- APRESENTAÇÃO -->
+<section class="seg-apresent">
+  <div class="container">
+    <div class="seg-apresent__card reveal" [style.background]="segmento.cor">
+      <h1 class="seg-apresent__title">{{ segmento.apresentacao.titulo }}</h1>
+      <div class="seg-apresent__body">
+        <p>{{ segmento.apresentacao.p1 }}</p>
+        <p>{{ segmento.apresentacao.p2 }}</p>
+        <p>{{ segmento.apresentacao.p3 }}</p>
+      </div>
+      <div class="seg-apresent__cta">
+        <div class="seg-apresent__cta-text">
+          <i class="fas fa-handshake"></i>
+          <span>Vamos conversar<br>sobre o seu negócio?</span>
+        </div>
+        <a routerLink="/contato" class="seg-apresent__btn">Entre em contato!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMAS -->
+<section class="seg-problemas">
+  <div class="container">
+    <h2 class="seg-problemas__title reveal">
+      Você se identifica com algum dos desafios abaixo?<br>
+      O Sistema A7 tem a solução para cada um deles!
+    </h2>
+
+    <div
+      *ngFor="let p of segmento.problemas; let i = index"
+      class="seg-problema reveal"
+      [class]="'d' + i"
+      [style.background]="segmento.cor">
+
+      <div class="seg-problema__top">
+        <div class="seg-problema__icon"><i [class]="p.icon"></i></div>
+        <h3 class="seg-problema__titulo">{{ p.titulo }}</h3>
+      </div>
+
+      <p class="seg-problema__desc">{{ p.desc }}</p>
+
+      <p class="seg-problema__beneficio">
+        <strong>Benefício:</strong> {{ p.beneficio }}
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<app-email-cta
+  [title]="'Pronto para transformar a gestão do seu ' + segmento.label + '?'"
+  subtitle="Fale com nosso time e agende uma demonstração gratuita do Sistema A7."
+  [showSelect]="false">
+</app-email-cta>
+<app-footer></app-footer>
