@@ -2,11 +2,12 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-soft',
   standalone: true,
-  imports: [ NgFor, FooterComponent, EmailCtaComponent ],
+  imports: [ NgFor, FooterComponent, EmailCtaComponent, RouterLink ],
   templateUrl: './soft.component.html',
   styleUrls: ['./soft.component.scss']
 })
@@ -18,14 +19,14 @@ export class SoftComponent implements AfterViewInit {
   activePage = 0;
 
    apps = [
-    { img: 'assets/images/soft/pre_vendas.webp', title: 'Sistema A7', sub: 'Gestão de Vendas' },
-    { img: 'assets/images/soft/app-web.jpg', title: 'A7 Web', sub: 'Relatórios de qualquer lugar' },
-    { img: 'assets/images/soft/app-prevenda.jpg', title: 'Pré-Venda', sub: 'Vendas Internas' },
-    { img: 'assets/images/soft/app-pdv.jpg', title: 'PDV Touch', sub: 'Ponto de Venda' },
-    { img: 'assets/images/soft/app-expedicao.jpg', title: 'Expedição e Estoque', sub: 'Lançamento' },
-    { img: 'assets/images/soft/app-navegacao.jpg', title: 'Navegação', sub: 'Lançamento em breve' },
-    { img: 'assets/images/soft/app-forca.jpg', title: 'Força de Venda', sub: 'Vendas Externas' },
-    { img: 'assets/images/soft/app-ecommerce.jpg', title: 'E-commerce', sub: 'Integrado ao A7' },
+    { img: 'assets/images/soft/pre_vendas.webp', title: 'Sistema A7', sub: 'Gestão de Vendas', slug:'sistema-a7'},
+    { img: 'assets/images/soft/app-web.jpg', title: 'A7 Web', sub: 'Relatórios de qualquer lugar', slug:'a7-web'},
+    { img: 'assets/images/soft/app-prevenda.jpg', title: 'Pré-Venda', sub: 'Vendas Internas', slug:'pre-venda'},
+    { img: 'assets/images/soft/app-pdv.jpg', title: 'PDV Touch', sub: 'Ponto de Venda', slug:'pdv-touch'},
+    { img: 'assets/images/soft/app-expedicao.jpg', title: 'Expedição e Estoque', sub: 'Lançamento', slug:'expedicao-estoque'},
+    { img: 'assets/images/soft/app-navegacao.jpg', title: 'Navegação', sub: 'Lançamento em breve', slug:'navegacao'},
+    { img: 'assets/images/soft/app-forca.jpg', title: 'Força de Venda', sub: 'Vendas Externas', slug:'forca-de-venda'},
+    { img: 'assets/images/soft/app-ecommerce.jpg', title: 'E-commerce', sub: 'Integrado ao A7', slug:'e-commerce'},
   ];
 
   // Número de páginas baseado em 3 cards por vez

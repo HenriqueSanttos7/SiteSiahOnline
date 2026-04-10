@@ -13,10 +13,12 @@
         <div class="nav-drop drop-segmentos">
           <div class="drop-inner">
             <a [routerLink]="['/segmentos', 'varejo']" (click)="close()" class="seg-btn sc1">Varejo em Geral</a>
-            <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()" class="seg-btn sc2">Materiais de Construção</a>
+            <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()" class="seg-btn sc2">Materiais de
+              Construção</a>
             <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()" class="seg-btn sc3">Importadoras</a>
             <a [routerLink]="['/segmentos', 'food-service']" (click)="close()" class="seg-btn sc4">Food Service</a>
-            <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()" class="seg-btn sc5">Pequenas Indústrias</a>
+            <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()" class="seg-btn sc5">Pequenas
+              Indústrias</a>
             <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()" class="seg-btn sc6">Supermercados</a>
           </div>
         </div>
@@ -27,17 +29,26 @@
         <a class="nav-link">Soluções <i class="fas fa-chevron-down chev"></i></a>
         <div class="nav-drop drop-solucoes">
           <div class="drop-inner">
-            <a routerLink="/siah-soft" (click)="close()" class="sol-btn sc1">
+            <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
               <i class="fas fa-laptop-code"></i>
-              <span><strong>SIAH Soft</strong><small>Sistema de gestão</small></span>
+              <span>
+                <strong>SIAHSoft</strong>
+                <small>Sistema de Gestão</small>
+              </span>
             </a>
-            <a routerLink="/siah-cert" (click)="close()" class="sol-btn sc3">
+            <a routerLink="/siah-cert" (click)="close()" class="sc3 sol-btn">
               <i class="fas fa-certificate"></i>
-              <span><strong>SIAH Cert</strong><small>Certificado digital</small></span>
+              <span>
+                <strong>SIAHCert</strong>
+                <small>Certificado Digital</small>
+              </span>
             </a>
-            <a routerLink="/siah-tech" (click)="close()" class="sol-btn sc2">
-              <i class="fas fa-tools"></i>
-              <span><strong>SIAH Tech</strong><small>Assistência técnica</small></span>
+            <a routerLink="/siah-tech" (click)="close()" class="sc2 sol-btn">
+              <i class="fas fa-screwdriver-wrench"></i>
+              <span>
+                <strong>SIAHTech</strong>
+                <small>Assistência Técnica</small>
+              </span>
             </a>
           </div>
         </div>
@@ -51,12 +62,12 @@
             <div class="drop-col">
               <p class="drop-col-title">Institucional</p>
               <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
-              <a routerLink="/sobre" (click)="close()">Nossa Equipe</a>
+              <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
             </div>
             <div class="drop-col-divider"></div>
             <div class="drop-col">
               <p class="drop-col-title">Parcerias</p>
-              <a routerLink="/sobre" (click)="close()">Nossos Clientes</a>
+              <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
             </div>
           </div>
         </div>

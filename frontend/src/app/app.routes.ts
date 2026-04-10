@@ -8,5 +8,8 @@ export const routes: Routes = [
   { path: 'sobre', loadComponent: () => import('./views/sobre/sobre.component').then(m => m.SobreComponent) },
   { path: 'contato', loadComponent: () => import('./views/contato/contato.component').then(m => m.ContatoComponent) },
   { path: 'segmentos/:slug', loadComponent: () => import('./views/segmento/segmento.component').then(m => m.SegmentoComponent)},
+  { path: 'apps/:slug', loadComponent: () => import('./views/detail/detail.component').then(m => m.DetailComponent)},
+  { path: 'clientes', loadComponent:() => import('./views/clientes/clientes.component').then(m => m.ClientesComponent)},
+  { path: 'equipe', loadComponent:() => import('./views/equipe/equipe.component').then(m => m.EquipeComponent)},
   { path: '**', redirectTo: '' }
 ];
