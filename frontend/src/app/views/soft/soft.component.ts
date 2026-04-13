@@ -15,21 +15,23 @@ export class SoftComponent implements AfterViewInit {
 
   @ViewChild('appsTrack') appsTrack!: ElementRef;
 
-  readonly perPage = 3;
   activePage = 0;
 
-   apps = [
-    { img: 'assets/images/soft/pre_vendas.webp', title: 'Sistema A7', sub: 'Gestão de Vendas', slug:'sistema-a7'},
-    { img: 'assets/images/soft/app-web.jpg', title: 'A7 Web', sub: 'Relatórios de qualquer lugar', slug:'a7-web'},
-    { img: 'assets/images/soft/app-prevenda.jpg', title: 'Pré-Venda', sub: 'Vendas Internas', slug:'pre-venda'},
-    { img: 'assets/images/soft/app-pdv.jpg', title: 'PDV Touch', sub: 'Ponto de Venda', slug:'pdv-touch'},
-    { img: 'assets/images/soft/app-expedicao.jpg', title: 'Expedição e Estoque', sub: 'Lançamento', slug:'expedicao-estoque'},
-    { img: 'assets/images/soft/app-navegacao.jpg', title: 'Navegação', sub: 'Lançamento em breve', slug:'navegacao'},
-    { img: 'assets/images/soft/app-forca.jpg', title: 'Força de Venda', sub: 'Vendas Externas', slug:'forca-de-venda'},
-    { img: 'assets/images/soft/app-ecommerce.jpg', title: 'E-commerce', sub: 'Integrado ao A7', slug:'e-commerce'},
+  get perPage(): number {
+    return window.innerWidth <= 768 ? 1 : 3;
+  }
+
+  apps = [
+    { img: 'assets/images/soft/pre_vendas.webp', title: 'Sistema A7', sub: 'Gestão de Vendas', slug: 'sistema-a7' },
+    { img: 'assets/images/soft/app-web.jpg', title: 'A7 Web', sub: 'Relatórios de qualquer lugar', slug: 'a7-web' },
+    { img: 'assets/images/soft/app-prevenda.jpg', title: 'Pré-Venda', sub: 'Vendas Internas', slug: 'pre-venda' },
+    { img: 'assets/images/soft/app-pdv.jpg', title: 'PDV Touch', sub: 'Ponto de Venda', slug: 'pdv-touch' },
+    { img: 'assets/images/soft/app-expedicao.jpg', title: 'Expedição e Estoque', sub: 'Lançamento', slug: 'expedicao-estoque' },
+    { img: 'assets/images/soft/app-navegacao.jpg', title: 'Navegação', sub: 'Lançamento em breve', slug: 'navegacao' },
+    { img: 'assets/images/soft/app-forca.jpg', title: 'Força de Venda', sub: 'Vendas Externas', slug: 'forca-de-venda' },
+    { img: 'assets/images/soft/app-ecommerce.jpg', title: 'E-commerce', sub: 'Integrado ao A7', slug: 'e-commerce' },
   ];
 
-  // Número de páginas baseado em 3 cards por vez
   get dots(): number[] {
     return Array.from({ length: Math.ceil(this.apps.length / this.perPage) });
   }
@@ -46,7 +48,6 @@ export class SoftComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Mostra a primeira página ao iniciar
     this.goToPage(0);
 
     const o = new IntersectionObserver(e => {

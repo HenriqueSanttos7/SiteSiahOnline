@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="navbar__inner container">
     <a routerLink="/" class="navbar__logo" (click)="close()">
-      <img src="assets/images/logo.png" alt="SIAH" class="navbar__logo-img"
+      <img src="/assets/images/logo.svg" alt="SIAH" class="navbar__logo-img"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <span class="navbar__logo-fallback">SIAH</span>
     </a>
@@ -90,7 +90,7 @@
               <p class="drop-col-title">Horários de Atendimento</p>
               <p><strong>Seg a Sex</strong> — 8h às 18h</p>
               <p><strong>SIAH Tech:</strong> (92) 99394-7451</p>
-              <p><strong>SIAH Cert:</strong> (92) 99394-6188</p>
+              <p><strong>SIAH Cert:</strong> (92) 99391-9956</p>
             </div>
           </div>
         </div>
@@ -123,12 +123,12 @@
         Segmentos <i class="fas fa-chevron-down"></i>
       </button>
       <div class="mob-sub">
-        <a routerLink="/" (click)="close()">Varejo em Geral</a>
-        <a routerLink="/" (click)="close()">Materiais de Construção</a>
-        <a routerLink="/" (click)="close()">Importadoras</a>
-        <a routerLink="/" (click)="close()">Food Service</a>
-        <a routerLink="/" (click)="close()">Pequenas Indústrias</a>
-        <a routerLink="/" (click)="close()">Supermercados</a>
+        <a [routerLink]="['/segmentos', 'varejo']" (click)="close()">Varejo em Geral</a>
+        <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()">Materiais de Construção</a>
+        <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()">Importadoras</a>
+        <a [routerLink]="['/segmentos', 'food-service']" (click)="close()">Food Service</a>
+        <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()">Pequenas Indústrias</a>
+        <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()">Supermercados</a>
       </div>
     </li>
 
@@ -151,8 +151,8 @@
       </button>
       <div class="mob-sub">
         <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
-        <a routerLink="/sobre" (click)="close()">Nossa Equipe</a>
-        <a routerLink="/sobre" (click)="close()">Nossos Clientes</a>
+        <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
+        <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
       </div>
     </li>
 
@@ -167,7 +167,7 @@
         </a>
         <span class="mob-info">Seg a Sex — 8h às 18h</span>
         <span class="mob-info">SIAH Tech: (92) 99394-7451</span>
-        <span class="mob-info">SIAH Cert: (92) 99394-6188</span>
+        <span class="mob-info">SIAH Cert: (92) 99391-9956</span>
       </div>
     </li>
 

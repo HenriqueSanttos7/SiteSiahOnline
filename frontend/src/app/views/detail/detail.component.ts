@@ -18,7 +18,7 @@ export interface AppDetail {
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink, FooterComponent, EmailCtaComponent],
+  imports: [NgFor, RouterLink, FooterComponent, EmailCtaComponent],
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })

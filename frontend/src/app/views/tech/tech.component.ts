@@ -14,16 +14,19 @@ export class TechComponent implements AfterViewInit {
 
   @ViewChild('servicosTrack') servicosTrack!: ElementRef;
 
-  readonly perPage = 3;
   activePage = 0;
 
+  get perPage(): number {
+    return window.innerWidth <= 768 ? 1 : 3;
+  }
+
   servicos = [
-    { icon: 'fas fa-desktop',       label: 'Manutenção de Computadores', desc: 'Sem precisar formatar!' },
-    { icon: 'fas fa-server',         label: 'Servidores e Redes',          desc: 'Configuração e monitoramento' },
-    { icon: 'fas fa-print',          label: 'Impressoras e Periféricos',   desc: 'Manutenção completa' },
-    { icon: 'fas fa-database',       label: 'Backup em Nuvem',             desc: 'Recuperação rápida de dados' },
-    { icon: 'fas fa-shield-alt',     label: 'Remoção de Vírus',            desc: 'Sem formatar o computador' },
-    { icon: 'fas fa-headset',        label: 'Suporte Remoto',              desc: 'Atendimento rápido online' },
+    { icon: 'fas fa-desktop',    label: 'Manutenção de Computadores', desc: 'Sem precisar formatar!' },
+    { icon: 'fas fa-server',     label: 'Servidores e Redes',         desc: 'Configuração e monitoramento' },
+    { icon: 'fas fa-print',      label: 'Impressoras e Periféricos',  desc: 'Manutenção completa' },
+    { icon: 'fas fa-database',   label: 'Backup em Nuvem',            desc: 'Recuperação rápida de dados' },
+    { icon: 'fas fa-shield-alt', label: 'Remoção de Vírus',           desc: 'Sem formatar o computador' },
+    { icon: 'fas fa-headset',    label: 'Suporte Remoto',             desc: 'Atendimento rápido online' },
   ];
 
   get dots(): number[] {

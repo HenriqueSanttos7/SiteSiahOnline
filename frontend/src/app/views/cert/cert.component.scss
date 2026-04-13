@@ -185,7 +185,6 @@
   line-height: 1.5;
   margin-top: .15rem;
 }
-
 // ── TIPOS DE CERTIFICADO (carrossel com dots) ─────────────
 .white-sec {
   background: #f4f6fb;
@@ -211,6 +210,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   .app-card {
     display: none;
     &.visible-card { display: flex; }
@@ -233,7 +236,6 @@
   }
 }
 
-// Thumb especial para tipos sem imagem
 .cert-thumb {
   height: 180px;
   background: linear-gradient(135deg, #f3f0ff 0%, #e9e4fd 100%);

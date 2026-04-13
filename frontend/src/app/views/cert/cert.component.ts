@@ -14,8 +14,11 @@ export class CertComponent implements AfterViewInit {
 
   @ViewChild('tiposTrack') tiposTrack!: ElementRef;
 
-  readonly perPage = 3;
   activePage = 0;
+
+  get perPage(): number {
+    return window.innerWidth <= 768 ? 1 : 3;
+  }
 
   tipos = [
     { icon: 'fas fa-cloud',    label: 'e-CPF A1',   desc: 'Arquivo digital, validade 1 ano' },

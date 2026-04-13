@@ -208,7 +208,8 @@
   margin-top: .15rem;
 }
 
-// ── APLICAÇÕES DISPONÍVEIS ────────────────────────────────
+· SCSS Copiar // ── APLICAÇÕES DISPONÍVEIS ────────────────────────────────
+
 .white-sec {
   background: #f4f6fb;
   padding: 80px 0 100px;
@@ -225,6 +226,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 
   // Esconde cards que não estão na página ativa via JS
   .app-card {

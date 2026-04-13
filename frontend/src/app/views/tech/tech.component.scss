@@ -83,7 +83,9 @@
   border-radius: 20px;
   padding: 56px 64px;
 
-  @media(max-width: 768px) { padding: 40px 28px; }
+  @media(max-width: 768px) {
+    padding: 40px 28px;
+  }
 }
 
 .highlight-title {
@@ -147,7 +149,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.8rem 4rem;
 
-  @media(max-width: 768px) { grid-template-columns: 1fr; gap: 1.4rem; }
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
 }
 
 .modulo-item {
@@ -167,7 +172,10 @@
   flex-shrink: 0;
   margin-top: 2px;
 
-  i { font-size: .7rem; color: #00c896; }
+  i {
+    font-size: .7rem;
+    color: #00c896;
+  }
 }
 
 .modulo-item-title {
@@ -211,9 +219,16 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   .app-card {
     display: none;
-    &.visible-card { display: flex; }
+
+    &.visible-card {
+      display: flex;
+    }
   }
 }
 
@@ -223,17 +238,16 @@
   border: 1px solid var(--border);
   overflow: hidden;
   flex-direction: column;
-  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
   transition: all .3s;
   cursor: pointer;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
   }
 }
 
-// Thumb especial para serviços sem imagem
 .tech-thumb {
   height: 180px;
   background: linear-gradient(135deg, #e8fdf5 0%, #d0faea 100%);
