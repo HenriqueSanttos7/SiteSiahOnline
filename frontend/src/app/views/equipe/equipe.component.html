@@ -1,0 +1,45 @@
+<!-- HERO -->
+<section class="page-hero equipe-hero">
+  <div class="container">
+    <div class="page-hero__grid">
+      <div class="page-hero__left">
+        <div class="page-hero__line"></div>
+        <h1 class="page-hero__title">Nossa<br>Equipe</h1>
+      </div>
+      <div class="page-hero__right">
+        <h2 class="page-hero__sub">As pessoas por trás da tecnologia que transforma negócios em Manaus</h2>
+        <p class="page-hero__desc">Conheça os profissionais dedicados de cada área da SIAH.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLABORADORES POR EMPRESA E DEPARTAMENTO -->
+<section class="parceiros-sec" *ngFor="let empresa of empresas">
+  <div class="container">
+
+    <h3 class="parceiros-cat__title" [style.color]="empresa.cor">{{ empresa.nome }}</h3>
+
+    <div *ngFor="let dept of empresa.departamentos" class="parceiros-dept reveal">
+      <h4 class="parceiros-dept__title">{{ dept.nome }}</h4>
+      <div class="parceiros-grid">
+        <div *ngFor="let p of dept.pessoas" class="parceiro-card">
+          <div class="parceiro-card__logo colab-logo" [style.border-color]="empresa.cor">
+            <img [src]="p.foto" [alt]="p.nome"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="colab-fallback" [style.color]="empresa.cor">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <div class="parceiro-card__info">
+            <strong>{{ p.nome }}</strong>
+            <span>{{ p.cargo }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-footer></app-footer>

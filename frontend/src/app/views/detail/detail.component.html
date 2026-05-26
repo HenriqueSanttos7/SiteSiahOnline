@@ -1,0 +1,84 @@
+<!-- HERO -->
+<section class="app-hero reveal" [style.background]="'linear-gradient(135deg, ' + app.corDark + ' 0%, ' + app.cor + ' 100%)'">
+  <div class="container">
+    <div class="app-hero__grid">
+
+      <div class="app-hero__content">
+        <p class="app-hero__sub">{{ app.subtitle }}</p>
+        <h1 class="app-hero__title">{{ app.title }}</h1>
+        <p class="app-hero__desc">{{ app.desc }}</p>
+        <a routerLink="/contato" class="app-hero__btn">
+          <i class="fa-solid fa-phone"></i>Entre em Contato!
+        </a>
+      </div>
+
+      <div class="app-hero__img">
+        <img [src]="app.img" [alt]="app.title">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FUNCIONALIDADES -->
+<section class="app-func-sec">
+  <div class="container">
+    <div class="modulo-header reveal">
+      <div class="modulo-icon-box" [style.border-color]="app.cor" [style.color]="app.cor">
+        <i class="fas fa-star"></i>
+      </div>
+      <h2 class="modulo-title" [style.color]="app.cor">Funcionalidades</h2>
+    </div>
+
+    <div class="modulo-grid reveal d1">
+      <div *ngFor="let f of app.funcionalidades" class="modulo-item">
+        <div class="modulo-check" [style.border-color]="app.cor">
+          <i class="fas fa-check" [style.color]="app.cor"></i>
+        </div>
+        <div>
+          <span class="modulo-item-title">{{ f.titulo }}</span>
+          <span class="modulo-item-sub">{{ f.desc }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTRAS APLICAÇÕES -->
+<section class="white-sec">
+  <div class="container">
+    <h2 class="title reveal" [style.color]="app.cor">Aplicações Disponíveis</h2>
+
+    <div class="apps-carousel reveal d1">
+      <div class="apps-track" #appsTrack>
+        <div *ngFor="let a of apps" class="app-nav-card" [routerLink]="['/apps', a.slug]">
+          <div class="app-thumb">
+            <img [src]="a.img" [alt]="a.title">
+          </div>
+          <div class="app-divider"></div>
+          <div class="app-body">
+            <h6>{{ a.title }}</h6>
+            <p>{{ a.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="apps-dots">
+        <span
+          *ngFor="let dot of dots; let i = index"
+          class="apps-dot"
+          [class.active]="i === activePage"
+          [style.background]="i === activePage ? app.cor : ''"
+          (click)="goToPage(i)">
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-email-cta
+  [title]="'Quer ver o ' + app.title + ' funcionando?'"
+  subtitle="Agende uma demonstração gratuita com nosso time."
+  [showSelect]="false">
+</app-email-cta>
+<app-footer></app-footer>

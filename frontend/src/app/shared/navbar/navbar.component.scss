@@ -1,0 +1,512 @@
+// ── Navbar base ───────────────────────────────────────────
+.navbar {
+  background: #111418;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  &__logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+  }
+
+  &__logo-fallback {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -1px;
+    display: none;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+  }
+}
+
+// ── Nav item & link ───────────────────────────────────────
+.nav-item {
+  position: static;
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  &:hover .nav-drop {
+    display: flex;
+  }
+
+  &:hover .chev {
+    transform: rotate(180deg);
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 21px;
+  height: 100%;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #00b4d8;
+    transition: width .35s cubic-bezier(.4, 0, .2, 1);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.chev {
+  font-size: .62rem;
+  margin-top: 1px;
+  transition: transform .2s;
+}
+
+// ── Nav drop — todos largura total ────────────────────────
+.nav-drop {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 3px solid #00b4d8;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+  z-index: 999;
+  flex-direction: row;
+  padding: 24px 0;
+}
+
+// ── Container interno dos drops ───────────────────────────
+.drop-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 16px;
+}
+
+// ── Seg buttons (Segmentos) ───────────────────────────────
+.seg-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: .95rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  transition: all .2s;
+  line-height: 1.3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .88;
+    transform: translateY(-2px);
+  }
+}
+
+.sc1.seg-btn {
+  background: #0099e5;
+}
+
+.sc2.seg-btn {
+  background: #00b37e;
+}
+
+.sc3.seg-btn {
+  background: #7c3aed;
+}
+
+.sc4.seg-btn {
+  background: #f97316;
+}
+
+.sc5.seg-btn {
+  background: #e11d48;
+}
+
+.sc6.seg-btn {
+  background: #DB2777;
+}
+
+// ── Sol buttons (Soluções / Suporte WhatsApp) ─────────────
+.sol-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  transition: all .2s;
+  cursor: pointer;
+  flex: 1;
+
+  i {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    color: #fff;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+      font-size: .9rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    small {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .8);
+    }
+  }
+
+  &:hover {
+    opacity: .88;
+    transform: translateY(-2px);
+  }
+}
+
+.sc1.sol-btn {
+  background: #0099e5;
+}
+
+.sc2.sol-btn {
+  background: #00b37e;
+}
+
+.sc3.sol-btn {
+  background: #7c3aed;
+}
+
+.sc4.sol-btn {
+  background: #f97316;
+}
+
+.sc5.sol-btn {
+  background: #e11d48;
+}
+
+.sc6.sol-btn {
+  background: #0099e5;
+}
+
+// ── Drop Soluções ─────────────────────────────────────────
+.drop-solucoes .drop-inner {
+  align-items: stretch;
+  gap: 12px;
+}
+
+// ── Drop Sobre ────────────────────────────────────────────
+.drop-sobre .drop-inner {
+  align-items: flex-start;
+  gap: 0;
+}
+
+// ── Drop Suporte ──────────────────────────────────────────
+.drop-suporte .drop-inner {
+  align-items: flex-start;
+  gap: 0;
+}
+
+.drop-suporte-wpp {
+  flex: 1;
+  padding-right: 32px;
+}
+
+.drop-suporte-desc {
+  color: #5a6480;
+  font-size: .88rem;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.drop-suporte-horarios {
+  flex: 1;
+  padding-left: 32px;
+
+  p {
+    color: #5a6480;
+    font-size: .88rem;
+    margin-bottom: 8px;
+    line-height: 1.6;
+
+    strong {
+      color: #1a1f2e;
+    }
+  }
+}
+
+// ── Colunas compartilhadas (Sobre) ────────────────────────
+.drop-col {
+  flex: 1;
+  padding: 0 24px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  a {
+    display: block;
+    padding: 9px 0;
+    color: #404c59;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .06);
+    transition: color .15s;
+
+    &:hover {
+      color: #00b4d8;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.drop-col-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #00b4d8;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 14px;
+}
+
+.drop-col-divider {
+  width: 1px;
+  background: rgba(0, 0, 0, .1);
+  align-self: stretch;
+  margin: 0 8px;
+}
+
+// ── CTA button ────────────────────────────────────────────
+.btn-cta {
+  background: linear-gradient(90deg, #f9ee1c, #f7bf66);
+  color: #b35d2c;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 46px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+  transition: background .2s;
+
+  &:hover {
+    background: linear-gradient(90deg, #f9ee1c, #ee9d1e);
+  }
+}
+
+// ── Mobile toggle ─────────────────────────────────────────
+.nav-mob-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+// ── Mobile menu ───────────────────────────────────────────
+.mob-menu {
+  position: fixed;
+  inset: 0;
+  background: #111418;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transform: translateX(100%);
+  transition: transform .3s;
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.mob-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mob-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.mob-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.mob-logo {
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+  display: none;
+}
+
+.mob-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mob-list {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+
+  li {
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+  }
+
+  a {
+    display: block;
+    padding: 16px 0;
+    color: rgba(255, 255, 255, .85);
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+
+    &:hover {
+      color: #00b4d8;
+    }
+  }
+}
+
+.mob-cta {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+// ── Responsivo ────────────────────────────────────────────
+@media (max-width: 991px) {
+
+  .navbar__center,
+  .navbar__right {
+    display: none;
+  }
+
+  .nav-mob-toggle {
+    display: block;
+  }
+}
+
+.mob-item {
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  &.open .mob-sub { display: flex; }
+  &.open .mob-toggle i { transform: rotate(180deg); }
+}
+
+.mob-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.85);
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-family: inherit;
+
+  i { font-size: .62rem; transition: transform .2s; }
+}
+
+.mob-sub {
+  display: none;
+  flex-direction: column;
+  padding: 0 0 12px 16px;
+  gap: 4px;
+
+  a {
+    padding: 10px 0;
+    color: rgba(255,255,255,.6);
+    font-size: .95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.04);
+
+    &:last-of-type { border-bottom: none; }
+    &:hover { color: #00b4d8; }
+
+    i { margin-right: 8px; color: #00b4d8; }
+  }
+}
+
+.mob-info {
+  padding: 6px 0;
+  color: rgba(255,255,255,.45);
+  font-size: .85rem;
+}

@@ -1,0 +1,80 @@
+<section class="hero-sec">
+  <div class="hero-circle"></div>
+  <div class="hero-circle-b"></div>
+  <div class="hero-circle-c"></div>
+  <div class="container">
+    <div class="hero-content reveal">
+      <div class="hero-anos-block">
+        <div class="hero-years">
+          <span class="h-num-o">1</span>
+          <div class="h-num-s-wrap">
+            <!-- <div class="h-num-s-circle"></div> -->
+            <span class="h-num-s">8</span>
+          </div>
+        </div>
+        <span class="h-anos">anos</span>
+      </div>
+      <div class="hero-text-block">
+        <h1 class="hero-hl">Conectando sua empresa<br>ao <span>futuro</span></h1>
+        <p class="hero-sub">Software, certificação digital e suporte técnico especializado para levar seu negócio ao próximo nível.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sobre-sec">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="reveal">
+        <div class="section-img-wrap">
+          <img src="assets/images/sobre-team.jpg" alt="Equipe SIAH" class="section-img">
+        </div>
+      </div>
+      <div class="reveal d1">
+        <h2 class="sobre-title">Muito prazer,<br>somos a SIAH!</h2>
+        <p class="sobre-desc">Somos especialistas em desenvolver soluções para gestão e operação de empresas. Há mais de 15 anos no mercado, atendemos mais de 300 clientes com software, certificação digital e suporte técnico de alta qualidade.</p>
+        <a routerLink="/sobre" class="btn-blue">Conheça nossa história</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seg-sec">
+  <div class="container">
+    <div class="seg-header reveal">
+      <h2 class="seg-title">Segmentos</h2>
+      <p class="seg-desc-p">Nossos produtos e serviços são desenvolvidos para os desafios e oportunidades de cada segmento de mercado.</p>
+    </div>
+    <div class="seg-cards reveal d1">
+      <div *ngFor="let s of segments" class="seg-card {{s.cls}}" [routerLink]="['/segmentos', s.slug]">
+        <div class="si"><i [class]="s.icon"></i></div>
+        <span class="sl">{{s.label}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cli-sec">
+  <div class="container">
+    <div class="cli-grid">
+      <div class="reveal">
+        <h2 class="cli-title">Mais de 300 clientes confiam na SIAH</h2>
+        <div class="section-img-wrap">
+          <img src="assets/images/siahsoftwares.jpg" alt="Clientes SIAH" class="section-img">
+        </div>
+      </div>
+      <div class="reveal d1">
+        <p class="cli-intro">Empresas de Manaus e toda a região Norte utilizam nossas soluções para melhorar a gestão e os resultados dos seus negócios.</p>
+        <div class="logos-grid">
+          <div *ngFor="let c of clients" class="logo-item">
+            <img [src]="'assets/images/clientes/' + c.img" [alt]="c.nome">
+          </div>
+        </div>
+        <a routerLink="/clientes" class="btn-ol-blue">Conheça Nossos Clientes!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-email-cta></app-email-cta>
+<app-footer></app-footer>

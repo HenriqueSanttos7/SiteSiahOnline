@@ -1,0 +1,176 @@
+<nav class="navbar">
+  <div class="navbar__inner container">
+    <a routerLink="/" class="navbar__logo" (click)="close()">
+      <img src="/assets/images/logo.svg" alt="SIAH" class="navbar__logo-img"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="navbar__logo-fallback">SIAH</span>
+    </a>
+    <div class="navbar__center">
+
+      <!-- Segmentos -->
+      <div class="nav-item">
+        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev"></i></a>
+        <div class="nav-drop drop-segmentos">
+          <div class="drop-inner">
+            <a [routerLink]="['/segmentos', 'varejo']" (click)="close()" class="seg-btn sc1">Varejo em Geral</a>
+            <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()" class="seg-btn sc2">Materiais de
+              Construção</a>
+            <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()" class="seg-btn sc3">Importadoras</a>
+            <a [routerLink]="['/segmentos', 'food-service']" (click)="close()" class="seg-btn sc4">Food Service</a>
+            <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()" class="seg-btn sc5">Pequenas
+              Indústrias</a>
+            <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()" class="seg-btn sc6">Supermercados</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soluções -->
+      <div class="nav-item">
+        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev"></i></a>
+        <div class="nav-drop drop-solucoes">
+          <div class="drop-inner">
+            <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
+              <i class="fas fa-laptop-code"></i>
+              <span>
+                <strong>SIAHSoft</strong>
+                <small>Sistema de Gestão</small>
+              </span>
+            </a>
+            <a routerLink="/siah-cert" (click)="close()" class="sc3 sol-btn">
+              <i class="fas fa-certificate"></i>
+              <span>
+                <strong>SIAHCert</strong>
+                <small>Certificado Digital</small>
+              </span>
+            </a>
+            <a routerLink="/siah-tech" (click)="close()" class="sc2 sol-btn">
+              <i class="fas fa-screwdriver-wrench"></i>
+              <span>
+                <strong>SIAHTech</strong>
+                <small>Assistência Técnica</small>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sobre -->
+      <div class="nav-item">
+        <a class="nav-link">Sobre <i class="fas fa-chevron-down chev"></i></a>
+        <div class="nav-drop drop-sobre">
+          <div class="drop-inner">
+            <div class="drop-col">
+              <p class="drop-col-title">Institucional</p>
+              <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
+              <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
+            </div>
+            <div class="drop-col-divider"></div>
+            <div class="drop-col">
+              <p class="drop-col-title">Parcerias</p>
+              <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suporte -->
+      <div class="nav-item">
+        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev"></i></a>
+        <div class="nav-drop drop-suporte">
+          <div class="drop-inner">
+            <div class="drop-suporte-wpp">
+              <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
+              <a href="https://wa.me/5592981826512" target="_blank" class="sol-btn sc2">
+                <i class="fab fa-whatsapp"></i>
+                <span><strong>Suporte via WhatsApp</strong><small>(92) 98182-6512</small></span>
+              </a>
+            </div>
+            <div class="drop-col-divider"></div>
+            <div class="drop-suporte-horarios">
+              <p class="drop-col-title">Horários de Atendimento</p>
+              <p><strong>Seg a Sex</strong> — 8h às 18h</p>
+              <p><strong>SIAH Tech:</strong> (92) 99394-7451</p>
+              <p><strong>SIAH Cert:</strong> (92) 99391-9956</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="navbar__right">
+      <a routerLink="/contato" class="btn-cta" (click)="close()">Nossos Contatos</a>
+    </div>
+    <button class="nav-mob-toggle" (click)="toggle()" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<div class="mob-menu" [class.open]="mobileOpen">
+  <div class="mob-header">
+    <div class="mob-logo-wrap">
+      <img src="assets/images/logo.png" alt="SIAH" class="mob-logo-img"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="mob-logo">SIAH</span>
+    </div>
+    <button class="mob-close" (click)="close()"><i class="fas fa-times"></i></button>
+  </div>
+  <ul class="mob-list">
+
+    <!-- Segmentos -->
+    <li class="mob-item" [class.open]="mobOpen === 'seg'">
+      <button class="mob-toggle" (click)="mobToggle('seg')">
+        Segmentos <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="mob-sub">
+        <a [routerLink]="['/segmentos', 'varejo']" (click)="close()">Varejo em Geral</a>
+        <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()">Materiais de Construção</a>
+        <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()">Importadoras</a>
+        <a [routerLink]="['/segmentos', 'food-service']" (click)="close()">Food Service</a>
+        <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()">Pequenas Indústrias</a>
+        <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()">Supermercados</a>
+      </div>
+    </li>
+
+    <!-- Soluções -->
+    <li class="mob-item" [class.open]="mobOpen === 'sol'">
+      <button class="mob-toggle" (click)="mobToggle('sol')">
+        Soluções <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="mob-sub">
+        <a routerLink="/siah-soft" (click)="close()">SIAH Soft</a>
+        <a routerLink="/siah-cert" (click)="close()">SIAH Cert</a>
+        <a routerLink="/siah-tech" (click)="close()">SIAH Tech</a>
+      </div>
+    </li>
+
+    <!-- Sobre -->
+    <li class="mob-item" [class.open]="mobOpen === 'sobre'">
+      <button class="mob-toggle" (click)="mobToggle('sobre')">
+        Sobre <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="mob-sub">
+        <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
+        <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
+        <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
+      </div>
+    </li>
+
+    <!-- Suporte -->
+    <li class="mob-item" [class.open]="mobOpen === 'sup'">
+      <button class="mob-toggle" (click)="mobToggle('sup')">
+        Suporte <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="mob-sub">
+        <a href="https://wa.me/5592981826512" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp: (92) 98182-6512
+        </a>
+        <span class="mob-info">Seg a Sex — 8h às 18h</span>
+        <span class="mob-info">SIAH Tech: (92) 99394-7451</span>
+        <span class="mob-info">SIAH Cert: (92) 99391-9956</span>
+      </div>
+    </li>
+
+  </ul>
+  <a routerLink="/contato" class="btn-cta mob-cta" (click)="close()">Nossos Contatos</a>
+</div>

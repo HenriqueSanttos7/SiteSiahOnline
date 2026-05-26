@@ -1,0 +1,274 @@
+// ── HERO ─────────────────────────────────────────────────
+.app-hero {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.app-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.app-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.app-hero__sub {
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  margin: 0;
+}
+
+.app-hero__title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.app-hero__desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,.85);
+  line-height: 1.75;
+  margin: 0;
+  max-width: 480px;
+}
+
+.app-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,.25);
+  color: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background .2s;
+
+  &:hover { background: rgba(0,0,0,.4); }
+}
+
+.app-hero__img {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  aspect-ratio: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media(max-width: 768px) { max-width: 320px; margin: 0 auto; }
+}
+
+// ── FUNCIONALIDADES ───────────────────────────────────────
+.app-func-sec {
+  background: #fff;
+  padding: 80px 0 100px;
+}
+
+// Herda modulo-header, modulo-icon-box, modulo-title,
+// modulo-grid, modulo-item, modulo-check,
+// modulo-item-title, modulo-item-sub do soft.component.scss
+
+// ── APLICAÇÕES — carrossel com dots ──────────────────────
+.white-sec {
+  background: #f4f6fb;
+  padding: 80px 0 100px;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+.apps-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.apps-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  .app-nav-card {
+    display: none;
+    &.visible-card { display: flex; }
+  }
+}
+
+.app-nav-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  flex-direction: column;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  transition: all .3s;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  }
+}
+
+.app-thumb {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  aspect-ratio: unset;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s;
+  }
+
+  &:hover img { transform: scale(1.05); }
+}
+
+.app-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.app-body {
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+
+  h6 {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0;
+  }
+
+  p {
+    font-size: .85rem;
+    color: var(--muted);
+    margin: 0;
+  }
+}
+
+.apps-dots {
+  display: flex;
+  justify-content: center;
+  gap: .6rem;
+}
+
+.apps-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c8cdd8;
+  cursor: pointer;
+  transition: background .25s, transform .25s;
+
+  &.active { transform: scale(1.25); }
+}
+
+// Módulos — copiados aqui pois este componente não herda do soft
+.modulo-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.modulo-icon-box {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: 16px;
+  border: 2.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.modulo-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+
+.modulo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem 4rem;
+
+  @media(max-width: 768px) { grid-template-columns: 1fr; gap: 1.4rem; }
+}
+
+.modulo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.modulo-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  i { font-size: .7rem; }
+}
+
+.modulo-item-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1f2e;
+  line-height: 1.5;
+}
+
+.modulo-item-sub {
+  display: block;
+  font-size: .9rem;
+  color: #5a6480;
+  line-height: 1.5;
+  margin-top: .15rem;
+}
