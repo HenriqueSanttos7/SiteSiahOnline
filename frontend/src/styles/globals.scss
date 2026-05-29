@@ -112,15 +112,15 @@ body {
   overflow: hidden;
 
   &.soft {
-    background: linear-gradient(135deg, #0077cc 0%, #00b4d8 100%);
+    background: linear-gradient(135deg, #0F49A6, #0077cc);
   }
 
   &.cert {
-    background: linear-gradient(135deg, #3b1999 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #3b1999, #724CB1);
   }
 
   &.tech {
-    background: linear-gradient(135deg, #1a6e1a 0%, #00c896 100%);
+    background: linear-gradient(135deg, #168116 0%, #AEDC62);
   }
 
   &.sobre {
@@ -191,6 +191,12 @@ body {
   }
 }
 
+.sol-logo-siah img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
 .sol-hero h1 {
   font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 900;
@@ -203,7 +209,7 @@ body {
   color: rgba(255, 255, 255, .75);
   font-size: 1.05rem;
   line-height: 1.7;
-  max-width: 520px;
+  max-width: auto;
 }
 
 /* Segment 12 grid */
@@ -1193,7 +1199,7 @@ textarea {
 // ── SEÇÕES DE CATEGORIAS ──────────────────────────────────
 .parceiros-sec {
   background: #f4f6fb;
-  padding: 60px 0 80px;
+  padding: 40px 0 40px;
  
   &.alt { background: #fff; }
 }

@@ -26,7 +26,7 @@
   width: 680px;
   height: 680px;
   border-radius: 50%;
-  border: 56px solid #9ed441;
+  border: 56px solid #0F49A6;
   opacity: .95;
   z-index: 1;
 }
@@ -202,7 +202,7 @@
 
 .btn-blue {
   display: inline-block;
-  background: #00b4d8;
+  background: #003A96;
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -214,7 +214,7 @@
   float: right;
 
   &:hover {
-    background: #0099ba;
+    background: linear-gradient(90deg, #003A96, #035be9);
   }
 }
 
@@ -451,8 +451,8 @@
 
 .btn-ol-blue {
   display: inline-block;
-  border: 1.5px solid #00b4d8;
-  color: #00b4d8;
+  border: 1.5px solid #003A96;
+  color: #003A96;
   font-weight: 600;
   font-size: 1rem;
   padding: 14px 40px;
@@ -464,7 +464,7 @@
   float: right;
 
   &:hover {
-    background: #00b4d8;
+    background: linear-gradient(90deg, #003A96, #035be9);
     color: #fff;
   }
 }

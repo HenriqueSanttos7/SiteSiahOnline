@@ -340,6 +340,8 @@
 .btn-cta {
   background: linear-gradient(90deg, #f9ee1c, #f7bf66);
   color: #b35d2c;
+  background: #003a96;
+  color: #fff;
   font-weight: 700;
   font-size: 16px;
   padding: 12px 46px;
@@ -353,6 +355,7 @@
 
   &:hover {
     background: linear-gradient(90deg, #f9ee1c, #ee9d1e);
+    background: linear-gradient(90deg, #003A96, #035be9);
   }
 }
 
