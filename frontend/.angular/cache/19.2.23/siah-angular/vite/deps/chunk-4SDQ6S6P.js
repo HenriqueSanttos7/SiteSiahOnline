@@ -60,7 +60,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-PATIGT73.js";
+} from "./chunk-CEZYY6BV.js";
 
 // node_modules/@angular/common/fesm2022/dom_tokens-rA0ACyx7.mjs
 var DOCUMENT = new InjectionToken(ngDevMode ? "DocumentToken" : "");
@@ -5149,4 +5149,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-IJH4PAM2.js.map
+//# sourceMappingURL=chunk-4SDQ6S6P.js.map
