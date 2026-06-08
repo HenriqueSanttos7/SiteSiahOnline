@@ -60,15 +60,15 @@ export class ClientesComponent implements AfterViewInit {
         { nome: 'Importadora Luanjo', desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.', logo: '/assets/images/clientes/luanjo.svg' },
       ]
     },
-    // {
-    //   nome: 'Pequenas Indústrias',
-    //   cor: '#e11d48',
-    //   desc: 'Pequenas indústrias que modernizaram sua gestão com as soluções da SIAH.',
-    //   clientes: [
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //   ]
-    // },
+    {
+      nome: 'Indústrias',
+      cor: '#e11d48',
+      desc: 'Pequenas e médias indústrias que modernizaram sua gestão com as soluções da SIAH.',
+      clientes: [
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
+      ]
+    },
   ];
 
   ngAfterViewInit(): void {
