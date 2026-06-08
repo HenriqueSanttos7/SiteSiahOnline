@@ -50,7 +50,7 @@ export class EquipeComponent implements AfterViewInit {
             { nome: 'Joab Martins', cargo: 'Suporte de TI', foto: '/assets/images/equipe/Joab.png' },
             { nome: 'José Souza', cargo: 'Suporte de TI', foto: '/assets/images/equipe/Jose.png' },
             { nome: 'Lúcio Portela', cargo: 'Suporte de TI', foto: '/assets/images/equipe/Lucio.png' },
-            { nome: 'Maria Eduarda', cargo: 'Suporte de TI', foto: '/assets/images/equipe/MariaEduarda.png' },
+            { nome: 'Maria Eduarda', cargo: 'Suporte de TI', foto: '/assets/images/equipe/Maria_Ed.png' },
             { nome: 'Neto Gonçalves', cargo: 'Suporte de TI', foto: '/assets/images/equipe/Neto.png' },
           ]
         },
