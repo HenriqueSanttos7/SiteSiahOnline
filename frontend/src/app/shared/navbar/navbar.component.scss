@@ -1,6 +1,6 @@
 // ── Navbar base ───────────────────────────────────────────
 .navbar {
-  background: #111418;
+  background: #000000;
   height: 80px;
   position: sticky;
   top: 0;
@@ -82,14 +82,14 @@
   cursor: pointer;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
     height: 3px;
     background: #00b4d8;
-    transition: width .35s cubic-bezier(.4, 0, .2, 1);
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover::after {
@@ -98,9 +98,9 @@
 }
 
 .chev {
-  font-size: .62rem;
+  font-size: 0.62rem;
   margin-top: 1px;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 // ── Nav drop — todos largura total ────────────────────────
@@ -112,7 +112,7 @@
   right: 0;
   background: #fff;
   border-top: 3px solid #00b4d8;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   z-index: 999;
   flex-direction: row;
   padding: 24px 0;
@@ -137,17 +137,17 @@
   padding: 7px 15px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: .95rem;
+  font-size: 0.95rem;
   text-align: center;
   text-decoration: none;
   border: none;
   color: #fff;
-  transition: all .2s;
+  transition: all 0.2s;
   line-height: 1.3;
   cursor: pointer;
 
   &:hover {
-    opacity: .88;
+    opacity: 0.88;
     transform: translateY(-2px);
   }
 }
@@ -173,7 +173,7 @@
 }
 
 .sc6.seg-btn {
-  background: #DB2777;
+  background: #db2777;
 }
 
 // ── Sol buttons (Soluções / Suporte WhatsApp) ─────────────
@@ -185,7 +185,7 @@
   border-radius: 10px;
   text-decoration: none;
   border: none;
-  transition: all .2s;
+  transition: all 0.2s;
   cursor: pointer;
   flex: 1;
 
@@ -201,45 +201,33 @@
     gap: 2px;
 
     strong {
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: #fff;
     }
 
     small {
-      font-size: .75rem;
-      color: rgba(255, 255, 255, .8);
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.8);
     }
   }
 
   &:hover {
-    opacity: .88;
+    opacity: 0.88;
     transform: translateY(-2px);
   }
 }
 
 .sc1.sol-btn {
-  background: #0099e5;
+  background: #0f49a6;
 }
 
 .sc2.sol-btn {
-  background: #00b37e;
+  background: #724cb1;
 }
 
 .sc3.sol-btn {
-  background: #7c3aed;
-}
-
-.sc4.sol-btn {
-  background: #f97316;
-}
-
-.sc5.sol-btn {
-  background: #e11d48;
-}
-
-.sc6.sol-btn {
-  background: #0099e5;
+  background: #85bd2b;
 }
 
 // ── Drop Soluções ─────────────────────────────────────────
@@ -267,7 +255,7 @@
 
 .drop-suporte-desc {
   color: #5a6480;
-  font-size: .88rem;
+  font-size: 0.88rem;
   margin-bottom: 16px;
   line-height: 1.6;
 }
@@ -278,7 +266,7 @@
 
   p {
     color: #5a6480;
-    font-size: .88rem;
+    font-size: 0.88rem;
     margin-bottom: 8px;
     line-height: 1.6;
 
@@ -307,8 +295,8 @@
     color: #404c59;
     font-size: 14px;
     text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .06);
-    transition: color .15s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: color 0.15s;
 
     &:hover {
       color: #00b4d8;
@@ -325,13 +313,13 @@
   font-weight: 800;
   color: #00b4d8;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   margin-bottom: 14px;
 }
 
 .drop-col-divider {
   width: 1px;
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
   align-self: stretch;
   margin: 0 8px;
 }
@@ -351,11 +339,11 @@
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
-  transition: background .2s;
+  transition: background 0.2s;
 
   &:hover {
     background: linear-gradient(90deg, #f9ee1c, #ee9d1e);
-    background: linear-gradient(90deg, #003A96, #035be9);
+    background: linear-gradient(90deg, #003a96, #035be9);
   }
 }
 
@@ -380,7 +368,7 @@
   flex-direction: column;
   padding: 24px;
   transform: translateX(100%);
-  transition: transform .3s;
+  transition: transform 0.3s;
 
   &.open {
     transform: translateX(0);
@@ -427,13 +415,13 @@
   flex: 1;
 
   li {
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   a {
     display: block;
     padding: 16px 0;
-    color: rgba(255, 255, 255, .85);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 600;
     font-size: 1.05rem;
     text-decoration: none;
@@ -452,7 +440,6 @@
 
 // ── Responsivo ────────────────────────────────────────────
 @media (max-width: 991px) {
-
   .navbar__center,
   .navbar__right {
     display: none;
@@ -464,10 +451,14 @@
 }
 
 .mob-item {
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-  &.open .mob-sub { display: flex; }
-  &.open .mob-toggle i { transform: rotate(180deg); }
+  &.open .mob-sub {
+    display: flex;
+  }
+  &.open .mob-toggle i {
+    transform: rotate(180deg);
+  }
 }
 
 .mob-toggle {
@@ -478,13 +469,16 @@
   padding: 16px 0;
   background: none;
   border: none;
-  color: rgba(255,255,255,.85);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
   font-size: 1.05rem;
   cursor: pointer;
   font-family: inherit;
 
-  i { font-size: .62rem; transition: transform .2s; }
+  i {
+    font-size: 0.62rem;
+    transition: transform 0.2s;
+  }
 }
 
 .mob-sub {
@@ -495,26 +489,33 @@
 
   a {
     padding: 10px 0;
-    color: rgba(255,255,255,.6);
-    font-size: .95rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
     font-weight: 500;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 
-    &:last-of-type { border-bottom: none; }
-    &:hover { color: #00b4d8; }
+    &:last-of-type {
+      border-bottom: none;
+    }
+    &:hover {
+      color: #00b4d8;
+    }
 
-    i { margin-right: 8px; color: #00b4d8; }
+    i {
+      margin-right: 8px;
+      color: #00b4d8;
+    }
   }
 }
 
 .mob-info {
   padding: 6px 0;
-  color: rgba(255,255,255,.45);
-  font-size: .85rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
 }
 
-.sol-logo{
+.sol-logo {
   height: 20px;
   width: auto;
   display: block;

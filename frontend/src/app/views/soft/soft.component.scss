@@ -30,7 +30,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem 4rem;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -39,7 +39,7 @@
 .intro-feat-item {
   display: flex;
   flex-direction: column;
-  gap: .8rem;
+  gap: 0.8rem;
 }
 
 .intro-feat-top {
@@ -84,7 +84,7 @@
   padding: 56px 64px;
   max-width: 100%;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 40px 28px;
   }
 }
@@ -163,7 +163,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.8rem 4rem;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1.4rem;
   }
@@ -187,7 +187,7 @@
   margin-top: 2px;
 
   i {
-    font-size: .7rem;
+    font-size: 0.7rem;
     color: #0077cc;
   }
 }
@@ -202,10 +202,10 @@
 
 .modulo-item-sub {
   display: block;
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: #5a6480;
   line-height: 1.5;
-  margin-top: .15rem;
+  margin-top: 0.15rem;
 }
 
 · SCSS Copiar // ── APLICAÇÕES DISPONÍVEIS ────────────────────────────────
@@ -227,7 +227,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 
@@ -247,13 +247,13 @@
   border: 1px solid var(--border);
   overflow: hidden;
   flex-direction: column;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
-  transition: all .3s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
   cursor: pointer;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -268,7 +268,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform .4s;
+    transition: transform 0.4s;
   }
 
   &:hover img {
@@ -286,7 +286,7 @@
   background: #fff;
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: 0.3rem;
 
   h6 {
     font-weight: 800;
@@ -296,7 +296,7 @@
   }
 
   p {
-    font-size: .85rem;
+    font-size: 0.85rem;
     color: var(--muted);
     margin: 0;
   }
@@ -306,7 +306,7 @@
 .apps-dots {
   display: flex;
   justify-content: center;
-  gap: .6rem;
+  gap: 0.6rem;
 }
 
 .apps-dot {
@@ -315,7 +315,9 @@
   border-radius: 50%;
   background: #c8cdd8;
   cursor: pointer;
-  transition: background .25s, transform .25s;
+  transition:
+    background 0.25s,
+    transform 0.25s;
 
   &.active {
     background: #004aad;
@@ -325,11 +327,9 @@
 
 //H2
 .title {
-
   text-align: center;
   font-size: 48px;
   font-weight: 900;
   color: #004aad;
   margin-bottom: 3rem;
-
 }
