@@ -24,15 +24,6 @@ export class ClientesComponent implements AfterViewInit {
         { nome: 'Pool Eletrica', desc: 'A Pool Elétrica é uma loja especializada no comércio varejista e atacadista de materiais elétricos, ferramentas, máquinas e equipamentos.', logo: '/assets/images/clientes/pool.svg' },
       ]
     },
-    // {
-    //   nome: 'Supermercados',
-    //   cor: '#0099e5',
-    //   desc: 'Supermercados e redes de varejo alimentar que confiam no Sistema A7.',
-    //   clientes: [
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //   ]
-    // },
     {
       nome: 'Materiais de Construção',
       cor: '#00b37e',
@@ -40,14 +31,18 @@ export class ClientesComponent implements AfterViewInit {
       clientes: [
         { nome: 'Grupo Tintão', desc: 'Maior Home Center do Norte do País!', logo: '/assets/images/clientes/tintao.svg' },
         { nome: 'Castelinho Materiais de Construção', desc: 'A maior marca de materiais de construção de Manaus!', logo: '/assets/images/clientes/castelinho.png' },
-
+        { nome: 'Grupo Tintão', desc: 'Maior Home Center do Norte do País!', logo: '/assets/images/clientes/tintao.svg' },
+        { nome: 'Castelinho Materiais de Construção', desc: 'A maior marca de materiais de construção de Manaus!', logo: '/assets/images/clientes/castelinho.png' },
       ]
     },
     {
-      nome: 'Food Service',
+      nome: 'Farmácias e Drogarias',
       cor: '#f97316',
-      desc: 'Restaurantes, padarias e estabelecimentos de food service atendidos pela SIAH.',
+      desc: 'Farmácias e drogarias atendidos pela SIAH.',
       clientes: [
+        { nome: 'Panificadora Cintia', desc: 'A Panificadora Cíntia é uma das padarias mais tradicionais de Manaus, com mais de 45 anos de história.', logo: '/assets/images/clientes/cynthia.png' },
+        { nome: 'Panificadora Cintia', desc: 'A Panificadora Cíntia é uma das padarias mais tradicionais de Manaus, com mais de 45 anos de história.', logo: '/assets/images/clientes/cynthia.png' },
+        { nome: 'Panificadora Cintia', desc: 'A Panificadora Cíntia é uma das padarias mais tradicionais de Manaus, com mais de 45 anos de história.', logo: '/assets/images/clientes/cynthia.png' },
         { nome: 'Panificadora Cintia', desc: 'A Panificadora Cíntia é uma das padarias mais tradicionais de Manaus, com mais de 45 anos de história.', logo: '/assets/images/clientes/cynthia.png' },
       ]
     },
@@ -58,6 +53,19 @@ export class ClientesComponent implements AfterViewInit {
       clientes: [
         { nome: 'Importadora São Luiz', desc: 'A Importadora São Luiz é Referência para o Comércio Musical.', logo: '/assets/images/clientes/saoluiz.png' },
         { nome: 'Importadora Luanjo', desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.', logo: '/assets/images/clientes/luanjo.svg' },
+        { nome: 'Importadora São Luiz', desc: 'A Importadora São Luiz é Referência para o Comércio Musical.', logo: '/assets/images/clientes/saoluiz.png' },
+        { nome: 'Importadora Luanjo', desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.', logo: '/assets/images/clientes/luanjo.svg' },
+      ]
+    },
+    {
+      nome: 'Serviços',
+      cor: '#e11d48',
+      desc: 'Pequenas e médias indústrias que modernizaram sua gestão com as soluções da SIAH.',
+      clientes: [
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
       ]
     },
     {
@@ -65,6 +73,30 @@ export class ClientesComponent implements AfterViewInit {
       cor: '#e11d48',
       desc: 'Pequenas e médias indústrias que modernizaram sua gestão com as soluções da SIAH.',
       clientes: [
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
+      ]
+    },
+    {
+      nome: 'Supermercado',
+      cor: '#e11d48',
+      desc: 'Pequenas e médias indústrias que modernizaram sua gestão com as soluções da SIAH.',
+      clientes: [
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
+      ]
+    },
+    {
+      nome: 'Marinas',
+      cor: '#e11d48',
+      desc: 'Pequenas e médias indústrias que modernizaram sua gestão com as soluções da SIAH.',
+      clientes: [
+        { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
+        { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
         { nome: 'Ponto da Camisa & Malharia', desc: 'É uma empresa especializada em personalização de camisetas, uniformes, brindes e peças exclusivas. Atua há anos entregando qualidade, criatividade e um atendimento próximo para clientes de todo o Brasil.', logo: 'assets/images/clientes/pontodacamisa.png' },
         { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
       ]
