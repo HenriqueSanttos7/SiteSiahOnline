@@ -86,7 +86,7 @@ export class ClientesComponent implements AfterViewInit {
       clientes: [
         { nome: 'Importadora São Luiz',
           desc: 'A Importadora São Luiz é Referência para o Comércio Musical.',
-          logo: '/assets/images/clientes/saoluiz.png' },
+          logo: '/assets/images/clientes/imp_sao_luiz.svg' },
 
         { nome: 'Importadora Luanjo',
           desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.',
@@ -102,8 +102,13 @@ export class ClientesComponent implements AfterViewInit {
         { nome: 'Marina do Davi', 
           desc: 'A Marina do Davi é uma marina localizada em Manaus, especializada em serviços de ancoragem, manutenção e suporte para embarcações de lazer e comerciais.', 
           logo: '/assets/images/clientes/marina_davi.png' },
+
+        { nome: 'Marina Tauá', 
+          desc: 'A Marina Tauá é uma tradicional marina e náutica localizada na região da Ponta Negra, em Manaus, especializada na guarda e manutenção de barcos, lanchas e jet-skis.', 
+          logo: '/assets/images/clientes/marina_taua.svg' },
       ]
     },
+    
   ];
 
   ngAfterViewInit(): void {
