@@ -17,12 +17,12 @@ export class SobreComponent implements AfterViewInit {
   [x: string]: any;
 
  segments = [
-    { icon: 'fas fa-store', label: 'Varejo em Geral', cls: 'sc1', slug: 'varejo' },
+    { icon: 'fas fa-store', label: 'Atacarejo', cls: 'sc1', slug: 'atacarejo' },
     { icon: 'fas fa-hard-hat', label: 'Materiais de Construção', cls: 'sc2', slug: 'materiais-construcao' },
     { icon: 'fas fa-prescription-bottle', label: 'Farmácias e Drogarias', cls: 'sc5', slug: 'farmacias-drogarias' },
-    { icon: 'fas fa-boxes-stacked', label: 'Importadoras', cls: 'sc3', slug: 'importadoras' },
-    { icon: 'fas fa-utensils', label: 'Empresas de Serviços', cls: 'sc4', slug: 'food-service' },
-    { icon: 'fas fa-industry', label: 'Pequenas e Médias Indústrias', cls: 'sc5', slug: 'pequenas-industrias' },
+    //{ icon: 'fas fa-boxes-stacked', label: '', cls: 'sc3', slug: 'importadoras' },
+    { icon: 'fas fa-utensils', label: 'Serviços', cls: 'sc4', slug: 'servicos' },
+    { icon: 'fas fa-industry', label: 'Indústrias', cls: 'sc5', slug: 'industrias' },
     { icon: 'fas fa-shopping-cart', label: 'Supermercados', cls: 'sc6', slug: 'supermercados' },
     { icon: 'fas fa-ship', label: 'Marinas', cls: 'sc1', slug: 'marinas' },
   ];
