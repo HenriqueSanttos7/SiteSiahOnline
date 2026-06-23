@@ -22,8 +22,8 @@
 
     <div *ngFor="let dept of empresa.departamentos" class="parceiros-dept reveal">
       <h4 class="parceiros-dept__title">{{ dept.nome }}</h4>
-      <div class="parceiros-grid">
-        <div *ngFor="let p of dept.pessoas" class="parceiro-card">
+      <div class="parceiros-grid colab-grid">
+        <div *ngFor="let p of dept.pessoas" class="parceiro-card colab">
           <div class="parceiro-card__logo colab-logo" [style.border-color]="empresa.cor">
             <img [src]="p.foto" [alt]="p.nome"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">

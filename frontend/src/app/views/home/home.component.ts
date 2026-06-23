@@ -23,12 +23,12 @@ export class HomeComponent implements AfterViewInit {
   clients = [
     { nome: 'Grupo Tintão', img: 'tintao.svg' },
     { nome: 'Mirai', img: 'mirai.svg' },
-    { nome: 'Grupo Baiano', img: 'baiano.svg' },
-    { nome: 'Panif. Cynthia', img: 'cynthia.png' },
+    { nome: 'Grupo Baiano', img: 'lojas_baiano.svg' },
+    // { nome: 'Panif. Cynthia', img: 'cynthia.png' },
     // { nome:'Amaz. Eletromec.',img:'eletromec.png' },
-    { nome: 'Grupo Pool', img: 'pool.svg' },
-    // { nome:'Import. São Luiz',img:'saoluiz.png' },
-    { nome: 'Livraria Lira', img: 'lira.svg' },
+    { nome: 'Grupo Pool', img: 'pool_eletrica.svg' },
+    { nome:'Castelinho',img:'castelinho.svg' },
+    { nome: 'Livraria Lira', img: 'livraria_lira.svg' },
     // { nome:'Import. Luanjo',  img:'luanjo.svg' },
   ];
   ngAfterViewInit(): void { const o = new IntersectionObserver(e => { e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }); }, { threshold: .1 }); document.querySelectorAll('.reveal').forEach(el => o.observe(el)); }
