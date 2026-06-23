@@ -35,15 +35,6 @@ export class ClientesComponent implements AfterViewInit {
           logo: '/assets/images/clientes/pool_eletrica.svg' },
       ]
     },
-    // {
-    //   nome: 'Supermercados',
-    //   cor: '#0099e5',
-    //   desc: 'Supermercados e redes de varejo alimentar que confiam no Sistema A7.',
-    //   clientes: [
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //   ]
-    // },
     {
       nome: 'Materiais de Construção',
       cor: '#00b37e',
@@ -67,9 +58,9 @@ export class ClientesComponent implements AfterViewInit {
       ]
     },
     {
-      nome: 'Food Service',
+      nome: 'Farmácias e Drogarias',
       cor: '#f97316',
-      desc: 'Restaurantes, padarias e estabelecimentos de food service atendidos pela SIAH.',
+      desc: 'Farmácias e drogarias atendidos pela SIAH.',
       clientes: [
         { nome: 'Dona Rita',
           desc: 'A Dona Rita é uma padaria, café e mercearia tradicional localizada no bairro Flores, em Manaus. Ponto de conveniência para compras rápidas e refeições informais.',
@@ -113,15 +104,6 @@ export class ClientesComponent implements AfterViewInit {
           logo: '/assets/images/clientes/marina_davi.png' },
       ]
     },
-    // {
-    //   nome: 'Pequenas Indústrias',
-    //   cor: '#e11d48',
-    //   desc: 'Pequenas indústrias que modernizaram sua gestão com as soluções da SIAH.',
-    //   clientes: [
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //     { nome: 'Nome do Cliente', desc: 'Descrição breve do cliente e segmento de atuação.', logo: 'assets/images/clientes/cliente.png' },
-    //   ]
-    // },
   ];
 
   ngAfterViewInit(): void {

@@ -1,10 +1,11 @@
 // ── Navbar base ───────────────────────────────────────────
 .navbar {
-  background: #000000;
+  background: #fff;
   height: 80px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 
   &__inner {
     height: 100%;
@@ -57,21 +58,13 @@
   height: 80px;
   display: flex;
   align-items: center;
-
-  &:hover .nav-drop {
-    display: flex;
-  }
-
-  &:hover .chev {
-    transform: rotate(180deg);
-  }
 }
 
 .nav-link {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #fff;
+  color: #0d2b6b;
   font-size: 16px;
   font-weight: 500;
   padding: 0 21px;
@@ -100,7 +93,11 @@
 .chev {
   font-size: 0.62rem;
   margin-top: 1px;
-  transition: transform 0.2s;
+  transition: transform .2s;
+
+  &.rotated {
+    transform: rotate(180deg);
+  }
 }
 
 // ── Nav drop — todos largura total ────────────────────────
@@ -110,12 +107,16 @@
   top: 80px;
   left: 0;
   right: 0;
-  background: #fff;
-  border-top: 3px solid #00b4d8;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  background: #f4f6fb;
+  // border-top: 3px solid #00b4d8;
+  //box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
   z-index: 999;
   flex-direction: row;
   padding: 24px 0;
+
+  &.show {
+    display: flex;
+  }
 }
 
 // ── Container interno dos drops ───────────────────────────
@@ -134,7 +135,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 15px;
+  padding: 5px 10px;
   border-radius: 10px;
   font-weight: 700;
   font-size: 0.95rem;
@@ -311,7 +312,7 @@
 .drop-col-title {
   font-size: 15px;
   font-weight: 800;
-  color: #00b4d8;
+  color: #5a6480;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 14px;
@@ -361,17 +362,18 @@
 // ── Mobile menu ───────────────────────────────────────────
 .mob-menu {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: #111418;
   z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
   transform: translateX(100%);
-  transition: transform 0.3s;
+  visibility: hidden;
 
   &.open {
     transform: translateX(0);
+    visibility: visible;
   }
 }
 
@@ -448,10 +450,14 @@
   .nav-mob-toggle {
     display: block;
   }
+
+  .nav-drop {
+    display: none !important;
+  }
 }
 
 .mob-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
 
   &.open .mob-sub {
     display: flex;
@@ -469,15 +475,15 @@
   padding: 16px 0;
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, .85);
   font-weight: 600;
   font-size: 1.05rem;
   cursor: pointer;
   font-family: inherit;
 
   i {
-    font-size: 0.62rem;
-    transition: transform 0.2s;
+    font-size: .62rem;
+    transition: transform .2s;
   }
 }
 
@@ -489,15 +495,16 @@
 
   a {
     padding: 10px 0;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, .6);
+    font-size: .95rem;
     font-weight: 500;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, .04);
 
     &:last-of-type {
       border-bottom: none;
     }
+
     &:hover {
       color: #00b4d8;
     }
@@ -511,8 +518,8 @@
 
 .mob-info {
   padding: 6px 0;
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, .45);
+  font-size: .85rem;
 }
 
 .sol-logo {

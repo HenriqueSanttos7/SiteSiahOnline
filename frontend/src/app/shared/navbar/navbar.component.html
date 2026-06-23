@@ -2,7 +2,7 @@
   <div class="navbar__inner container">
     <a routerLink="/" class="navbar__logo" (click)="close()">
       <img
-        src="/assets/images/logo.svg"
+        src="/assets/images/SIAH.svg"
         alt="SIAH"
         class="navbar__logo-img"
         onerror="
@@ -13,95 +13,23 @@
     </a>
     <div class="navbar__center">
       <!-- Segmentos -->
-      <div class="nav-item">
-        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev"></i></a>
-        <div class="nav-drop drop-segmentos">
-          <div class="drop-inner">
-            <a [routerLink]="['/segmentos', 'varejo']" (click)="close()" class="seg-btn sc1">Varejo em Geral</a>
-            <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()" class="seg-btn sc2">Materiais de Construção</a>
-            <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()" class="seg-btn sc3">Importadoras</a>
-            <a [routerLink]="['/segmentos', 'food-service']" (click)="close()" class="seg-btn sc4">Food Service</a>
-            <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()" class="seg-btn sc5">Pequenas Indústrias</a>
-            <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()" class="seg-btn sc6">Supermercados</a>
-          </div>
-        </div>
+      <div class="nav-item" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
+        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'segmentos'"></i></a>
       </div>
 
       <!-- Soluções -->
-      <div class="nav-item">
-        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev"></i></a>
-        <div class="nav-drop drop-solucoes">
-          <div class="drop-inner">
-            <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
-              <img src="/assets/images/logo_siahsoft.svg" alt="SIAHSoft" class="sol-logo" />
-              <span>
-                <strong>SIAH Soft</strong>
-                <small>Sistema de Gestão</small>
-              </span>
-            </a>
-            <a routerLink="/siah-cert" (click)="close()" class="sc2 sol-btn">
-              <img src="/assets/images/logo_siahcert.svg" alt="SIAHCert" class="sol-logo" />
-              <span>
-                <strong>SIAH Cert</strong>
-                <small>Certificado Digital</small>
-              </span>
-            </a>
-            <a routerLink="/siah-tech" (click)="close()" class="sc3 sol-btn">
-              <img src="/assets/images/logo_siahtech.svg" alt="SIAHTech" class="sol-logo" />
-              <span>
-                <strong>SIAH Tech</strong>
-                <small>Assistência Técnica</small>
-              </span>
-            </a>
-          </div>
-        </div>
+      <div class="nav-item" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
+        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'solucoes'"></i></a>
       </div>
 
       <!-- Sobre -->
-      <div class="nav-item">
-        <a class="nav-link">Sobre <i class="fas fa-chevron-down chev"></i></a>
-        <div class="nav-drop drop-sobre">
-          <div class="drop-inner">
-            <div class="drop-col">
-              <p class="drop-col-title">Institucional</p>
-              <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
-              <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
-            </div>
-            <div class="drop-col-divider"></div>
-            <div class="drop-col">
-              <p class="drop-col-title">Parcerias</p>
-              <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
-            </div>
-          </div>
-        </div>
+      <div class="nav-item" (mouseenter)="openDrop('sobre')" (mouseleave)="closeDrop()">
+        <a class="nav-link">Sobre <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'sobre'"></i></a>
       </div>
 
       <!-- Suporte -->
-      <div class="nav-item">
-        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev"></i></a>
-        <div class="nav-drop drop-suporte">
-          <div class="drop-inner">
-            <div class="drop-suporte-wpp">
-              <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
-              <a href="https://wa.me/5592981826512" target="_blank" class="sol-btn sc2">
-                <i class="fab fa-whatsapp"></i>
-                <span><strong>Suporte via WhatsApp</strong><small>(92) 98182-6512</small></span>
-              </a>
-            </div>
-            <div class="drop-col-divider"></div>
-            <div class="drop-suporte-horarios">
-              <p class="drop-col-title">Horário de Atendimento</p>
-              <p><strong>Seg a Sex</strong> — 7:30 às 17:30</p>
-            </div>
-            <div class="drop-suporte-horarios">
-              <p class="drop-col-title">Contatos</p>
-              <p><strong>Telefone: </strong>(92) 3345-7707</p>
-              <p><strong>SIAH Soft: </strong>(92) 98182-6512</p>
-              <p><strong>SIAH Tech: </strong>(92) 99394-7451</p>
-              <p><strong>SIAH Cert: </strong>(92) 99391-9956</p>
-            </div>
-          </div>
-        </div>
+      <div class="nav-item" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
+        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'suporte'"></i></a>
       </div>
     </div>
     <div class="navbar__right">
@@ -113,11 +41,95 @@
   </div>
 </nav>
 
+<!-- ───────── Dropdowns (fora da navbar, irmãos) ───────── -->
+
+<!-- Drop Segmentos -->
+<div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
+  <div class="drop-inner">
+    <a [routerLink]="['/segmentos', 'varejo']" (click)="close()" class="seg-btn sc1">Varejo em Geral</a>
+    <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()" class="seg-btn sc2">Materiais de Construção</a>
+    <a [routerLink]="['/segmentos', 'farmacias-drogarias']" (click)="close()" class="seg-btn sc3">Farmácias e Drogarias</a>
+    <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()" class="seg-btn sc3">Importadoras</a>
+    <a [routerLink]="['/segmentos', 'serviços']" (click)="close()" class="seg-btn sc4">Empresas de Serviços</a>
+    <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()" class="seg-btn sc5">Pequenas Indústrias</a>
+    <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()" class="seg-btn sc6">Supermercados</a>
+    <a [routerLink]="['/segmentos', 'marinas']" (click)="close()" class="seg-btn sc6">Marinas</a>
+  </div>
+</div>
+
+<!-- Drop Soluções -->
+<div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
+  <div class="drop-inner">
+    <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
+      <img src="/assets/images/logo_siahsoft.svg" alt="SIAHSoft" class="sol-logo" />
+      <span>
+        <strong>SIAH Soft</strong>
+        <small>Sistema de Gestão</small>
+      </span>
+    </a>
+    <a routerLink="/siah-cert" (click)="close()" class="sc3 sol-btn">
+      <img src="/assets/images/logo_siahcert.svg" alt="SIAHCert" class="sol-logo" />
+      <span>
+        <strong>SIAH Cert</strong>
+        <small>Certificado Digital</small>
+      </span>
+    </a>
+    <a routerLink="/siah-tech" (click)="close()" class="sc2 sol-btn">
+      <img src="/assets/images/logo_siahtech.svg" alt="SIAHTech" class="sol-logo" />
+      <span>
+        <strong>SIAH Tech</strong>
+        <small>Assistência Técnica</small>
+      </span>
+    </a>
+  </div>
+</div>
+
+<!-- Drop Sobre -->
+<div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')" (mouseleave)="closeDrop()">
+  <div class="drop-inner">
+    <div class="drop-col">
+      <p class="drop-col-title">Institucional</p>
+      <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
+      <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
+    </div>
+    <div class="drop-col-divider"></div>
+    <div class="drop-col">
+      <p class="drop-col-title">Parcerias</p>
+      <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
+    </div>
+  </div>
+</div>
+
+<!-- Drop Suporte -->
+<div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
+  <div class="drop-inner">
+    <div class="drop-suporte-wpp">
+      <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
+      <a href="https://wa.me/5592981826512" target="_blank" class="sol-btn sc2">
+        <i class="fab fa-whatsapp"></i>
+        <span><strong>Suporte via WhatsApp</strong><small>(92) 98182-6512</small></span>
+      </a>
+    </div>
+    <div class="drop-col-divider"></div>
+    <div class="drop-suporte-horarios">
+      <p class="drop-col-title">Horário de Atendimento</p>
+      <p><strong>Seg a Sex</strong> — 7:30h às 17:30h</p>
+    </div>
+    <div class="drop-suporte-horarios">
+      <p class="drop-col-title">Contatos</p>
+      <p><strong>Telefone: </strong>(92) 3345-7707</p>
+      <p><strong>SIAH Soft: </strong>(92) 98182-6512</p>
+      <p><strong>SIAH Tech: </strong>(92) 99394-7451</p>
+      <p><strong>SIAH Cert: </strong>(92) 99391-9956</p>
+    </div>
+  </div> 
+</div>
+
 <div class="mob-menu" [class.open]="mobileOpen">
   <div class="mob-header">
     <div class="mob-logo-wrap">
       <img
-        src="assets/images/logo.png"
+        src=""
         alt="SIAH"
         class="mob-logo-img"
         onerror="
