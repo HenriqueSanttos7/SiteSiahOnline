@@ -14,6 +14,42 @@ export class NavbarComponent {
   mobOpen: string = '';
   activeDrop: string | null = null;
 
+  segmentos = [
+    { label: 'Varejo em Geral', route: ['/segmentos', 'varejo'], class: 'sc1' },
+    { label: 'Materiais de Construção', route: ['/segmentos', 'materiais-construcao'], class: 'sc2' },
+    { label: 'Farmácias e Drogarias', route: ['/segmentos', 'farmacias-drogarias'], class: 'sc3' },
+    { label: 'Importadoras', route: ['/segmentos', 'importadoras'], class: 'sc3' },
+    { label: 'Empresas de Serviços', route: ['/segmentos', 'serviços'], class: 'sc4' },
+    { label: 'Pequenas Indústrias', route: ['/segmentos', 'pequenas-industrias'], class: 'sc5' },
+    { label: 'Supermercados', route: ['/segmentos', 'supermercados'], class: 'sc6' },
+    { label: 'Marinas', route: ['/segmentos', 'marinas'], class: 'sc6' }
+  ];
+
+  solucoes = [
+    { label: 'SIAH Soft', route: '/siah-soft', class: 'sc1', img: '/assets/images/logo_siahsoft.svg', desc: 'Sistema de Gestão' },
+    { label: 'SIAH Cert', route: '/siah-cert', class: 'sc2', img: '/assets/images/logo_siahcert.svg', desc: 'Certificado Digital' },
+    { label: 'SIAH Tech', route: '/siah-tech', class: 'sc3', img: '/assets/images/logo_siahtech.svg', desc: 'Assistência Técnica' }
+  ];
+
+  sobre = {
+    institucional: [
+      { label: 'Sobre a SIAH', route: '/sobre' },
+      { label: 'Nossa Equipe', route: '/equipe' }
+    ],
+    parcerias: [
+      { label: 'Nossos Clientes', route: '/clientes' }
+    ]
+  };
+
+  contatos = {
+    wppLink: 'https://wa.me/5592981826512',
+    wppNumero: '(92) 98182-6512',
+    telefone: '(92) 3345-7707',
+    siahTech: '(92) 99394-7451',
+    siahCert: '(92) 99391-9956 | (92) 9394-6188',
+    horario: 'Seg a Sex — 7:30h às 17:30h'
+  };
+
   toggle(): void { this.mobileOpen = !this.mobileOpen; }
   close(): void { this.mobileOpen = false; this.mobOpen = ''; }
   mobToggle(key: string): void { this.mobOpen = this.mobOpen === key ? '' : key; }

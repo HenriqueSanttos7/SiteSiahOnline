@@ -41,27 +41,18 @@
   </div>
 </nav>
 
-<!-- ───────── Dropdowns (fora da navbar, irmãos) ───────── -->
-
-<!-- Drop Segmentos -->
 <div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
-    <a [routerLink]="['/segmentos', 'varejo']" (click)="close()" class="seg-btn sc1">Varejo em Geral</a>
-    <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()" class="seg-btn sc2">Materiais de Construção</a>
-    <a [routerLink]="['/segmentos', 'farmacias-drogarias']" (click)="close()" class="seg-btn sc3">Farmácias e Drogarias</a>
-    <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()" class="seg-btn sc3">Importadoras</a>
-    <a [routerLink]="['/segmentos', 'serviços']" (click)="close()" class="seg-btn sc4">Empresas de Serviços</a>
-    <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()" class="seg-btn sc5">Pequenas Indústrias</a>
-    <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()" class="seg-btn sc6">Supermercados</a>
-    <a [routerLink]="['/segmentos', 'marinas']" (click)="close()" class="seg-btn sc6">Marinas</a>
+    <a *ngFor="let seg of segmentos" [routerLink]="seg.route" (click)="close()" class="seg-btn" [ngClass]="seg.class">
+      {{ seg.label }}
+    </a>
   </div>
 </div>
 
-<!-- Drop Soluções -->
 <div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
-    <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
-      <img src="/assets/images/logo_siahsoft.svg" alt="SIAHSoft" class="sol-logo" />
+    <a *ngFor="let sol of solucoes" [routerLink]="sol.route" (click)="close()" class="sol-btn" [ngClass]="sol.class">
+      <img [src]="sol.img" [alt]="sol.label" class="sol-logo" />
       <span>
         <strong>SIAH Soft</strong>
         <small>Sistema de Gestão</small>
@@ -84,36 +75,33 @@
   </div>
 </div>
 
-<!-- Drop Sobre -->
 <div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-col">
       <p class="drop-col-title">Institucional</p>
-      <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
-      <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
+      <a *ngFor="let inst of sobre.institucional" [routerLink]="inst.route" (click)="close()">{{ inst.label }}</a>
     </div>
     <div class="drop-col-divider"></div>
     <div class="drop-col">
       <p class="drop-col-title">Parcerias</p>
-      <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
+      <a *ngFor="let parc of sobre.parcerias" [routerLink]="parc.route" (click)="close()">{{ parc.label }}</a>
     </div>
   </div>
 </div>
 
-<!-- Drop Suporte -->
 <div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-suporte-wpp">
       <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
       <a href="https://wa.me/5592981826512" target="_blank" class="sol-btn sc2">
         <i class="fab fa-whatsapp"></i>
-        <span><strong>Suporte via WhatsApp</strong><small>(92) 98182-6512</small></span>
+        <span><strong>Suporte via WhatsApp</strong><small>{{ contatos.wppNumero }}</small></span>
       </a>
     </div>
     <div class="drop-col-divider"></div>
     <div class="drop-suporte-horarios">
       <p class="drop-col-title">Horário de Atendimento</p>
-      <p><strong>Seg a Sex</strong> — 7:30h às 17:30h</p>
+      <p><strong>{{ contatos.horario }}</strong></p>
     </div>
     <div class="drop-suporte-horarios">
       <p class="drop-col-title">Contatos</p>
@@ -129,7 +117,7 @@
   <div class="mob-header">
     <div class="mob-logo-wrap">
       <img
-        src=""
+        src="/assets/images/SIAH.svg"
         alt="SIAH"
         class="mob-logo-img"
         onerror="
@@ -142,47 +130,35 @@
     <button class="mob-close" (click)="close()"><i class="fas fa-times"></i></button>
   </div>
   <ul class="mob-list">
-    <!-- Segmentos -->
     <li class="mob-item" [class.open]="mobOpen === 'seg'">
       <button class="mob-toggle" (click)="mobToggle('seg')">Segmentos <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
-        <a [routerLink]="['/segmentos', 'varejo']" (click)="close()">Varejo em Geral</a>
-        <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()">Materiais de Construção</a>
-        <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()">Importadoras</a>
-        <a [routerLink]="['/segmentos', 'food-service']" (click)="close()">Food Service</a>
-        <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()">Pequenas Indústrias</a>
-        <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()">Supermercados</a>
+        <a *ngFor="let seg of segmentos" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
       </div>
     </li>
 
-    <!-- Soluções -->
     <li class="mob-item" [class.open]="mobOpen === 'sol'">
       <button class="mob-toggle" (click)="mobToggle('sol')">Soluções <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
-        <a routerLink="/siah-soft" (click)="close()">SIAH Soft</a>
-        <a routerLink="/siah-cert" (click)="close()">SIAH Cert</a>
-        <a routerLink="/siah-tech" (click)="close()">SIAH Tech</a>
+        <a *ngFor="let sol of solucoes" [routerLink]="sol.route" (click)="close()">{{ sol.label }}</a>
       </div>
     </li>
 
-    <!-- Sobre -->
     <li class="mob-item" [class.open]="mobOpen === 'sobre'">
       <button class="mob-toggle" (click)="mobToggle('sobre')">Sobre <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
-        <a routerLink="/sobre" (click)="close()">Sobre a SIAH</a>
-        <a routerLink="/equipe" (click)="close()">Nossa Equipe</a>
-        <a routerLink="/clientes" (click)="close()">Nossos Clientes</a>
+        <a *ngFor="let inst of sobre.institucional" [routerLink]="inst.route" (click)="close()">{{ inst.label }}</a>
+        <a *ngFor="let parc of sobre.parcerias" [routerLink]="parc.route" (click)="close()">{{ parc.label }}</a>
       </div>
     </li>
 
-    <!-- Suporte -->
     <li class="mob-item" [class.open]="mobOpen === 'sup'">
       <button class="mob-toggle" (click)="mobToggle('sup')">Suporte <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
-        <a href="https://wa.me/5592981826512" target="_blank"> <i class="fab fa-whatsapp"></i> WhatsApp: (92) 98182-6512 </a>
-        <span class="mob-info">Seg a Sex — 8h às 18h</span>
-        <span class="mob-info">SIAH Tech: (92) 99394-7451</span>
-        <span class="mob-info">SIAH Cert: (92) 99391-9956</span>
+        <a [href]="contatos.wppLink" target="_blank"> <i class="fab fa-whatsapp"></i> WhatsApp: {{ contatos.wppNumero }} </a>
+        <span class="mob-info">{{ contatos.horario }}</span>
+        <span class="mob-info">SIAH Tech: {{ contatos.siahTech }}</span>
+        <span class="mob-info">SIAH Cert: {{ contatos.siahCert }}</span>
       </div>
     </li>
   </ul>
