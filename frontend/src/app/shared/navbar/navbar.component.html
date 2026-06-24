@@ -51,8 +51,8 @@
 
 <div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
-    <a *ngFor="let sol of solucoes" [routerLink]="sol.route" (click)="close()" class="sol-btn" [ngClass]="sol.class">
-      <img [src]="sol.img" [alt]="sol.label" class="sol-logo" />
+    <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
+      <img src="/assets/images/logo_siahsoft.svg" alt="SIAH Soft" class="sol-logo" />
       <span>
         <strong>SIAH Soft</strong>
         <small>Sistema de Gestão</small>
@@ -93,7 +93,7 @@
   <div class="drop-inner">
     <div class="drop-suporte-wpp">
       <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
-      <a href="https://wa.me/5592981826512" target="_blank" class="sol-btn sc4">
+      <a href="https://wa.me/5592981826512" target="_blank" class="sol-btn sc1">
         <i class="fab fa-whatsapp"></i>
         <span><strong>Suporte via WhatsApp</strong><small>{{ contatos.wppNumero }}</small></span>
       </a>
@@ -105,10 +105,10 @@
     </div>
     <div class="drop-suporte-horarios">
       <p class="drop-col-title">Contatos</p>
-      <p><strong>Telefone: </strong>(92) 3345-7707</p>
-      <p><strong>SIAH Soft: </strong>(92) 98182-6512</p>
-      <p><strong>SIAH Tech: </strong>(92) 99394-7451</p>
-      <p><strong>SIAH Cert: </strong>(92) 99391-9956 | (92) 9394-6188</p>
+      <p><strong>Telefone: </strong>{{ contatos.horario }}</p>
+      <p><strong>SIAH Soft: </strong>{{ contatos.siahSoft }}</p>
+      <p><strong>SIAH Tech: </strong>{{ contatos.siahTech }}</p>
+      <p><strong>SIAH Cert: </strong>{{ contatos.siahCert }}</p>
     </div>
   </div> 
 </div>
@@ -125,7 +125,6 @@
           this.nextElementSibling.style.display = 'block';
         "
       />
-      <span class="mob-logo">SIAH</span>
     </div>
     <button class="mob-close" (click)="close()"><i class="fas fa-times"></i></button>
   </div>
@@ -155,10 +154,11 @@
     <li class="mob-item" [class.open]="mobOpen === 'sup'">
       <button class="mob-toggle" (click)="mobToggle('sup')">Suporte <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
-        <a [href]="contatos.wppLink" target="_blank"> <i class="fab fa-whatsapp"></i> WhatsApp: {{ contatos.wppNumero }} </a>
-        <span class="mob-info">{{ contatos.horario }}</span>
-        <span class="mob-info">SIAH Tech: {{ contatos.siahTech }}</span>
-        <span class="mob-info">SIAH Cert: {{ contatos.siahCert }}</span>
+        <span class="mob-info"> <strong>Horário de Atendimento: </strong>{{ contatos.horario }}</span>
+        <span class="mob-info"> <strong>Telefone: </strong>{{ contatos.telefone }}</span>
+        <span class="mob-info"> <strong>SIAH Soft: </strong>{{ contatos.siahSoft }}</span>
+        <span class="mob-info"> <strong>SIAH Tech: </strong>{{ contatos.siahTech }}</span>
+        <span class="mob-info"> <strong>SIAH Cert: </strong>{{ contatos.siahCert }}</span>
       </div>
     </li>
   </ul>

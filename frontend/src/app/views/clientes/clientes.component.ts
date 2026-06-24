@@ -58,7 +58,7 @@ export class ClientesComponent implements AfterViewInit {
       ]
     },
     {
-      nome: 'Farmácias e Drogarias',
+      nome: 'Panificadores e Confeitarias',
       cor: '#f97316',
       desc: 'Farmácias e drogarias atendidos pela SIAH.',
       clientes: [
@@ -99,9 +99,6 @@ export class ClientesComponent implements AfterViewInit {
       cor: '#013272',
       desc: 'Marinas e clubes náuticos que confiam no Sistema A7 para gestão de suas operações.',
       clientes: [
-        { nome: 'Marina do Davi', 
-          desc: 'A Marina do Davi é uma marina localizada em Manaus, especializada em serviços de ancoragem, manutenção e suporte para embarcações de lazer e comerciais.', 
-          logo: '/assets/images/clientes/marina_davi.png' },
 
         { nome: 'Marina Tauá', 
           desc: 'A Marina Tauá é uma tradicional marina e náutica localizada na região da Ponta Negra, em Manaus, especializada na guarda e manutenção de barcos, lanchas e jet-skis.', 

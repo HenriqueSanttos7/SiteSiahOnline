@@ -45,8 +45,9 @@ export class NavbarComponent {
     wppLink: 'https://wa.me/5592981826512',
     wppNumero: '(92) 98182-6512',
     telefone: '(92) 3345-7707',
+    siahSoft: '(92) 98182-6512',
     siahTech: '(92) 99394-7451',
-    siahCert: '(92) 99391-9956 | (92) 9394-6188',
+    siahCert: '(92) 99391-9956 | (92) 99394-6188',
     horario: 'Seg a Sex — 7:30h às 17:30h'
   };
 
