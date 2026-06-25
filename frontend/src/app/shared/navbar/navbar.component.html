@@ -1,25 +1,22 @@
 <nav class="navbar">
   <div class="navbar__inner container">
     <a routerLink="/" class="navbar__logo" (click)="close()">
-      <img
-        src="/assets/images/SIAH.svg"
-        alt="SIAH"
-        class="navbar__logo-img"
-        onerror="
+      <img src="/assets/images/SIAH.svg" alt="SIAH" class="navbar__logo-img" onerror="
           this.style.display = 'none';
           this.nextElementSibling.style.display = 'block';
-        "
-      />
+        " />
     </a>
     <div class="navbar__center">
       <!-- Segmentos -->
       <div class="nav-item" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'segmentos'"></i></a>
+        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev"
+            [class.rotated]="activeDrop === 'segmentos'"></i></a>
       </div>
 
       <!-- Soluções -->
       <div class="nav-item" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'solucoes'"></i></a>
+        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev"
+            [class.rotated]="activeDrop === 'solucoes'"></i></a>
       </div>
 
       <!-- Sobre -->
@@ -29,7 +26,8 @@
 
       <!-- Suporte -->
       <div class="nav-item" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'suporte'"></i></a>
+        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev"
+            [class.rotated]="activeDrop === 'suporte'"></i></a>
       </div>
     </div>
     <div class="navbar__right">
@@ -44,21 +42,24 @@
 <!-- ───────── Dropdowns (fora da navbar, irmãos) ───────── -->
 
 <!-- Drop Segmentos -->
-<div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
-    <a [routerLink]="['/segmentos', 'varejo']" (click)="close()" class="seg-btn sc1">Varejo em Geral</a>
+    <a [routerLink]="['/segmentos', 'atacarejo']" (click)="close()" class="seg-btn sc1">Atacarejo</a>
     <a [routerLink]="['/segmentos', 'materiais-construcao']" (click)="close()" class="seg-btn sc2">Materiais de Construção</a>
-    <a [routerLink]="['/segmentos', 'farmacias-drogarias']" (click)="close()" class="seg-btn sc3">Farmácias e Drogarias</a>
-    <a [routerLink]="['/segmentos', 'importadoras']" (click)="close()" class="seg-btn sc3">Importadoras</a>
-    <a [routerLink]="['/segmentos', 'serviços']" (click)="close()" class="seg-btn sc4">Empresas de Serviços</a>
-    <a [routerLink]="['/segmentos', 'pequenas-industrias']" (click)="close()" class="seg-btn sc5">Pequenas Indústrias</a>
+    <a [routerLink]="['/segmentos', 'distribuidoras']" (click)="close()" class="seg-btn sc3">Distribuidoras</a>
+    <a [routerLink]="['/segmentos', 'confeccao-calcados']" (click)="close()" class="seg-btn sc4">Confecções e Calçados</a>
+    <a [routerLink]="['/segmentos', 'farmacias-drogarias']" (click)="close()" class="seg-btn sc7">Farmácias e Drogarias</a>
+    <a [routerLink]="['/segmentos', 'servicos']" (click)="close()" class="seg-btn sc8">Serviços</a>
+    <a [routerLink]="['/segmentos', 'industrias']" (click)="close()" class="seg-btn sc5">Indústrias</a>
     <a [routerLink]="['/segmentos', 'supermercados']" (click)="close()" class="seg-btn sc6">Supermercados</a>
-    <a [routerLink]="['/segmentos', 'marinas']" (click)="close()" class="seg-btn sc6">Marinas</a>
+    <a [routerLink]="['/segmentos', 'marinas']" (click)="close()" class="seg-btn sc9">Marinas</a>
   </div>
 </div>
 
 <!-- Drop Soluções -->
-<div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
       <img src="/assets/images/logo_siahsoft.svg" alt="SIAHSoft" class="sol-logo" />
@@ -85,7 +86,8 @@
 </div>
 
 <!-- Drop Sobre -->
-<div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-col">
       <p class="drop-col-title">Institucional</p>
@@ -101,7 +103,8 @@
 </div>
 
 <!-- Drop Suporte -->
-<div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-suporte-wpp">
       <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
@@ -122,21 +125,16 @@
       <p><strong>SIAH Tech: </strong>(92) 99394-7451</p>
       <p><strong>SIAH Cert: </strong>(92) 99391-9956 | (92) 9394-6188</p>
     </div>
-  </div> 
+  </div>
 </div>
 
 <div class="mob-menu" [class.open]="mobileOpen">
   <div class="mob-header">
     <div class="mob-logo-wrap">
-      <img
-        src=""
-        alt="SIAH"
-        class="mob-logo-img"
-        onerror="
+      <img src="" alt="SIAH" class="mob-logo-img" onerror="
           this.style.display = 'none';
           this.nextElementSibling.style.display = 'block';
-        "
-      />
+        " />
       <span class="mob-logo">SIAH</span>
     </div>
     <button class="mob-close" (click)="close()"><i class="fas fa-times"></i></button>
@@ -179,7 +177,8 @@
     <li class="mob-item" [class.open]="mobOpen === 'sup'">
       <button class="mob-toggle" (click)="mobToggle('sup')">Suporte <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
-        <a href="https://wa.me/5592981826512" target="_blank"> <i class="fab fa-whatsapp"></i> WhatsApp: (92) 98182-6512 </a>
+        <a href="https://wa.me/5592981826512" target="_blank"> <i class="fab fa-whatsapp"></i> WhatsApp: (92) 98182-6512
+        </a>
         <span class="mob-info">Seg a Sex — 8h às 18h</span>
         <span class="mob-info">SIAH Tech: (92) 99394-7451</span>
         <span class="mob-info">SIAH Cert: (92) 99391-9956</span>

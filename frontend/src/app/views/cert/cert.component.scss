@@ -50,7 +50,7 @@
 
 .intro-feat-icon {
   font-size: 3rem;
-  color: #7c3aed;
+  color: #3b1999;
   flex-shrink: 0;
   width: 56px;
   text-align: center;
@@ -59,7 +59,7 @@
 .intro-feat-title {
   font-size: 24px;
   font-weight: 700;
-  color: #7c3aed;
+  color: #3b1999;
   line-height: 1.25;
   margin: 0;
 }
@@ -79,7 +79,7 @@
 }
 
 .highlight-card {
-  background: linear-gradient(135deg, #3b1999 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #3b1999 0%, #724cb1 100%);
   border-radius: 20px;
   padding: 56px 64px;
 
@@ -122,12 +122,12 @@
   min-width: 80px;
   min-height: 80px;
   border-radius: 16px;
-  border: 2.5px solid #7c3aed;
+  border: 2.5px solid #3b1999;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: #7c3aed;
+  color: #3b1999;
   flex-shrink: 0;
   align-self: center;
 }
@@ -135,7 +135,7 @@
 .modulo-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
-  color: #7c3aed;
+  color: #3b1999;
   line-height: 1.1;
   margin: 0;
   padding: 0;
@@ -160,14 +160,14 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 2px solid #7c3aed;
+  border: 2px solid #3b1999;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
 
-  i { font-size: .7rem; color: #7c3aed; }
+  i { font-size: .7rem; color: #3b1999; }
 }
 
 .modulo-item-title {
@@ -254,7 +254,7 @@
   align-items: center;
   justify-content: center;
   font-size: 2.2rem;
-  color: #7c3aed;
+  color: #3b1999;
   box-shadow: 0 4px 16px rgba(124,58,237,.15);
 }
 
@@ -299,7 +299,7 @@
   transition: background .25s, transform .25s;
 
   &.active {
-    background: #7c3aed;
+    background: #3b1999;
     transform: scale(1.25);
   }
 }

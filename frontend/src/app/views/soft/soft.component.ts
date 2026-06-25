@@ -28,7 +28,7 @@ export class SoftComponent implements AfterViewInit {
     { img: 'assets/images/soft/app-pdv.jpg', title: 'PDV Touch', sub: 'Ponto de Venda', slug: 'pdv-touch' },
     { img: 'assets/images/soft/app-expedicao.jpg', title: 'Expedição e Estoque', sub: 'Lançamento', slug: 'expedicao-estoque' },
     { img: 'assets/images/soft/app-navegacao.jpg', title: 'Navegação', sub: 'Lançamento em breve', slug: 'navegacao' },
-    { img: 'assets/images/soft/app-forca.jpg', title: 'Força de Venda', sub: 'Vendas Externas', slug: 'forca-de-venda' },
+    { img: 'assets/images/soft/app-forca.jpg', title: 'Força de Vendas', sub: 'Vendas Externas', slug: 'forca-de-venda' },
     { img: 'assets/images/soft/app-ecommerce.jpg', title: 'E-commerce', sub: 'Integrado ao A7', slug: 'e-commerce' },
   ];
 

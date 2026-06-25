@@ -11,14 +11,15 @@ import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
 })
 export class HomeComponent implements AfterViewInit {
   segments = [
-    { icon: 'fas fa-store', label: 'Atacarejo', cls: 'sc1', slug: 'atacarejo' },
+    { icon: 'fas fa-warehouse', label: 'Atacarejo', cls: 'sc1', slug: 'atacarejo' },
     { icon: 'fas fa-hard-hat', label: 'Materiais de Construção', cls: 'sc2', slug: 'materiais-construcao' },
-    { icon: 'fas fa-prescription-bottle', label: 'Farmácias e Drogarias', cls: 'sc5', slug: 'farmacias-drogarias' },
-    //{ icon: 'fas fa-boxes-stacked', label: '', cls: 'sc3', slug: 'importadoras' },
-    { icon: 'fas fa-utensils', label: 'Serviços', cls: 'sc4', slug: 'servicos' },
-    { icon: 'fas fa-industry', label: 'Indústrias', cls: 'sc5', slug: 'industrias' },
+    { icon: 'fas fa-truck', label: 'Distribuidoras', cls: 'sc3', slug: 'distribuidoras' },
+    { icon: 'fas fa-tshirt', label: 'Confecção e Calçados', cls: 'sc4', slug: 'confeccao-calcados' },
+    { icon: 'fas fa-pills', label: 'Farmácias e Drogarias', cls: 'sc7', slug: 'farmacias-drogarias' },
+    { icon: 'fas fa-briefcase', label: 'Serviços', cls: 'sc8', slug: 'servicos' },    
+    { icon: 'fas fa-industry', label: 'Indústrias', cls: 'sc5', slug: 'industrias' },    
     { icon: 'fas fa-shopping-cart', label: 'Supermercados', cls: 'sc6', slug: 'supermercados' },
-    { icon: 'fas fa-ship', label: 'Marinas', cls: 'sc1', slug: 'marinas' },
+    { icon: 'fas fa-ship', label: 'Marinas', cls: 'sc9', slug: 'marinas' },
   ];
   clients = [
     { nome: 'Grupo Tintão', img: 'tintao.svg' },
@@ -27,7 +28,7 @@ export class HomeComponent implements AfterViewInit {
     // { nome: 'Panif. Cynthia', img: 'cynthia.png' },
     // { nome:'Amaz. Eletromec.',img:'eletromec.png' },
     { nome: 'Grupo Pool', img: 'pool_eletrica.svg' },
-    { nome:'Castelinho',img:'castelinho.svg' },
+    { nome: 'Castelinho', img: 'castelinho.svg' },
     { nome: 'Livraria Lira', img: 'livraria_lira.svg' },
     // { nome:'Import. Luanjo',  img:'luanjo.svg' },
   ];
