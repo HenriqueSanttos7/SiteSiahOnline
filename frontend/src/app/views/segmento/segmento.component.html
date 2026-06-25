@@ -27,10 +27,7 @@
       O Sistema A7 tem a solução para cada um deles!
     </h2>
 
-    <div
-      *ngFor="let p of segmento.problemas; let i = index"
-      class="seg-problema reveal"
-      [class]="'d' + i"
+    <div *ngFor="let p of segmento.problemas; let i = index" class="seg-problema reveal" [class]="'d' + i"
       [style.background]="segmento.cor">
 
       <div class="seg-problema__top">
@@ -48,9 +45,33 @@
   </div>
 </section>
 
-<app-email-cta
-  [title]="'Pronto para transformar a gestão do seu ' + segmento.label + '?'"
-  subtitle="Fale com nosso time e agende uma demonstração gratuita do Sistema A7."
-  [showSelect]="false">
+<section class="seg-solucoes">
+  <div class="container">
+
+    <h2 class="seg-solucoes__title reveal">
+      Soluções que utilizamos neste segmento
+    </h2>
+
+    <div class="seg-solucoes__grid reveal d1">
+      <a *ngFor="let s of segmento.solucoes" [routerLink]="['/apps', s.slug]" class="seg-solucao-card">
+
+        <div class="seg-solucao-card__icon" [style.color]="segmento.cor">
+          <i [class]="s.icon"></i>
+        </div>
+
+        <div class="seg-solucao-card__body">
+          <strong>{{ s.nome }}</strong>
+          <span>{{ s.desc }}</span>
+        </div>
+
+        <i class="fas fa-arrow-right seg-solucao-card__arrow" [style.color]="segmento.cor"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<app-email-cta [title]="'Pronto para transformar a gestão do seu ' + segmento.label + '?'"
+  subtitle="Fale com nosso time e agende uma demonstração gratuita do Sistema A7." [showSelect]="false">
 </app-email-cta>
 <app-footer></app-footer>

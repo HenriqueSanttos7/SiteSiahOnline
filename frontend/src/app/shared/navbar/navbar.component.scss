@@ -160,7 +160,7 @@
 }
 
 .sc1.seg-btn {
-  background: #0099e5;
+  background: #0077cc;
 }
 
 .sc2.seg-btn {
@@ -181,6 +181,18 @@
 
 .sc6.seg-btn {
   background: #db2777;
+}
+
+.sc7.seg-btn {
+  background: #a52a2f;
+}
+
+.sc8.seg-btn {
+  background: #FFA600;
+}
+
+.sc9.seg-btn {
+  background: #003a96;
 }
 
 // ── Sol buttons (Soluções / Suporte WhatsApp) ─────────────
@@ -442,6 +454,7 @@
 
 // ── Responsivo ────────────────────────────────────────────
 @media (max-width: 991px) {
+
   .navbar__center,
   .navbar__right {
     display: none;
@@ -462,6 +475,7 @@
   &.open .mob-sub {
     display: flex;
   }
+
   &.open .mob-toggle i {
     transform: rotate(180deg);
   }

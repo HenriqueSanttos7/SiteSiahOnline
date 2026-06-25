@@ -134,7 +134,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
     },
     {
       slug: 'forca-de-venda',
-      title: 'Força de Venda',
+      title: 'Força de Vendas',
       subtitle: 'Vendas Externas',
       desc: 'O aplicativo é integrado ao Sistema A7 e sua função é realizar vendas externas e cobrança de títulos, com atualização de dados automática.',
       img: 'assets/images/soft/app-forca.jpg',

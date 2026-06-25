@@ -1,25 +1,22 @@
 <nav class="navbar">
   <div class="navbar__inner container">
     <a routerLink="/" class="navbar__logo" (click)="close()">
-      <img
-        src="/assets/images/SIAH.svg"
-        alt="SIAH"
-        class="navbar__logo-img"
-        onerror="
+      <img src="/assets/images/SIAH.svg" alt="SIAH" class="navbar__logo-img" onerror="
           this.style.display = 'none';
           this.nextElementSibling.style.display = 'block';
-        "
-      />
+        " />
     </a>
     <div class="navbar__center">
       <!-- Segmentos -->
       <div class="nav-item" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'segmentos'"></i></a>
+        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev"
+            [class.rotated]="activeDrop === 'segmentos'"></i></a>
       </div>
 
       <!-- Soluções -->
       <div class="nav-item" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'solucoes'"></i></a>
+        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev"
+            [class.rotated]="activeDrop === 'solucoes'"></i></a>
       </div>
 
       <!-- Sobre -->
@@ -29,7 +26,8 @@
 
       <!-- Suporte -->
       <div class="nav-item" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'suporte'"></i></a>
+        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev"
+            [class.rotated]="activeDrop === 'suporte'"></i></a>
       </div>
     </div>
     <div class="navbar__right">
@@ -110,7 +108,7 @@
       <p><strong>SIAH Tech: </strong>{{ contatos.siahTech }}</p>
       <p><strong>SIAH Cert: </strong>{{ contatos.siahCert }}</p>
     </div>
-  </div> 
+  </div>
 </div>
 
 <div class="mob-menu" [class.open]="mobileOpen">

@@ -315,15 +315,15 @@
 }
 
 .sc1 {
-  border-color: #0099e5;
+  border-color: #0077cc;
 
   .si,
   .sl {
-    color: #0099e5;
+    color: #0077cc;
   }
 
   &:hover {
-    background: #0099e5;
+    background: #0077cc;
   }
 }
 
@@ -380,15 +380,54 @@
 }
 
 .sc6 {
-  border-color: #db2777;
+  border-color: #DB2777;
 
   .si,
   .sl {
-    color: #db2777;
+    color: #DB2777;
   }
 
   &:hover {
-    background: #db2777;
+    background: #DB2777;
+  }
+}
+
+.sc7 {
+  border-color: #a52a2f;
+
+  .si,
+  .sl {
+    color: #a52a2f;
+  }
+
+  &:hover {
+    background: #a52a2f;
+  }
+}
+
+.sc8 {
+  border-color: #FFA600;
+
+  .si,
+  .sl {
+    color: #FFA600;
+  }
+
+  &:hover {
+    background: #FFA600;
+  }
+}
+
+.sc9 {
+  border-color: #003a96;
+
+  .si,
+  .sl {
+    color: #003a96;
+  }
+
+  &:hover {
+    background: #003a96;
   }
 }
 

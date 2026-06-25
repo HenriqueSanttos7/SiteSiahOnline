@@ -11,7 +11,7 @@
   h2 {
     font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 900;
-    color: #1a6e1a;
+    color: #168116;
     line-height: 1.1;
     margin: 0 0 1.4rem;
   }
@@ -50,7 +50,7 @@
 
 .intro-feat-icon {
   font-size: 3rem;
-  color: #00c896;
+  color: #168116 ;
   flex-shrink: 0;
   width: 56px;
   text-align: center;
@@ -59,7 +59,7 @@
 .intro-feat-title {
   font-size: 24px;
   font-weight: 700;
-  color: #00c896;
+  color: #168116 ;
   line-height: 1.25;
   margin: 0;
 }
@@ -79,7 +79,7 @@
 }
 
 .highlight-card {
-  background: linear-gradient(135deg, #1a6e1a 0%, #28ac28 100%);
+  background: linear-gradient(135deg, #1a6e1a 0%, #aedc62 100%);
   border-radius: 20px;
   padding: 56px 64px;
 
@@ -124,12 +124,12 @@
   min-width: 80px;
   min-height: 80px;
   border-radius: 16px;
-  border: 2.5px solid #00c896;
+  border: 2.5px solid #168116 ;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: #00c896;
+  color: #168116 ;
   flex-shrink: 0;
   align-self: center;
 }
@@ -137,7 +137,7 @@
 .modulo-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
-  color: #00c896;
+  color: #168116 ;
   line-height: 1.1;
   margin: 0;
   padding: 0;
@@ -165,7 +165,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 2px solid #00c896;
+  border: 2px solid #168116 ;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +174,7 @@
 
   i {
     font-size: .7rem;
-    color: #00c896;
+    color: #168116 ;
   }
 }
 
@@ -266,7 +266,7 @@
   align-items: center;
   justify-content: center;
   font-size: 2.2rem;
-  color: #00c896;
+  color: #168116 ;
   box-shadow: 0 4px 16px rgba(0, 200, 150, .15);
 }
 
@@ -311,7 +311,7 @@
   transition: background .25s, transform .25s;
 
   &.active {
-    background: #00c896;
+    background: #168116 ;
     transform: scale(1.25);
   }
 }
