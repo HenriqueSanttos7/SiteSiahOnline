@@ -15,14 +15,15 @@ export class NavbarComponent {
   activeDrop: string | null = null;
 
   segmentos = [
-    { label: 'Varejo em Geral', route: ['/segmentos', 'varejo'], class: 'sc1' },
+    { label: 'Atacarejo', route: ['/segmentos', 'atacarejo'], class: 'sc1' },
     { label: 'Materiais de Construção', route: ['/segmentos', 'materiais-construcao'], class: 'sc2' },
-    { label: 'Farmácias e Drogarias', route: ['/segmentos', 'farmacias-drogarias'], class: 'sc3' },
-    { label: 'Importadoras', route: ['/segmentos', 'importadoras'], class: 'sc3' },
-    { label: 'Empresas de Serviços', route: ['/segmentos', 'serviços'], class: 'sc4' },
-    { label: 'Pequenas Indústrias', route: ['/segmentos', 'pequenas-industrias'], class: 'sc5' },
+    { label: 'Distribuidoras', route: ['/segmentos', 'distribuidoras'], class: 'sc3' },
+    { label: 'Confecções e Calçados', route: ['/segmentos', 'confeccao-calcados'], class: 'sc4' },
+    { label: 'Farmácias e Drogarias', route: ['/segmentos', 'farmacias-drogarias'], class: 'sc7' },
+    { label: 'Serviços', route: ['/segmentos', 'servicos'], class: 'sc8' },
+    { label: 'Indústrias', route: ['/segmentos', 'industrias'], class: 'sc5' },
     { label: 'Supermercados', route: ['/segmentos', 'supermercados'], class: 'sc6' },
-    { label: 'Marinas', route: ['/segmentos', 'marinas'], class: 'sc6' }
+    { label: 'Marinas', route: ['/segmentos', 'marinas'], class: 'sc9' }
   ];
 
   solucoes = [
