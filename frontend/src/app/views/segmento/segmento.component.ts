@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
 
@@ -37,7 +37,7 @@ export interface Segmento {
 @Component({
   selector: 'app-segmento',
   standalone: true,
-  imports: [NgFor, NgIf, FooterComponent, EmailCtaComponent, RouterLink],
+  imports: [NgFor, FooterComponent, EmailCtaComponent, RouterLink],
   templateUrl: './segmento.component.html',
   styleUrls: ['./segmento.component.scss']
 })
