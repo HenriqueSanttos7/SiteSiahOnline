@@ -1334,6 +1334,7 @@ textarea {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.2rem;
+  min-height: unset;
 
   &:hover {
     border: 1px solid var(--border);
