@@ -199,23 +199,22 @@
   <div class="container">
     <h2 class="title reveal">Aplicações Disponíveis</h2>
 
-    <div class="apps-carousel reveal d1">
-      <div class="apps-track" #appsTrack>
-        <div *ngFor="let a of apps" class="app-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb">
-            <img [src]="a.img" [alt]="a.title" />
-          </div>
-          <div class="app-divider"></div>
-          <div class="app-body">
-            <h6>{{ a.title }}</h6>
-            <p>{{ a.sub }}</p>
+    <div class="swiper apps-swiper reveal d1">
+      <div class="swiper-wrapper">
+        <div *ngFor="let a of apps" class="swiper-slide">
+          <div class="app-card" [routerLink]="['/apps', a.slug]">
+            <div class="app-thumb">
+              <img [src]="a.img" [alt]="a.title" />
+            </div>
+            <div class="app-divider"></div>
+            <div class="app-body">
+              <h6>{{ a.title }}</h6>
+              <p>{{ a.sub }}</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="apps-dots">
-        <span *ngFor="let dot of dots; let i = index" class="apps-dot" [class.active]="i === activePage" (click)="goToPage(i)"> </span>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>

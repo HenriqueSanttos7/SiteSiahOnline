@@ -1,3 +1,4 @@
+declare const Swiper: any;
 import { Component, AfterViewInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -14,7 +15,7 @@ export class ClientesComponent implements AfterViewInit {
 
   segmentos = [
     {
-      nome: 'Atarejo',
+      nome: 'Atacado e Varejo em Geral',
       cor: '#0077cc',
       desc: 'Empresas de varejo que utilizam o Sistema A7 para gestão completa de suas operações.',
       clientes: [
@@ -23,7 +24,6 @@ export class ClientesComponent implements AfterViewInit {
           desc: 'Empresa que atua no Comércio Atacadista e Varejista do Estado do Amazonas, com mais de 40 anos de história na região.',
           logo: '/assets/images/clientes/lojas_baiano.svg'
         },
-
         {
           nome: 'Lojas Mirai',
           desc: 'Comercialização de produtos eletrônicos, eletrodomésticos e importados. Sediada em Manaus, famosa por trazer a cultura e produtos orientais para a cidade.',
@@ -79,33 +79,38 @@ export class ClientesComponent implements AfterViewInit {
       desc: 'Empresas importadoras que utilizam o A7 para controle de estoque e fiscal.',
       clientes: [
         {
-          nome: 'Importadora São Luiz',
-          desc: 'A Importadora São Luiz é Referência para o Comércio Musical.',
-          logo: '/assets/images/clientes/imp_sao_luiz.svg'
+          nome: 'Oriente',
+          desc: 'A Oriente Atacado (Distribuidora Oriente) é uma das mais tradicionais empresas do comércio atacadista de estivas e produtos alimentícios em geral de Manaus, atuando há mais de 20 anos no abastecimento do mercado amazonense.',
+          logo: '/assets/images/clientes/oriente.svg'
         },
 
         {
-          nome: 'Importadora Luanjo',
-          desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.',
-          logo: '/assets/images/clientes/imp_luanjo.png'
+          nome: 'Agl Distribuidora',
+          desc: 'A AGL Distribuidora é uma das principais referências logísticas e comerciais no setor de alimentos e laticínios da Região Norte, destacando-se como a distribuidora oficial e exclusiva das marcas Frutap e Frutilac na região.',
+          logo: '/assets/images/clientes/agl_distribuidora.svg'
         },
       ]
     },
     {
       nome: 'Confecção e Calçados',
       cor: '#f97316',
-      desc: 'Empresas importadoras que utilizam o A7 para controle de estoque e fiscal.',
+      desc: 'Empresas de Confecção e Calçados que utilizam o A7 para controle de estoque, fiscal e PDV.',
       clientes: [
         {
-          nome: 'Importadora São Luiz',
-          desc: 'A Importadora São Luiz é Referência para o Comércio Musical.',
-          logo: '/assets/images/clientes/imp_sao_luiz.svg'
+          nome: 'World Tennis',
+          desc: 'A maior rede de lojas especializadas em tênis do Brasil!',
+          logo: '/assets/images/clientes/world_tennis.svg'
         },
 
         {
-          nome: 'Importadora Luanjo',
-          desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.',
-          logo: '/assets/images/clientes/imp_luanjo.png'
+          nome: 'Chora pra vender fiado',
+          desc: 'Chora Pra Vender Fiado é uma rede de lojas de confecções em Manaus focada em moda feminina e masculina popular.',
+          logo: '/assets/images/clientes/chora_pra_vender.png'
+        },
+        {
+          nome: 'Ponto da Camisa',
+          desc: 'O Ponto da Camisa e Malharia é a maior empresa da Região Norte no segmento de malhas, camisas personalizadas e estamparia. ',
+          logo: '/assets/images/clientes/ponto_da_camisa.svg'
         },
       ]
     },
@@ -116,25 +121,13 @@ export class ClientesComponent implements AfterViewInit {
       desc: 'Farmácias e drogarias atendidos pela SIAH.',
       clientes: [
         {
-          nome: 'Dona Rita',
-          desc: 'A Dona Rita é uma padaria, café e mercearia tradicional localizada no bairro Flores, em Manaus. Ponto de conveniência para compras rápidas e refeições informais.',
-          logo: '/assets/images/clientes/dona_rita.svg'
-        },
-
-        {
-          nome: 'Baluarte',
-          desc: 'É uma indústria e distribuidora de embalagens e produtos para o segmento de delivery (como sacos de papel kraft, caixas para pizza e embalagens personalizadas). ',
-          logo: '/assets/images/clientes/baluarte.svg'
-        },
-
-        {
-          nome: 'Lorena Panificadora e Supermercado',
-          desc: 'Atuando de forma integrada nos setores de panificação e varejo alimentício, a empresa gerencia desde o controle rigoroso de matérias-primas e produção diária até a frente de caixa (PDV)',
+          nome: 'J Coelho Farmácia',
+          desc: 'A Drogarias Coelho é uma farmácia focada na saúde e bem-estar dos moradores da zona norte de Manaus.',
           logo: '/assets/images/clientes/lorena.svg'
         },
 
         {
-          nome: 'Fino Sabor Amazônia',
+          nome: 'TS Pharma',
           desc: 'O Fino Sabor Amazônia é especializada em culinária regional e produtos amazônicos, otimiza o controle de estoque de safras, a rastreabilidade de insumos e a agilidade no atendimento de mesa e balcão.',
           logo: '/assets/images/clientes/fino_sabor.svg'
         }
@@ -143,54 +136,58 @@ export class ClientesComponent implements AfterViewInit {
     {
       nome: 'Serviços',
       cor: '#FFA600',
-      desc: 'Empresas importadoras que utilizam o A7 para controle de estoque e fiscal.',
+      desc: 'Empresas de Serviços que utilizam o A7 para controle de estoque e fiscal.',
       clientes: [
         {
-          nome: 'Importadora São Luiz',
-          desc: 'A Importadora São Luiz é Referência para o Comércio Musical.',
-          logo: '/assets/images/clientes/imp_sao_luiz.svg'
+          nome: 'AM Soluções Industriais',
+          desc: 'A AM Soluções Industriais é uma empresa especializada em sistemas hidráulicos, usinagem e fabricação de componentes.',
+          logo: '/assets/images/clientes/am_solucoes.png'
         },
 
         {
-          nome: 'Importadora Luanjo',
+          nome: 'North Service',
+          desc: 'A North Service Engenharia e Comércio é uma empresa especializada no fornecimento de soluções técnicas, prestação de serviços de engenharia e comércio de materiais, focada no atendimento a contratos corporativos e ao setor público na região Norte.',
+          logo: '/assets/images/clientes/north_service.svg'
+        },
+
+        {
+          nome: 'Amazonas Eletromec',
           desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.',
-          logo: '/assets/images/clientes/imp_luanjo.png'
+          logo: '/assets/images/clientes/amazonas_eletromec.svg'
         },
       ]
     },
     {
       nome: 'Indústrias',
       cor: '#e11d48',
-      desc: 'Empresas importadoras que utilizam o A7 para controle de estoque e fiscal.',
+      desc: 'Indústrias que utilizam o A7 para controle de estoque e fiscal.',
       clientes: [
         {
-          nome: 'Importadora São Luiz',
-          desc: 'A Importadora São Luiz é Referência para o Comércio Musical.',
-          logo: '/assets/images/clientes/imp_sao_luiz.svg'
+          nome: 'Kawasaki',
+          desc: 'A Kawasaki Motores do Brasil posiciona-se no mercado nacional como uma marca premium de alta tecnologia, performance e confiabilidade, herdando o DNA global de engenharia pesada da sua matriz japonesa. ',
+          logo: '/assets/images/clientes/kawasaki.svg'
         },
-
         {
-          nome: 'Importadora Luanjo',
-          desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.',
-          logo: '/assets/images/clientes/imp_luanjo.png'
+          nome: 'Baluarte',
+          desc: 'A Baluarte Alimentos e Embalagens é uma fabricante e distribuidora atacadista localizada em Manaus, Amazonas.',
+          logo: '/assets/images/clientes/baluarte.svg'
         },
       ]
     },
     {
       nome: 'Supermercados',
       cor: '#DB2777',
-      desc: 'Empresas importadoras que utilizam o A7 para controle de estoque e fiscal.',
+      desc: 'Supermercados que utilizam o A7 para controle de estoque, fiscal e PDV.',
       clientes: [
         {
-          nome: 'Importadora São Luiz',
-          desc: 'A Importadora São Luiz é Referência para o Comércio Musical.',
-          logo: '/assets/images/clientes/imp_sao_luiz.svg'
+          nome: 'Supermercado Bahia',
+          desc: 'Tradicional empresa do comércio varejista de alimentos localizada em Manaus, atuando há anos no abastecimento e atendimento direto à comunidade da Zona Leste.',
+          logo: '/assets/images/clientes/bahia.svg'
         },
-
         {
-          nome: 'Importadora Luanjo',
-          desc: 'A Importadora Luanjo é uma empresa tradicional sediada em Manaus, com mais de 50 anos de atuação, especializada nos ramos de construção civil e setor náutico.',
-          logo: '/assets/images/clientes/imp_luanjo.png'
+          nome: 'Karita',
+          desc: 'Empresa do setor de atacado e varejo de alimentos em Manaus, especializada no fornecimento de frios, panificação e insumos para comércios locais e lanchonetes.',
+          logo: '/assets/images/clientes/karita.svg'
         },
       ]
     },
@@ -215,5 +212,22 @@ export class ClientesComponent implements AfterViewInit {
       e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); });
     }, { threshold: .1 });
     document.querySelectorAll('.reveal').forEach(el => o.observe(el));
+
+    setTimeout(() => {
+      document.querySelectorAll('.parceiros-swiper').forEach(el => {
+        new Swiper(el, {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          pagination: {
+            el: el.querySelector('.swiper-pagination'),
+            clickable: true,
+          },
+          breakpoints: {
+            576: { slidesPerView: 2 },
+            992: { slidesPerView: 4 },
+          }
+        });
+      });
+    }, 100);
   }
 }

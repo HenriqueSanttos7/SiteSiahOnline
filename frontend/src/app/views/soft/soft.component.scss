@@ -215,29 +215,16 @@
   padding: 80px 0 100px;
 }
 
-.apps-carousel {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
+.apps-swiper {
+  padding-bottom: 3rem !important;
 
-// Viewport que esconde os cards fora de view
-.apps-track {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+  .swiper-pagination-bullet-active {
+    background: #004aad;
   }
 
-  // Esconde cards que não estão na página ativa via JS
-  .app-card {
-    display: none;
-
-    &.visible-card {
-      display: flex;
-    }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -246,6 +233,7 @@
   border-radius: 16px;
   border: 1px solid var(--border);
   overflow: hidden;
+  display: flex;
   flex-direction: column;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
@@ -299,29 +287,6 @@
     font-size: 0.85rem;
     color: var(--muted);
     margin: 0;
-  }
-}
-
-// Dots
-.apps-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
-.apps-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #c8cdd8;
-  cursor: pointer;
-  transition:
-    background 0.25s,
-    transform 0.25s;
-
-  &.active {
-    background: #004aad;
-    transform: scale(1.25);
   }
 }
 

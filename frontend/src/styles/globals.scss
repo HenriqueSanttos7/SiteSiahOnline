@@ -1320,6 +1320,8 @@ textarea {
   gap: 1.5rem;
   transition: box-shadow 0.2s;
   flex-direction: column;
+  height: 100%;
+  min-height: 320px;
 
   &:hover {
     border: 3px solid var(--border);
@@ -1350,8 +1352,8 @@ textarea {
 }
 
 .parceiro-card__logo {
-  width: 200px;
   height: 160px;
+  width: 100%;
   flex-shrink: 0;
   display: flex;
   align-items: center;

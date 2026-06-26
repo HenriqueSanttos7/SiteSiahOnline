@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+declare const Swiper: any;
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
 
@@ -23,12 +24,6 @@ export interface AppDetail {
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('appsTrack') appsTrack!: ElementRef;
-
-  readonly perPage = 3;
-  activePage = 0;
-
   apps: AppDetail[] = [
     {
       slug: 'sistema-a7',
@@ -169,10 +164,8 @@ export class DetailComponent implements OnInit, AfterViewInit {
   ];
 
   app!: AppDetail;
+  appsSwiper: any;
 
-  get dots(): number[] {
-    return Array.from({ length: Math.ceil(this.apps.length / this.perPage) });
-  }
 
   constructor(private route: ActivatedRoute) {}
 
@@ -181,13 +174,34 @@ export class DetailComponent implements OnInit, AfterViewInit {
       const slug = params.get('slug') ?? '';
       this.app = this.apps.find(a => a.slug === slug) ?? this.apps[0];
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      setTimeout(() => this.initReveal(), 100);
+      setTimeout(() => {
+        this.initReveal();
+        this.initSwiper();
+      }, 100);
     });
   }
 
-  ngAfterViewInit(): void {
-    this.goToPage(0);
+ ngAfterViewInit(): void {
     this.initReveal();
+    setTimeout(() => this.initSwiper(), 100);
+  }
+
+  initSwiper(): void {
+    if (this.appsSwiper) {
+      this.appsSwiper.destroy(true, true);
+    }
+    this.appsSwiper = new Swiper('.apps-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.apps-swiper .swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        576: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+      }
+    });
   }
 
   initReveal(): void {
@@ -198,17 +212,5 @@ export class DetailComponent implements OnInit, AfterViewInit {
       el.classList.remove('visible');
       o.observe(el);
     });
-  }
-
-  goToPage(page: number): void {
-    this.activePage = page;
-    if (!this.appsTrack) return;
-    const track = this.appsTrack.nativeElement as HTMLElement;
-    const cards = track.querySelectorAll('.app-nav-card');
-    const start = page * this.perPage;
-    const end = start + this.perPage;
-    cards.forEach((card, i) => {
-      card.classList.toggle('visible-card', i >= start && i < end);
-    });
-  }
+  } 
 }
