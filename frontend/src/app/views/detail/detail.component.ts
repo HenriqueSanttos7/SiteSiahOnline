@@ -12,7 +12,7 @@ export interface AppDetail {
   img: string;
   cor: string;
   corDark: string;
-  funcionalidades: { icon: string; titulo: string; desc: string }[];
+  funcionalidades: { categoria?: 'desktop' | 'mobile' | 'web'; icon: string; titulo: string; desc: string }[];
 }
 
 @Component({
@@ -29,22 +29,35 @@ export class DetailComponent implements OnInit, AfterViewInit {
   readonly perPage = 3;
   activePage = 0;
 
+  get temCategorias(): boolean {
+    return this.app?.funcionalidades.some(f => f.categoria) ?? false;
+  }
+
+  filtrarPorCategoria(categoria: 'desktop' | 'mobile' | 'web') {
+    return this.app?.funcionalidades.filter(f => f.categoria === categoria) ?? [];
+  }
+
   apps: AppDetail[] = [
     {
       slug: 'sistema-a7',
-      title: 'Sistema A7',
-      subtitle: 'Gestão de Vendas',
-      desc: 'O ERP completo para gestão do seu negócio. O Sistema A7 une gerenciamento de vendas, módulo fiscal, mobile e financeiro em um só lugar. Tudo integrado, tudo em tempo real.',
+      title: 'A7 ERP',
+      subtitle: 'Varejo e Atacado',
+      desc: 'O ERP completo para gestão do seu negócio. O sistema A7 ERP une gerenciamento de vendas, módulo fiscal, mobile e financeiro em um só lugar. Tudo integrado, tudo em tempo real.',
       img: 'assets/images/soft/pre_vendas.webp',
       cor: '#0077cc',
       corDark: '#005fa3',
       funcionalidades: [
-        { icon: 'fas fa-cash-register', titulo: 'Frente de Caixa (PDV)', desc: 'PDV rápido com suporte a leitor de código de barras, múltiplas formas de pagamento e emissão de NFC-e integrada.' },
-        { icon: 'fas fa-boxes', titulo: 'Controle de Estoque', desc: 'Entrada de mercadorias via XML, alertas de mínimo e máximo, inventário e ajuste de estoque em tempo real.' },
-        { icon: 'fas fa-file-invoice-dollar', titulo: 'Módulo Fiscal', desc: 'Emissão de NF-e, NFC-e e MDF-e com transmissão automática para a SEFAZ e cálculo de impostos.' },
-        { icon: 'fas fa-chart-line', titulo: 'Financeiro', desc: 'Contas a pagar e receber, fluxo de caixa, DRE e relatórios gerenciais integrados.' },
-        { icon: 'fas fa-mobile-alt', titulo: 'Acesso Mobile', desc: 'Acompanhe indicadores e consulte relatórios pelo celular com sincronização em tempo real.' },
-        { icon: 'fas fa-users', titulo: 'Gestão de Usuários', desc: 'Controle de operadores, turnos de caixa, comissões de vendedores e perfis de acesso.' },
+        { categoria: 'desktop', icon: 'fas fa-file-contract', titulo: 'ERP', desc: 'Módulo de gestão empresarial completo.' },
+        { categoria: 'desktop', icon: 'fas fa-file-invoice-dollar', titulo: 'Fiscal', desc: 'Emissão e gestão de documentos fiscais.' },
+        { categoria: 'desktop', icon: 'fas fa-calculator', titulo: 'Contábil', desc: 'Gestão e relatórios contábeis da empresa.' },
+        { categoria: 'desktop', icon: 'fas fa-cash-register', titulo: 'PDV Offline', desc: 'Ponto de venda com funcionamento sem internet.' },
+        { categoria: 'desktop', icon: 'fas fa-hand-pointer', titulo: 'PDV Touch', desc: 'Ponto de venda otimizado para telas de toque.' },
+        { categoria: 'mobile', icon: 'fas fa-mobile-alt', titulo: 'A7 Pré Venda', desc: 'Pré-venda ágil para dispositivos móveis (Android).' },
+        { categoria: 'mobile', icon: 'fas fa-shopping-cart', titulo: 'A7 Força de Vendas', desc: 'Ferramenta de vendas externas no A7. (Android)' },
+        { categoria: 'mobile', icon: 'fas fa-boxes', titulo: 'A7 Expedição e Estoque', desc: 'Gestão de estoque e expedição de vendas. (Android)' },
+        { categoria: 'web', icon: 'fas fa-chart-line', titulo: 'A7 Dashboard', desc: 'Gráficos e indicadores de desempenho e vendas em tempo real. <i class="fab fa-android" style="margin-left: 5px; color: #a4c639;"></i> <i class="fab fa-apple" style="margin-left: 2px; color: #555555;"></i>' },
+        { categoria: 'web', icon: 'fas fa-store-alt', titulo: 'E-commerce', desc: 'Integração completa com vendas em loja virtual, via web.' },
+        { categoria: 'web', icon: 'fas fa-globe', titulo: 'A7 Web', desc: 'Acesso web para funcionalidades do sistema A7 ERP.' }
       ]
     },
     {
@@ -181,7 +194,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
       const slug = params.get('slug') ?? '';
       this.app = this.apps.find(a => a.slug === slug) ?? this.apps[0];
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      setTimeout(() => this.initReveal(), 100);
+      setTimeout(() => this.initReveal(), 250);
     });
   }
 
