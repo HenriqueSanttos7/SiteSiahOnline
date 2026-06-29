@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 export class SoftComponent implements AfterViewInit {
 
   apps = [
-    { img: 'assets/images/soft/pre_vendas.webp', title: 'Sistema A7', sub: 'Gestão de Vendas', slug: 'sistema-a7' },
+    { img: 'assets/images/soft/pre_vendas.webp', title: 'A7 ERP', sub: 'Varejo e Atacado', slug: 'sistema-a7' },
     { img: 'assets/images/soft/app-web.jpg', title: 'A7 Web', sub: 'Relatórios de qualquer lugar', slug: 'a7-web' },
     { img: 'assets/images/soft/app-prevenda.jpg', title: 'Pré-Venda', sub: 'Vendas Internas', slug: 'pre-venda' },
     { img: 'assets/images/soft/app-pdv.jpg', title: 'PDV Touch', sub: 'Ponto de Venda', slug: 'pdv-touch' },
