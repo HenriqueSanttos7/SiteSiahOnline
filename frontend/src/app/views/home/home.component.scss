@@ -1,7 +1,10 @@
 .hero-sec {
   background-color: #0d2b6b;
-  background-image: radial-gradient(ellipse at 50% 120%, rgba(26, 79, 168, 0.8) 0%, transparent 60%);
-  min-height: 64vh;
+  //background-image: radial-gradient(ellipse at 50% 120%, rgba(26, 79, 168, 0.8) 0%, transparent 60%);
+  background-image: url("/assets/images/blue.svg");
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -380,15 +383,15 @@
 }
 
 .sc6 {
-  border-color: #DB2777;
+  border-color: #db2777;
 
   .si,
   .sl {
-    color: #DB2777;
+    color: #db2777;
   }
 
   &:hover {
-    background: #DB2777;
+    background: #db2777;
   }
 }
 
@@ -406,15 +409,15 @@
 }
 
 .sc8 {
-  border-color: #FFA600;
+  border-color: #ffa600;
 
   .si,
   .sl {
-    color: #FFA600;
+    color: #ffa600;
   }
 
   &:hover {
-    background: #FFA600;
+    background: #ffa600;
   }
 }
 
