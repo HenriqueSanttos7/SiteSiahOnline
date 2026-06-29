@@ -4,6 +4,10 @@ import { NgFor, NgIf } from "@angular/common";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { EmailCtaComponent } from "../../shared/email-cta/email-cta.component";
 
+const iconeAndroid = `<img src="assets/images/soft/icon_android.svg">`;
+const iconeApple = `<img src="assets/images/soft/icon_apple.svg">`;
+const iconeWindows = `<img src="assets/images/soft/icon_windows.svg">`;
+const iconeLinux = `<img src="assets/images/soft/icon_linux.svg">`;
 export interface AppDetail {
   slug: string;
   title: string;
@@ -43,17 +47,17 @@ export class DetailComponent implements OnInit, AfterViewInit {
       cor: "#0077cc",
       corDark: "#005fa3",
       funcionalidades: [
-        { categoria: "desktop", icon: "fas fa-file-contract", titulo: "ERP", desc: "Módulo de gestão empresarial completo." },
-        { categoria: "desktop", icon: "fas fa-file-invoice-dollar", titulo: "Fiscal", desc: "Emissão e gestão de documentos fiscais." },
-        { categoria: "desktop", icon: "fas fa-calculator", titulo: "Contábil", desc: "Gestão e relatórios contábeis da empresa." },
-        { categoria: "desktop", icon: "fas fa-cash-register", titulo: "PDV Offline", desc: "Ponto de venda com funcionamento sem internet." },
-        { categoria: "desktop", icon: "fas fa-hand-pointer", titulo: "PDV Touch", desc: "Ponto de venda otimizado para telas de toque." },
-        { categoria: "mobile", icon: "fas fa-mobile-alt", titulo: 'Pré venda <i class="fab fa-android" style="margin-left: 5px;"></i>', desc: "Pré-venda ágil para dispositivos móveis (Android)." },
-        { categoria: "mobile", icon: "fas fa-shopping-cart", titulo: 'Força de Vendas <i class="fab fa-android" style="margin-left: 5px;"></i>', desc: "Ferramenta de vendas externas no A7. (Android)" },
-        { categoria: "mobile", icon: "fas fa-boxes", titulo: 'Expedição e Estoque <i class="fab fa-android" style="margin-left: 5px;"></i>', desc: "Gestão de estoque e expedição de vendas. (Android)" },
-        { categoria: "mobile", icon: "fas fa-tachometer-alt", titulo: 'Dashboard <i class="fab fa-android" style="margin-left: 5px;"></i> <i class="fa-brands fa-apple" style="margin-left: 2px; "></i>', desc: "Gráficos e indicadores de desempenho e vendas em tempo real. Compatível com Android e iOS." },
-        { categoria: "web", icon: "fas fa-store-alt", titulo: "E-commerce", desc: "Integração completa com vendas em loja virtual, via web." },
-        { categoria: "web", icon: "fas fa-globe", titulo: "Web", desc: "Acesso web para funcionalidades do sistema A7 ERP." },
+        { categoria: "desktop", icon: "fas fa-file-contract", titulo: `ERP ${iconeWindows}`, desc: "Módulo de gestão empresarial completo." },
+        { categoria: "desktop", icon: "fas fa-file-invoice-dollar", titulo: `Fiscal ${iconeWindows}`, desc: "Emissão e gestão de documentos fiscais." },
+        { categoria: "desktop", icon: "fas fa-calculator", titulo: `Contábil ${iconeWindows}`, desc: "Gestão e relatórios contábeis da empresa." },
+        { categoria: "desktop", icon: "fas fa-cash-register", titulo: `PDV Offline ${iconeWindows} ${iconeLinux}`, desc: "Ponto de venda com funcionamento sem internet." },
+        { categoria: "desktop", icon: "fas fa-hand-pointer", titulo: `PDV Touch ${iconeWindows} ${iconeLinux}`, desc: "Ponto de venda otimizado para telas de toque." },
+        { categoria: "mobile", icon: "fas fa-mobile-alt", titulo: `Pré venda ${iconeAndroid}`, desc: "Pré-venda ágil para dispositivos móveis (Android)." },
+        { categoria: "mobile", icon: "fas fa-shopping-cart", titulo: `Força de Vendas ${iconeAndroid}`, desc: "Ferramenta de vendas externas no A7. (Android)" },
+        { categoria: "mobile", icon: "fas fa-boxes", titulo: `Expedição e Estoque ${iconeAndroid}`, desc: "Gestão de estoque e expedição de vendas. (Android)" },
+        { categoria: "mobile", icon: "fas fa-tachometer-alt", titulo: `Dashboard ${iconeAndroid} ${iconeApple}`, desc: "Gráficos e indicadores de desempenho e vendas em tempo real. Compatível com Android e iOS." },
+        { categoria: "web", icon: "fas fa-store-alt", titulo: `E-commerce ${iconeWindows} ${iconeLinux} ${iconeAndroid} ${iconeApple}`, desc: "Integração completa com vendas em loja virtual, via web." },
+        { categoria: "web", icon: "fas fa-globe", titulo: `Web ${iconeWindows} ${iconeLinux} ${iconeAndroid} ${iconeApple}`, desc: "Acesso web para funcionalidades do sistema A7 ERP." },
       ],
     },
     {

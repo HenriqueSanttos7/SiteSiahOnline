@@ -258,11 +258,19 @@
 }
 
 .modulo-item-title {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 700;
   color: #1a1f2e;
   line-height: 1.5;
+
+  ::ng-deep img {
+    height: 18px !important;
+    width: auto !important;
+    margin-left: 8px;
+    display: inline-block;
+  }
 }
 
 .modulo-item-sub {
