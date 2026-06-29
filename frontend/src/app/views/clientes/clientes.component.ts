@@ -14,8 +14,33 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 export class ClientesComponent implements AfterViewInit {
 
   segmentos = [
+    // {
+    //   nome: 'Atacarejo',
+    //   cor: '#0077cc',
+    //   desc: 'Empresas de varejo que utilizam o Sistema A7 para gestão completa de suas operações.',
+    //   clientes: [
+    //     {
+    //       nome: 'Lojas Baiano',
+    //       desc: 'Empresa que atua no Comércio Atacadista e Varejista do Estado do Amazonas, com mais de 40 anos de história na região.',
+    //       logo: '/assets/images/clientes/lojas_baiano.svg'
+    //     },
+    //     {
+    //       nome: 'Lojas Mirai',
+    //       desc: 'Comercialização de produtos eletrônicos, eletrodomésticos e importados. Sediada em Manaus, famosa por trazer a cultura e produtos orientais para a cidade.',
+    //       logo: '/assets/images/clientes/mirai.svg'
+    //     },
+
+    //     {
+    //       nome: 'Livraria Lira',
+    //       desc: 'A Livraria Lira atua principalmente no ramo de comércio varejista de livros, papelaria e materiais escolares.',
+    //       logo: '/assets/images/clientes/livraria_lira.svg'
+    //     },
+
+
+    //   ]
+    // },
     {
-      nome: 'Atacado e Varejo em Geral',
+      nome: 'Varejo em Geral',
       cor: '#0077cc',
       desc: 'Empresas de varejo que utilizam o Sistema A7 para gestão completa de suas operações.',
       clientes: [
@@ -37,10 +62,12 @@ export class ClientesComponent implements AfterViewInit {
         },
 
         {
-          nome: 'Pool Eletrica',
-          desc: 'A Pool Elétrica é uma loja especializada no comércio de materiais elétricos, ferramentas, máquinas e equipamentos.',
-          logo: '/assets/images/clientes/pool_eletrica.svg'
+          nome: 'Panificadora Lorena',
+          desc: 'Complexo comercial que reúne padaria, açougue e mercadinho em Manaus, oferecendo itens de conveniência essenciais e culinária regional.',
+          logo: '/assets/images/clientes/lorena.svg'
         },
+
+
       ]
     },
     {
@@ -58,6 +85,18 @@ export class ClientesComponent implements AfterViewInit {
           nome: 'Castelinho Materiais de Construção',
           desc: 'O Castelinho Material de Construção é uma das maiores redes de lojas de material para construção, reforma e acabamento da cidade de Manaus (AM)',
           logo: '/assets/images/clientes/castelinho.svg'
+        },
+
+        {
+          nome: 'Pool Eletrica',
+          desc: 'A Pool Elétrica é uma loja especializada no comércio de materiais elétricos, ferramentas, máquinas e equipamentos.',
+          logo: '/assets/images/clientes/pool_eletrica.svg'
+        },
+
+        {
+          nome: 'Importadora Luanjo',
+          desc: 'A Importadora Luanjo é uma das empresas mais tradicionais de Manaus, com mais de 50 anos de atuação no mercado.',
+          logo: '/assets/images/clientes/imp_luanjo.png'
         },
 
         {
@@ -114,7 +153,6 @@ export class ClientesComponent implements AfterViewInit {
         },
       ]
     },
-
     {
       nome: 'Farmácias e Drogarias',
       cor: '#a52a2f',
@@ -123,13 +161,13 @@ export class ClientesComponent implements AfterViewInit {
         {
           nome: 'J Coelho Farmácia',
           desc: 'A Drogarias Coelho é uma farmácia focada na saúde e bem-estar dos moradores da zona norte de Manaus.',
-          logo: '/assets/images/clientes/lorena.svg'
+          logo: '/assets/images/clientes/farmacia_jcoelho.svg'
         },
 
         {
           nome: 'TS Pharma',
           desc: 'O Fino Sabor Amazônia é especializada em culinária regional e produtos amazônicos, otimiza o controle de estoque de safras, a rastreabilidade de insumos e a agilidade no atendimento de mesa e balcão.',
-          logo: '/assets/images/clientes/fino_sabor.svg'
+          logo: '/assets/images/clientes/farmacia_novotempo.png'
         }
       ]
     },
@@ -163,14 +201,14 @@ export class ClientesComponent implements AfterViewInit {
       desc: 'Indústrias que utilizam o A7 para controle de estoque e fiscal.',
       clientes: [
         {
-          nome: 'Kawasaki',
-          desc: 'A Kawasaki Motores do Brasil posiciona-se no mercado nacional como uma marca premium de alta tecnologia, performance e confiabilidade, herdando o DNA global de engenharia pesada da sua matriz japonesa. ',
-          logo: '/assets/images/clientes/kawasaki.svg'
-        },
-        {
           nome: 'Baluarte',
           desc: 'A Baluarte Alimentos e Embalagens é uma fabricante e distribuidora atacadista localizada em Manaus, Amazonas.',
           logo: '/assets/images/clientes/baluarte.svg'
+        },
+        {
+          nome: 'Romano Pães',
+          desc: 'A Romano Pães é uma renomada fábrica de pães artesanais e produtos premium sediada em Manaus, Amazonas.',
+          logo: '/assets/images/clientes/romano_paes.svg'
         },
       ]
     },
