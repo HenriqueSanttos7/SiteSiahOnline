@@ -33,10 +33,10 @@
 
     <ng-container *ngIf="temCategorias">
       
-      <div *ngIf="filtrarPorCategoria('desktop').length > 0" class="categoria-section reveal d1">
+      <div *ngIf="desktopModulos.length > 0" class="categoria-section reveal d1">
         <h3 class="categoria-title" [style.color]="app.cor"><i class="fas fa-desktop"></i> Módulos Desktop</h3>
         <div class="modulo-grid">
-          <div *ngFor="let f of filtrarPorCategoria('desktop')" class="modulo-item">
+          <div *ngFor="let f of desktopModulos" class="modulo-item">
             <div class="modulo-check" [style.border-color]="app.cor">
               <i [class]="f.icon" [style.color]="app.cor"></i>
             </div>
@@ -48,10 +48,10 @@
         </div>
       </div>
 
-      <div *ngIf="filtrarPorCategoria('mobile').length > 0" class="categoria-section reveal d1">
+      <div *ngIf="mobileModulos.length > 0" class="categoria-section reveal d1">
         <h3 class="categoria-title" [style.color]="app.cor"><i class="fas fa-mobile-alt"></i> Módulos Mobile</h3>
         <div class="modulo-grid">
-          <div *ngFor="let f of filtrarPorCategoria('mobile')" class="modulo-item">
+          <div *ngFor="let f of mobileModulos" class="modulo-item">
             <div class="modulo-check" [style.border-color]="app.cor">
               <i [class]="f.icon" [style.color]="app.cor"></i>
             </div>
@@ -63,10 +63,10 @@
         </div>
       </div>
 
-      <div *ngIf="filtrarPorCategoria('web').length > 0" class="categoria-section reveal d1">
+      <div *ngIf="webModulos.length > 0" class="categoria-section reveal d1">
         <h3 class="categoria-title" [style.color]="app.cor"><i class="fas fa-globe"></i> Módulos Web</h3>
         <div class="modulo-grid">
-          <div *ngFor="let f of filtrarPorCategoria('web')" class="modulo-item">
+          <div *ngFor="let f of webModulos" class="modulo-item">
             <div class="modulo-check" [style.border-color]="app.cor">
               <i [class]="f.icon" [style.color]="app.cor"></i>
             </div>
