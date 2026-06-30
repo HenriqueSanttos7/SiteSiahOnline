@@ -1,0 +1,17 @@
+.parceiros-swiper {
+  padding-bottom: 3rem !important;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--cyan);
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--cyan);
+  }
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+}

@@ -1,43 +1,43 @@
-<!-- HERO -->
 <section class="page-hero clientes-hero">
   <div class="container">
     <div class="page-hero__grid">
       <div class="page-hero__left">
         <div class="page-hero__line"></div>
-        <h1 class="page-hero__title">Nossos<br>Clientes</h1>
+        <h1 class="page-hero__title">Alguns dos<br>nossos Clientes</h1>
       </div>
       <div class="page-hero__right">
-        <h2 class="page-hero__sub">Empresas que confiam na SIAH para transformar sua gestão</h2>
+        <h2 class="page-hero__sub">Mais de 320 empresas confiam na SIAH para transformar sua gestão</h2>
         <p class="page-hero__desc">
-          Quer fazer parte dessa lista?
-          <a routerLink="/contato">Fale conosco</a>
+          Faça parte dessa lista. <a routerLink="/contato">Fale com nosso time</a>
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CLIENTES POR SEGMENTO -->
 <section class="parceiros-sec" *ngFor="let seg of segmentos; let i = index" [class.alt]="i % 2 !== 0">
   <div class="container">
-
     <h3 class="parceiros-cat__title">{{ seg.nome }}</h3>
 
-    <div class="parceiros-grid reveal d1">
-      <div *ngFor="let c of seg.clientes" class="parceiro-card">
-        <div class="parceiro-card__logo">
-          <img [src]="c.logo" [alt]="c.nome"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-          
-            <div class="parceiro-card__logo-fallback">
-            <i class="fas fa-store"></i>
+    <div class="swiper parceiros-swiper reveal d1">
+      <div class="swiper-wrapper">
+        <div *ngFor="let c of seg.clientes" class="swiper-slide">
+          <div class="parceiro-card">
+            <div class="parceiro-card__logo">
+              <img [src]="c.logo" [alt]="c.nome"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="parceiro-card__logo-fallback">
+                <i class="fas fa-store"></i>
+              </div>
+            </div>
+            <div class="parceiro-card__info">
+              <strong>{{ c.nome }}</strong>
+              <span>{{ c.desc }}</span>
+            </div>
           </div>
         </div>
-        <div class="parceiro-card__info">
-          <strong>{{ c.nome }}</strong>
-          <span>{{ c.desc }}</span>
-        </div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
 
   </div>

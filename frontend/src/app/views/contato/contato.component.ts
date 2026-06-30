@@ -1,7 +1,7 @@
+declare const emailjs: any;
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { Component, AfterViewInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-contato',
@@ -23,13 +23,30 @@ export class ContatoComponent implements AfterViewInit {
   }
 
   submit(): void {
-    alert('Obrigado! Entraremos em contato em breve.');
-    this.nome = '';
-    this.email = '';
-    this.whatsapp = '';
-    this.empresa = '';
-    this.interesse = '';
-    this.mensagem = '';
+    emailjs.send(
+      'service_2859acd',
+      'template_6v6545p',
+      {
+        nome: this.nome,
+        email: this.email,
+        whatsapp: this.whatsapp,
+        empresa: this.empresa,
+        interesse: this.interesse,
+        mensagem: this.mensagem,
+      },
+      'TvuyFtTFoc6pz6KGh'
+    ).then(() => {
+      alert('Obrigado! Entraremos em contato em breve.');
+      this.nome = '';
+      this.email = '';
+      this.whatsapp = '';
+      this.empresa = '';
+      this.interesse = '';
+      this.mensagem = '';
+    }).catch((err: unknown) => {
+      console.error(err);
+      alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+    });
   }
 
   ngAfterViewInit(): void {

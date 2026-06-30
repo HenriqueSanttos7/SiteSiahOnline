@@ -27,7 +27,7 @@
   font-weight: 800;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, .7);
   margin: 0;
 }
 
@@ -41,7 +41,7 @@
 
 .app-hero__desc {
   font-size: 1rem;
-  color: rgba(255,255,255,.85);
+  color: rgba(255, 255, 255, .85);
   line-height: 1.75;
   margin: 0;
   max-width: 480px;
@@ -51,7 +51,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, .25);
   color: #fff;
   font-weight: 700;
   font-size: .95rem;
@@ -61,13 +61,15 @@
   align-self: flex-start;
   transition: background .2s;
 
-  &:hover { background: rgba(0,0,0,.4); }
+  &:hover {
+    background: rgba(0, 0, 0, .4);
+  }
 }
 
 .app-hero__img {
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
   aspect-ratio: 1;
 
   img {
@@ -77,7 +79,10 @@
     display: block;
   }
 
-  @media(max-width: 768px) { max-width: 320px; margin: 0 auto; }
+  @media(max-width: 768px) {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
 
 // ── FUNCIONALIDADES ───────────────────────────────────────
@@ -103,37 +108,20 @@
   margin-bottom: 3rem;
 }
 
-.apps-carousel {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.apps-track {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-
-  .app-nav-card {
-    display: none;
-    &.visible-card { display: flex; }
-  }
-}
-
 .app-nav-card {
   background: #fff;
   border-radius: 16px;
   border: 1px solid var(--border);
   overflow: hidden;
   flex-direction: column;
-  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
   transition: all .3s;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
   }
 }
 
@@ -151,7 +139,9 @@
     transition: transform .4s;
   }
 
-  &:hover img { transform: scale(1.05); }
+  &:hover img {
+    transform: scale(1.05);
+  }
 }
 
 .app-divider {
@@ -180,21 +170,17 @@
   }
 }
 
-.apps-dots {
-  display: flex;
-  justify-content: center;
-  gap: .6rem;
-}
+.apps-swiper {
+  padding-bottom: 3rem !important;
 
-.apps-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #c8cdd8;
-  cursor: pointer;
-  transition: background .25s, transform .25s;
+  .swiper-pagination-bullet-active {
+    background: var(--cyan);
+  }
 
-  &.active { transform: scale(1.25); }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 // Módulos — copiados aqui pois este componente não herda do soft
@@ -234,7 +220,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.8rem 4rem;
 
-  @media(max-width: 768px) { grid-template-columns: 1fr; gap: 1.4rem; }
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
 }
 
 .modulo-item {

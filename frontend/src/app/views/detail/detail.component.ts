@@ -182,10 +182,8 @@ export class DetailComponent implements OnInit, AfterViewInit {
   ];
 
   app!: AppDetail;
+  appsSwiper: any;
 
-  get dots(): number[] {
-    return Array.from({ length: Math.ceil(this.apps.length / this.perPage) });
-  }
 
   constructor(private route: ActivatedRoute) {}
 
