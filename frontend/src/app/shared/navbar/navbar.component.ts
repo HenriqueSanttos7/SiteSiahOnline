@@ -14,17 +14,21 @@ export class NavbarComponent {
   mobOpen: string = '';
   activeDrop: string | null = null;
 
-  segmentos = [
-    { label: 'Atacarejo', route: ['/segmentos', 'atacarejo'], class: 'sc1' },
-    { label: 'Materiais de Construção', route: ['/segmentos', 'materiais-construcao'], class: 'sc2' },
-    { label: 'Distribuidoras', route: ['/segmentos', 'distribuidoras'], class: 'sc3' },
-    { label: 'Confecções e Calçados', route: ['/segmentos', 'confeccao-calcados'], class: 'sc4' },
-    { label: 'Farmácias e Drogarias', route: ['/segmentos', 'farmacias-drogarias'], class: 'sc7' },
-    { label: 'Serviços', route: ['/segmentos', 'servicos'], class: 'sc8' },
-    { label: 'Indústrias', route: ['/segmentos', 'industrias'], class: 'sc5' },
-    { label: 'Supermercados', route: ['/segmentos', 'supermercados'], class: 'sc6' },
-    { label: 'Marinas', route: ['/segmentos', 'marinas'], class: 'sc9' }
-  ];
+  segmentos = {
+    varejo: [
+      { label: 'Atacarejo', route: ['/segmentos', 'atacarejo'] },
+      { label: 'Materiais de Construção', route: ['/segmentos', 'materiais-construcao'] },
+      { label: 'Confecções e Calçados', route: ['/segmentos', 'confeccao-calcados'] },
+      { label: 'Farmácias e Drogarias', route: ['/segmentos', 'farmacias-drogarias'] },
+      { label: 'Supermercados', route: ['/segmentos', 'supermercados'] }
+    ],
+    industriaServicos: [
+      { label: 'Distribuidoras', route: ['/segmentos', 'distribuidoras'] },
+      { label: 'Serviços', route: ['/segmentos', 'servicos'] },
+      { label: 'Indústrias', route: ['/segmentos', 'industrias'] },
+      { label: 'Marinas', route: ['/segmentos', 'marinas'] }
+    ]
+  };
 
   solucoes = [
     { label: 'SIAH Soft', route: '/siah-soft', class: 'sc1', img: '/assets/images/logo_siahsoft.svg', desc: 'Sistema de Gestão' },
@@ -57,7 +61,7 @@ export class NavbarComponent {
   mobToggle(key: string): void { this.mobOpen = this.mobOpen === key ? '' : key; }
 
   @HostListener('document:keydown.escape') onEsc(): void { this.close(); }
-  
+
   openDrop(name: string): void {
     this.activeDrop = name;
   }

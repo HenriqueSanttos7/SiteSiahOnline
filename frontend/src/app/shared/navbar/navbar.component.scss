@@ -71,7 +71,7 @@
   align-items: center;
   gap: 5px;
   color: #0d2b6b;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   padding: 0 21px;
   height: 100%;
@@ -192,7 +192,7 @@
 }
 
 .sc9.seg-btn {
-  background: #003a96;
+  background: #0f49a6;
 }
 
 // ── Sol buttons (Soluções / Suporte WhatsApp) ─────────────
@@ -220,13 +220,13 @@
     gap: 2px;
 
     strong {
-      font-size: 0.9rem;
+      font-size: 1.06rem;
       font-weight: 700;
       color: #fff;
     }
 
     small {
-      font-size: 0.75rem;
+      font-size: 0.80rem;
       color: rgba(255, 255, 255, 0.8);
     }
   }
@@ -278,7 +278,7 @@
 
 .drop-suporte-desc {
   color: #5a6480;
-  font-size: 0.88rem;
+  font-size: 16px;
   margin-bottom: 16px;
   line-height: 1.6;
 }
@@ -289,7 +289,7 @@
 
   p {
     color: #5a6480;
-    font-size: 0.88rem;
+    font-size: 15px;
     margin-bottom: 8px;
     line-height: 1.6;
 
@@ -316,7 +316,7 @@
     display: block;
     padding: 9px 0;
     color: #404c59;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     transition: color 0.15s;
@@ -332,7 +332,7 @@
 }
 
 .drop-col-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   color: #5a6480;
   text-transform: uppercase;
@@ -352,7 +352,7 @@
   background: #003a96;
   color: #fff;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
   padding: 12px 46px;
   border-radius: 6px;
   border: none;
