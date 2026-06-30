@@ -79,10 +79,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
     },
     {
       slug: "pre-venda",
-      title: "Pré-Venda",
+      title: "Pré-venda",
       subtitle: "Vendas Internas",
-      desc: "O aplicativo é integrado ao Sistema A7 e sua função é realizar vendas internas, para uma interação mais próxima do cliente.",
-      img: "assets/images/soft/app-prevenda.jpg",
+      desc: "O aplicativo é integrado ao sistema A7 ERP e sua função é realizar vendas internas, para uma interação mais próxima do cliente, com atualização de dados automática, agilizando o processo de vendas e aumentando a produtividade da equipe.",
+      img: "assets/images/soft/pre_venda_1.png",
       cor: "#00a86b",
       corDark: "#007a4d",
       funcionalidades: [
@@ -165,9 +165,9 @@ export class DetailComponent implements OnInit, AfterViewInit {
     {
       slug: "e-commerce",
       title: "E-commerce",
-      subtitle: "Integrado ao A7",
-      desc: "O e-commerce é integrado ao Sistema A7, garantindo uma gestão eficiente, centralizada e automatizada de todas as operações online — totalmente responsivo, adaptado para qualquer dispositivo.",
-      img: "assets/images/soft/app-ecommerce.jpg",
+      subtitle: "Integrado ao A7 ERP",
+      desc: "O e-commerce é integrado ao Sistema A7 ERP, garantindo uma gestão eficiente, centralizada e automatizada de todas as operações online — totalmente responsivo, adaptado para qualquer dispositivo.",
+      img: "assets/images/soft/ecommerce.png",
       cor: "#c0392b",
       corDark: "#96281b",
       funcionalidades: [
