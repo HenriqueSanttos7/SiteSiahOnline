@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { ActivatedRoute, RouterLink } from "@angular/router";
-import { NgFor, NgIf } from "@angular/common";
+import { NgFor, NgIf, NgClass } from "@angular/common";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { EmailCtaComponent } from "../../shared/email-cta/email-cta.component";
 
@@ -17,6 +17,7 @@ export interface AppDetail {
   img: string;
   cor: string;
   corDark: string;
+  tipoLayout: 'mobile3D' | 'desktop3D';
   categoria: 'desktop' | 'mobile' | 'web';
   funcionalidades: { categoria?: "desktop" | "mobile" | "web"; icon: string; titulo: string; desc: string }[];
 }
@@ -24,7 +25,7 @@ export interface AppDetail {
 @Component({
   selector: "app-detail",
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink, FooterComponent, EmailCtaComponent],
+  imports: [NgFor, NgIf, NgClass, RouterLink, FooterComponent, EmailCtaComponent],
   templateUrl: "./detail.component.html",
   styleUrls: ["./detail.component.scss"],
 })
@@ -42,9 +43,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
       title: "A7 ERP",
       subtitle: "Varejo e Atacado",
       desc: "O ERP completo para gestão do seu negócio. O sistema A7 ERP une gerenciamento de vendas, módulo fiscal, mobile e financeiro em um só lugar. Tudo integrado, tudo em tempo real.",
-      img: "assets/images/soft/pre_vendas.webp",
+      img: "assets/images/soft/tela_a7.png",
       cor: "#0077cc",
       corDark: "#005fa3",
+      tipoLayout: "desktop3D",
       funcionalidades: [
         { categoria: "desktop", icon: "fas fa-file-contract",      titulo: `ERP ${iconeWindows}`,                                        desc: "Módulo de gestão empresarial completo." },
         { categoria: "desktop", icon: "fas fa-file-invoice-dollar", titulo: `Fiscal ${iconeWindows}`,                                     desc: "Emissão e gestão de documentos fiscais." },
@@ -65,9 +67,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
       title: "PDV Touch",
       subtitle: "Ponto de Venda",
       desc: "Frente de caixa integrado ao Sistema A7, design moderno, adaptado para monitores touch screen.",
-      img: "assets/images/soft/app-pdv.jpg",
+      img: "assets/images/soft/tela_pdvtouch.png",
       cor: "#2d8c2d",
       corDark: "#1f6b1f",
+      tipoLayout: "desktop3D",
       funcionalidades: [
         { icon: "fas fa-file-invoice",  titulo: "Emissão de NFC-e",              desc: "Cupom Fiscal para consumidor final emitido diretamente pelo PDV Touch." },
         { icon: "fas fa-bolt",          titulo: "Fácil de Usar",                 desc: "Rapidez e praticidade ao atender seu cliente com interface touch intuitiva." },
@@ -83,9 +86,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
       title: "Pré-venda",
       subtitle: "Vendas Internas",
       desc: "O aplicativo é integrado ao sistema A7 ERP e sua função é realizar vendas internas, para uma interação mais próxima do cliente, com atualização de dados automática, agilizando o processo de vendas e aumentando a produtividade da equipe.",
-      img: "assets/images/soft/pre_venda_1.png",
+      img: "assets/images/soft/tela_prevenda.png",
       cor: "#00a86b",
       corDark: "#007a4d",
+      tipoLayout: "mobile3D",
       funcionalidades: [
         { icon: "fas fa-barcode",      titulo: "Consulta por Código de Barras", desc: "Consulte informações do item mais rápido usando o leitor de código de barras do celular." },
         { icon: "fas fa-user-plus",    titulo: "Cadastro de Clientes",          desc: "Cadastre o cliente no ato da venda com integração direta ao Sistema A7." },
@@ -101,9 +105,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
       title: "Força de Vendas",
       subtitle: "Vendas Externas",
       desc: "O aplicativo é integrado ao Sistema A7 e sua função é realizar vendas externas e cobrança de títulos, com atualização de dados automática.",
-      img: "assets/images/soft/app-forca.jpg",
+      img: "assets/images/soft/tela_forcadevendas.png",
       cor: "#e6a800",
       corDark: "#b38200",
+      tipoLayout: "mobile3D",
       funcionalidades: [
         { icon: "fas fa-users",           titulo: "Carteira de Clientes",      desc: "Tenha acesso apenas a seus clientes com gestão da carteira de atendimento." },
         { icon: "fas fa-dollar-sign",     titulo: "Recebimento de Títulos",    desc: "Receba o valor da parcela do cliente diretamente pelo aplicativo." },
@@ -119,9 +124,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
       title: "Expedição e Estoque",
       subtitle: "Logística e Armazenagem",
       desc: "O aplicativo é integrado ao Sistema A7 e inclui novas rotinas para agilizar os processos nos setores de expedição e estoque.",
-      img: "assets/images/soft/app-expedicao.jpg",
+      img: "assets/images/soft/tela_expedicao.png",
       cor: "#0077cc",
       corDark: "#005fa3",
+      tipoLayout: "mobile3D",
       funcionalidades: [
         { icon: "fas fa-camera",    titulo: "Comprovante de Entregas",    desc: "Imagens, localização e assinaturas como comprovante de entrega integrado ao sistema." },
         { icon: "fas fa-boxes",     titulo: "Controle de Estoque",        desc: "Consultas, inventários, validade e relatórios de estoque em tempo real." },
@@ -140,6 +146,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
       img: "assets/images/soft/app-navegacao.jpg",
       cor: "#c0392b",
       corDark: "#96281b",
+      tipoLayout: "mobile3D",
       funcionalidades: [
         { icon: "fas fa-ticket-alt",  titulo: "Emissão de Passagens",            desc: "Emissão e impressão imediata de passagens para viagens de embarcação." },
         { icon: "fas fa-boxes",       titulo: "Controle de Encomendas e Cargas", desc: "Dados do emitente e destinatário, comprovação de entrega integrada." },
@@ -155,9 +162,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
       title: "Web",
       subtitle: "Relatórios de qualquer lugar",
       desc: "A7 Web é a versão online do A7, permite acesso rápido aos principais relatórios gerenciais. Ideal para acompanhar as informações de onde estiver, direto do navegador.",
-      img: "assets/images/soft/app-web.jpg",
+      img: "assets/images/soft/tela_a7web.png",
       cor: "#0077cc",
       corDark: "#005fa3",
+      tipoLayout: "desktop3D",
       funcionalidades: [
         { icon: "fas fa-chart-bar",    titulo: "Acesso aos Relatórios",      desc: "Acesse os principais relatórios do Sistema A7 de qualquer lugar, direto do navegador." },
         { icon: "fas fa-cash-register", titulo: "Caixa de Recebimento",      desc: "Consulte detalhes sobre os caixas de recebimento e movimentações financeiras." },
@@ -176,6 +184,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
       img: "assets/images/soft/ecommerce.png",
       cor: "#c0392b",
       corDark: "#96281b",
+      tipoLayout: "desktop3D",
       funcionalidades: [
         { icon: "fas fa-shopping-bag", titulo: "Pedidos Online Sincronizados",    desc: "Visualização de pedidos, status de pagamento, envio e entrega integrados ao A7." },
         { icon: "fas fa-sync",         titulo: "Catálogo de Produtos Atualizado", desc: "Dados dos produtos atualizados de acordo com o Sistema A7 — descrição, preço e disponibilidade." },
