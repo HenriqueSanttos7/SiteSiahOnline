@@ -1,11 +1,20 @@
 // ── Navbar base ───────────────────────────────────────────
 .navbar {
-  background: #fff;
+  background: transparent;
   height: 80px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover,
+  &.navbar--active {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
 
   &__inner {
     height: 100%;
@@ -16,17 +25,36 @@
   }
 
   &__logo {
+    position: relative;
     display: flex;
     align-items: center;
+    height: 60px;
+    width: 140px; // ajuste pro tamanho real da sua logo
     margin-right: 3rem;
     flex-shrink: 0;
     text-decoration: none;
   }
 
   &__logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 60px;
     width: auto;
-    display: block;
+    transition: opacity 0.25s ease;
+
+    &--white { opacity: 1; }
+    &--color { opacity: 0; }
+  }
+
+  &:hover &__logo-img--white,
+  &.navbar--active &__logo-img--white {
+    opacity: 0;
+  }
+
+  &:hover &__logo-img--color,
+  &.navbar--active &__logo-img--color {
+    opacity: 1;
   }
 
   @media (max-width: 600px) {
@@ -70,8 +98,8 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #0d2b6b;
-  font-size: 16px;
+  color: #fff;
+  font-size: 18px;
   font-weight: 500;
   padding: 0 21px;
   height: 100%;
@@ -79,6 +107,7 @@
   white-space: nowrap;
   position: relative;
   cursor: pointer;
+  transition: color 0.25s ease;
 
   &::after {
     content: "";
@@ -94,6 +123,11 @@
   &:hover::after {
     width: 100%;
   }
+}
+
+.navbar:hover .nav-link,
+.navbar.navbar--active .nav-link {
+  color: #0d2b6b;
 }
 
 .chev {
@@ -114,8 +148,6 @@
   left: 0;
   right: 0;
   background: #f4f6fb;
-  // border-top: 3px solid #00b4d8;
-  //box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
   z-index: 999;
   flex-direction: row;
   padding: 24px 0;
@@ -159,41 +191,15 @@
   }
 }
 
-.sc1.seg-btn {
-  background: #0077cc;
-}
-
-.sc2.seg-btn {
-  background: #00b37e;
-}
-
-.sc3.seg-btn {
-  background: #7c3aed;
-}
-
-.sc4.seg-btn {
-  background: #f97316;
-}
-
-.sc5.seg-btn {
-  background: #e11d48;
-}
-
-.sc6.seg-btn {
-  background: #db2777;
-}
-
-.sc7.seg-btn {
-  background: #a52a2f;
-}
-
-.sc8.seg-btn {
-  background: #FFA600;
-}
-
-.sc9.seg-btn {
-  background: #003a96;
-}
+.sc1.seg-btn { background: #0077cc; }
+.sc2.seg-btn { background: #00b37e; }
+.sc3.seg-btn { background: #7c3aed; }
+.sc4.seg-btn { background: #f97316; }
+.sc5.seg-btn { background: #e11d48; }
+.sc6.seg-btn { background: #db2777; }
+.sc7.seg-btn { background: #a52a2f; }
+.sc8.seg-btn { background: #FFA600; }
+.sc9.seg-btn { background: #0f49a6; }
 
 // ── Sol buttons (Soluções / Suporte WhatsApp) ─────────────
 .sol-btn {
@@ -220,13 +226,13 @@
     gap: 2px;
 
     strong {
-      font-size: 0.9rem;
+      font-size: 1.06rem;
       font-weight: 700;
       color: #fff;
     }
 
     small {
-      font-size: 0.75rem;
+      font-size: 0.80rem;
       color: rgba(255, 255, 255, 0.8);
     }
   }
@@ -237,21 +243,10 @@
   }
 }
 
-.sc1.sol-btn {
-  background: #0f49a6;
-}
-
-.sc2.sol-btn {
-  background: #724cb1;
-}
-
-.sc3.sol-btn {
-  background: #85bd2b;
-}
-
-.sc4.sol-btn {
-  background: #189b4a;
-}
+.sc1.sol-btn { background: #0f49a6; }
+.sc2.sol-btn { background: #724cb1; }
+.sc3.sol-btn { background: #85bd2b; }
+.sc4.sol-btn { background: #189b4a; }
 
 // ── Drop Soluções ─────────────────────────────────────────
 .drop-solucoes .drop-inner {
@@ -278,7 +273,7 @@
 
 .drop-suporte-desc {
   color: #5a6480;
-  font-size: 0.88rem;
+  font-size: 16px;
   margin-bottom: 16px;
   line-height: 1.6;
 }
@@ -289,7 +284,7 @@
 
   p {
     color: #5a6480;
-    font-size: 0.88rem;
+    font-size: 15px;
     margin-bottom: 8px;
     line-height: 1.6;
 
@@ -316,7 +311,7 @@
     display: block;
     padding: 9px 0;
     color: #404c59;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     transition: color 0.15s;
@@ -332,7 +327,7 @@
 }
 
 .drop-col-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   color: #5a6480;
   text-transform: uppercase;
@@ -349,18 +344,25 @@
 
 // ── CTA button ────────────────────────────────────────────
 .btn-cta {
-  background: #003a96;
+  background: transparent;
   color: #fff;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
   padding: 12px 46px;
   border-radius: 6px;
-  border: none;
+  border: 2px solid #fff;
+  box-sizing: border-box;
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.2s;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.navbar:hover .btn-cta,
+.navbar.navbar--active .btn-cta {
+  background: #003a96;
+  border-color: #003a96;
 
   &:hover {
     background: linear-gradient(90deg, #003a96, #035be9);
@@ -372,10 +374,16 @@
   display: none;
   background: none;
   border: none;
-  color: #022a80;
+  color: #fff;
   font-size: 1.4rem;
   cursor: pointer;
   margin-left: auto;
+  transition: color 0.25s ease;
+}
+
+.navbar:hover .nav-mob-toggle,
+.navbar.navbar--active .nav-mob-toggle {
+  color: #022a80;
 }
 
 // ── Mobile menu ───────────────────────────────────────────

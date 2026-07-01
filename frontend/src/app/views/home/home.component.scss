@@ -149,7 +149,7 @@
 
 .hero-sub {
   color: rgba(255, 255, 255);
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 1.2rem;
   line-height: 1.7;
   font-weight: 400;
@@ -431,6 +431,19 @@
 
   &:hover {
     background: #003a96;
+  }
+}
+
+.sc10{
+  border-color: #e00202;
+
+  .si,
+  .sl {
+    color: #e00202;
+  }
+
+  &:hover {
+    background: #e00202;
   }
 }
 

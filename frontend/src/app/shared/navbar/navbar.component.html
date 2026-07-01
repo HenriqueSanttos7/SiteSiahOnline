@@ -1,10 +1,8 @@
-<nav class="navbar">
+<nav class="navbar" [class.navbar--active]="activeDrop !== null || isScrolled || forceActive">
   <div class="navbar__inner container">
     <a routerLink="/" class="navbar__logo" (click)="close()">
-      <img src="/assets/images/SIAH.svg" alt="SIAH" class="navbar__logo-img" onerror="
-          this.style.display = 'none';
-          this.nextElementSibling.style.display = 'block';
-        " />
+      <img src="/assets/images/siah_branco.svg" alt="SIAH" class="navbar__logo-img navbar__logo-img--white" />
+      <img src="/assets/images/SIAH.svg" alt="SIAH" class="navbar__logo-img navbar__logo-img--color" />
     </a>
     <div class="navbar__center">
       <!-- Segmentos -->
@@ -39,15 +37,23 @@
   </div>
 </nav>
 
-<div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
-    <a *ngFor="let seg of segmentos" [routerLink]="seg.route" (click)="close()" class="seg-btn" [ngClass]="seg.class">
-      {{ seg.label }}
-    </a>
+    <div class="drop-col">
+      <p class="drop-col-title">Varejo</p>
+      <a *ngFor="let seg of segmentos.varejo" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
+    </div>
+    <div class="drop-col-divider"></div>
+    <div class="drop-col">
+      <p class="drop-col-title">Indústria &amp; Serviços</p>
+      <a *ngFor="let seg of segmentos.industriaServicos" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
+    </div>
   </div>
 </div>
 
-<div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
       <img src="/assets/images/logo_siahsoft.svg" alt="SIAH Soft" class="sol-logo" />
@@ -73,7 +79,8 @@
   </div>
 </div>
 
-<div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-col">
       <p class="drop-col-title">Institucional</p>
@@ -87,7 +94,8 @@
   </div>
 </div>
 
-<div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
+<div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')"
+  (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-suporte-wpp">
       <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
@@ -114,15 +122,10 @@
 <div class="mob-menu" [class.open]="mobileOpen">
   <div class="mob-header">
     <div class="mob-logo-wrap">
-      <img
-        src="/assets/images/SIAH.svg"
-        alt="SIAH"
-        class="mob-logo-img"
-        onerror="
+      <img src="/assets/images/SIAH.svg" alt="SIAH" class="mob-logo-img" onerror="
           this.style.display = 'none';
           this.nextElementSibling.style.display = 'block';
-        "
-      />
+        " />
     </div>
     <button class="mob-close" (click)="close()"><i class="fas fa-times"></i></button>
   </div>
@@ -130,7 +133,9 @@
     <li class="mob-item" [class.open]="mobOpen === 'seg'">
       <button class="mob-toggle" (click)="mobToggle('seg')">Segmentos <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
-        <a *ngFor="let seg of segmentos" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
+        <a *ngFor="let seg of segmentos.varejo" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
+        <a *ngFor="let seg of segmentos.industriaServicos" [routerLink]="seg.route" (click)="close()">{{ seg.label
+          }}</a>
       </div>
     </li>
 
