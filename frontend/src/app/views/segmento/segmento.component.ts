@@ -296,6 +296,20 @@ export class SegmentoComponent implements OnInit {
     },
   ];
 
+  getAppImg(slug: string): string {
+    const imgs: Record<string, string> = {
+      'sistema-a7': 'assets/images/soft/capa_a7erp.png',
+      'pdv-touch': 'assets/images/soft/capa_pdvtouch.png',
+      'pre-venda': 'assets/images/soft/capa_prevenda.png',
+      'forca-de-venda': 'assets/images/soft/capa_forcadevendas.png',
+      'expedicao-estoque': 'assets/images/soft/capa_expedicao.png',
+      'navegacao': 'assets/images/soft/capa_dashboard.png',
+      'a7-web': 'assets/images/soft/capa_a7web.png',
+      'e-commerce': 'assets/images/soft/capa_ecommerce.png',
+    };
+    return imgs[slug] ?? 'assets/images/soft/pre_vendas.webp';
+  }
+
   segmento!: Segmento;
   outros: Segmento[] = [];
 

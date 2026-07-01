@@ -47,24 +47,18 @@
 
 <section class="seg-solucoes">
   <div class="container">
+    <h2 class="seg-solucoes__title reveal">Soluções que utilizamos neste segmento</h2>
 
-    <h2 class="seg-solucoes__title reveal">
-      Soluções que utilizamos neste segmento
-    </h2>
-
-    <div class="seg-solucoes__grid reveal d1">
-      <a *ngFor="let s of segmento.solucoes" [routerLink]="['/apps', s.slug]" class="seg-solucao-card">
-
-        <div class="seg-solucao-card__icon" [style.color]="segmento.cor">
-          <i [class]="s.icon"></i>
+    <div class="apps-grid-cat reveal d1">
+      <a *ngFor="let s of segmento.solucoes" [routerLink]="['/apps', s.slug]" class="app-card">
+        <div class="app-thumb">
+          <img [src]="getAppImg(s.slug)" [alt]="s.nome" />
         </div>
-
-        <div class="seg-solucao-card__body">
-          <strong>{{ s.nome }}</strong>
-          <span>{{ s.desc }}</span>
+        <div class="app-divider"></div>
+        <div class="app-body">
+          <h6>{{ s.nome }}</h6>
+          <p>{{ s.desc }}</p>
         </div>
-
-        <i class="fas fa-arrow-right seg-solucao-card__arrow" [style.color]="segmento.cor"></i>
       </a>
     </div>
 
