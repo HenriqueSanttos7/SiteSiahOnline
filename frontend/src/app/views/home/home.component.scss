@@ -434,6 +434,19 @@
   }
 }
 
+.sc10{
+  border-color: #e00202;
+
+  .si,
+  .sl {
+    color: #e00202;
+  }
+
+  &:hover {
+    background: #e00202;
+  }
+}
+
 .cli-sec {
   background: #fff;
   padding: 90px 0;

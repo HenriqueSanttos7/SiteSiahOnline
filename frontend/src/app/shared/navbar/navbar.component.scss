@@ -10,7 +10,8 @@
   box-shadow: none;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 
-  &:hover {
+  &:hover,
+  &.navbar--active {
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
@@ -28,7 +29,7 @@
     display: flex;
     align-items: center;
     height: 60px;
-    width: 140px; // ajuste esse valor pro tamanho real da sua logo
+    width: 140px; // ajuste pro tamanho real da sua logo
     margin-right: 3rem;
     flex-shrink: 0;
     text-decoration: none;
@@ -42,20 +43,17 @@
     width: auto;
     transition: opacity 0.25s ease;
 
-    &--white {
-      opacity: 1;
-    }
-
-    &--color {
-      opacity: 0;
-    }
+    &--white { opacity: 1; }
+    &--color { opacity: 0; }
   }
 
-  &:hover &__logo-img--white {
+  &:hover &__logo-img--white,
+  &.navbar--active &__logo-img--white {
     opacity: 0;
   }
 
-  &:hover &__logo-img--color {
+  &:hover &__logo-img--color,
+  &.navbar--active &__logo-img--color {
     opacity: 1;
   }
 
@@ -127,7 +125,8 @@
   }
 }
 
-.navbar:hover .nav-link {
+.navbar:hover .nav-link,
+.navbar.navbar--active .nav-link {
   color: #0d2b6b;
 }
 
@@ -192,41 +191,15 @@
   }
 }
 
-.sc1.seg-btn {
-  background: #0077cc;
-}
-
-.sc2.seg-btn {
-  background: #00b37e;
-}
-
-.sc3.seg-btn {
-  background: #7c3aed;
-}
-
-.sc4.seg-btn {
-  background: #f97316;
-}
-
-.sc5.seg-btn {
-  background: #e11d48;
-}
-
-.sc6.seg-btn {
-  background: #db2777;
-}
-
-.sc7.seg-btn {
-  background: #a52a2f;
-}
-
-.sc8.seg-btn {
-  background: #FFA600;
-}
-
-.sc9.seg-btn {
-  background: #0f49a6;
-}
+.sc1.seg-btn { background: #0077cc; }
+.sc2.seg-btn { background: #00b37e; }
+.sc3.seg-btn { background: #7c3aed; }
+.sc4.seg-btn { background: #f97316; }
+.sc5.seg-btn { background: #e11d48; }
+.sc6.seg-btn { background: #db2777; }
+.sc7.seg-btn { background: #a52a2f; }
+.sc8.seg-btn { background: #FFA600; }
+.sc9.seg-btn { background: #0f49a6; }
 
 // ── Sol buttons (Soluções / Suporte WhatsApp) ─────────────
 .sol-btn {
@@ -270,21 +243,10 @@
   }
 }
 
-.sc1.sol-btn {
-  background: #0f49a6;
-}
-
-.sc2.sol-btn {
-  background: #724cb1;
-}
-
-.sc3.sol-btn {
-  background: #85bd2b;
-}
-
-.sc4.sol-btn {
-  background: #189b4a;
-}
+.sc1.sol-btn { background: #0f49a6; }
+.sc2.sol-btn { background: #724cb1; }
+.sc3.sol-btn { background: #85bd2b; }
+.sc4.sol-btn { background: #189b4a; }
 
 // ── Drop Soluções ─────────────────────────────────────────
 .drop-solucoes .drop-inner {
@@ -397,7 +359,8 @@
   transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-.navbar:hover .btn-cta {
+.navbar:hover .btn-cta,
+.navbar.navbar--active .btn-cta {
   background: #003a96;
   border-color: #003a96;
 
@@ -418,7 +381,8 @@
   transition: color 0.25s ease;
 }
 
-.navbar:hover .nav-mob-toggle {
+.navbar:hover .nav-mob-toggle,
+.navbar.navbar--active .nav-mob-toggle {
   color: #022a80;
 }
 

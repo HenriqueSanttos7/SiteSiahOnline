@@ -17,13 +17,14 @@ export class SobreComponent implements AfterViewInit {
   [x: string]: any;
 
   segments = [
-    { icon: 'fas fa-warehouse', label: 'Atacarejo', cls: 'sc1', slug: 'atacarejo' },
+    { icon: 'fas fa-warehouse', label: 'Atacarejo', cls: 'sc10', slug: 'atacarejo' },
+    { icon: 'fas fa-shop', label: 'Varejo em Geral', cls: 'sc1', slug: 'varejo-geral' },
     { icon: 'fas fa-hard-hat', label: 'Materiais de Construção', cls: 'sc2', slug: 'materiais-construcao' },
     { icon: 'fas fa-truck', label: 'Distribuidoras', cls: 'sc3', slug: 'distribuidoras' },
     { icon: 'fas fa-tshirt', label: 'Confecção e Calçados', cls: 'sc4', slug: 'confeccao-calcados' },
     { icon: 'fas fa-pills', label: 'Farmácias e Drogarias', cls: 'sc7', slug: 'farmacias-drogarias' },
-    { icon: 'fas fa-briefcase', label: 'Serviços', cls: 'sc8', slug: 'servicos' },    
-    { icon: 'fas fa-industry', label: 'Indústrias', cls: 'sc5', slug: 'industrias' },    
+    { icon: 'fas fa-briefcase', label: 'Serviços', cls: 'sc8', slug: 'servicos' },
+    { icon: 'fas fa-industry', label: 'Indústrias', cls: 'sc5', slug: 'industrias' },
     { icon: 'fas fa-shopping-cart', label: 'Supermercados', cls: 'sc6', slug: 'supermercados' },
     { icon: 'fas fa-ship', label: 'Marinas', cls: 'sc9', slug: 'marinas' },
   ];

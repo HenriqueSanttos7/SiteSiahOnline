@@ -1,7 +1,7 @@
-<nav class="navbar">
+<nav class="navbar" [class.navbar--active]="activeDrop !== null || isScrolled || forceActive">
   <div class="navbar__inner container">
     <a routerLink="/" class="navbar__logo" (click)="close()">
-      <img src="/assets/images/logo.svg" alt="SIAH" class="navbar__logo-img navbar__logo-img--white" />
+      <img src="/assets/images/siah_branco.svg" alt="SIAH" class="navbar__logo-img navbar__logo-img--white" />
       <img src="/assets/images/SIAH.svg" alt="SIAH" class="navbar__logo-img navbar__logo-img--color" />
     </a>
     <div class="navbar__center">

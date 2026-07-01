@@ -100,23 +100,51 @@
   <div class="container">
     <h2 class="title reveal" [style.color]="app.cor">Aplicações Disponíveis</h2>
 
-    <div class="swiper apps-swiper reveal d1">
-      <div class="swiper-wrapper">
-        <div *ngFor="let a of apps" class="swiper-slide">
-          <div class="app-nav-card" [routerLink]="['/apps', a.slug]">
-            <div class="app-thumb">
-              <img [src]="a.img" [alt]="a.title">
-            </div>
-            <div class="app-divider"></div>
-            <div class="app-body">
-              <h6>{{ a.title }}</h6>
-              <p>{{ a.subtitle }}</p>
-            </div>
-          </div>
+    <!-- Desktop -->
+    <div class="apps-categoria reveal">
+      <div class="apps-categoria__header">
+        <i class="fas fa-desktop" [style.color]="app.cor"></i>
+        <h2 [style.color]="app.cor">Desktop</h2>
+      </div>
+      <div class="apps-grid-cat">
+        <div *ngFor="let a of appsDesktop" class="app-nav-card" [routerLink]="['/apps', a.slug]">
+          <div class="app-thumb"><img [src]="a.img" [alt]="a.title"></div>
+          <div class="app-divider"></div>
+          <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
+
+    <!-- Mobile -->
+    <div class="apps-categoria reveal">
+      <div class="apps-categoria__header">
+        <i class="fas fa-mobile-alt" [style.color]="app.cor"></i>
+        <h2 [style.color]="app.cor">Mobile</h2>
+      </div>
+      <div class="apps-grid-cat">
+        <div *ngFor="let a of appsMobile" class="app-nav-card" [routerLink]="['/apps', a.slug]">
+          <div class="app-thumb"><img [src]="a.img" [alt]="a.title"></div>
+          <div class="app-divider"></div>
+          <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web -->
+    <div class="apps-categoria reveal">
+      <div class="apps-categoria__header">
+        <i class="fas fa-globe" [style.color]="app.cor"></i>
+        <h2 [style.color]="app.cor">Web</h2>
+      </div>
+      <div class="apps-grid-cat">
+        <div *ngFor="let a of appsWeb" class="app-nav-card" [routerLink]="['/apps', a.slug]">
+          <div class="app-thumb"><img [src]="a.img" [alt]="a.title"></div>
+          <div class="app-divider"></div>
+          <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
