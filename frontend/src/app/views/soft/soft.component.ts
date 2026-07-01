@@ -23,18 +23,22 @@ export class SoftComponent implements AfterViewInit {
 
   apps: AppCard[] = [
     // Desktop
-    { img: 'assets/images/soft/pre_vendas.webp',    title: 'A7 ERP',              sub: 'Varejo e Atacado',          slug: 'sistema-a7',        categoria: 'desktop' },
-    { img: 'assets/images/soft/app-pdv.jpg',         title: 'PDV Touch',           sub: 'Ponto de Venda',            slug: 'pdv-touch',         categoria: 'desktop' },
+    { img: 'assets/images/soft/capa_a7erp.png',    title: 'A7 ERP',              sub: 'Varejo e Atacado',          slug: 'sistema-a7',        categoria: 'desktop' },
+    { img: 'assets/images/soft/capa_a7fiscal.png',         title: 'A7 Fiscal',           sub: 'Emissão de Notas Fiscais',  slug: 'a7-fiscal',         categoria: 'desktop' },
+    { img: 'assets/images/soft/capa_a7contabil.png',         title: 'A7 Contábil',           sub: 'Gestão Contábil',  slug: 'a7-contabil',         categoria: 'desktop' },
+    { img: 'assets/images/soft/capa_pdvtouch.png',         title: 'PDV Touch',           sub: 'Ponto de Venda',            slug: 'pdv-touch',         categoria: 'desktop' },
+    { img: 'assets/images/soft/capa_pdvoff.png',         title: 'PDV Off-line',        sub: 'Ponto de Venda',            slug: 'pdv-offline',       categoria: 'desktop' },
+    
 
     // Mobile
-    { img: 'assets/images/soft/app-prevenda.jpg',    title: 'Pré-Venda',           sub: 'Vendas Internas',           slug: 'pre-venda',         categoria: 'mobile'  },
-    { img: 'assets/images/soft/app-forca.jpg',       title: 'Força de Vendas',     sub: 'Vendas Externas',           slug: 'forca-de-venda',    categoria: 'mobile'  },
-    { img: 'assets/images/soft/app-expedicao.jpg',   title: 'Expedição e Estoque', sub: 'Logística e Armazenagem',   slug: 'expedicao-estoque', categoria: 'mobile'  },
-    { img: 'assets/images/soft/app-navegacao.jpg',   title: 'Dashboard',           sub: 'Lançamento em breve',       slug: 'navegacao',         categoria: 'mobile'  },
+    { img: 'assets/images/soft/capa_dashboard.png',   title: 'Dashboard',          sub: 'Indicadores de Vendas',     slug: 'dashboard',         categoria: 'mobile'  },
+    { img: 'assets/images/soft/capa_prevenda.png',    title: 'Pré-Venda',           sub: 'Vendas Internas',           slug: 'pre-venda',         categoria: 'mobile'  },
+    { img: 'assets/images/soft/capa_forcadevendas.png',       title: 'Força de Vendas',     sub: 'Vendas Externas',           slug: 'forca-de-venda',    categoria: 'mobile'  },
+    { img: 'assets/images/soft/capa_expedicao.png',   title: 'Expedição e Estoque', sub: 'Logística e Armazenagem',   slug: 'expedicao-estoque', categoria: 'mobile'  },
 
     // Web
-    { img: 'assets/images/soft/app-web.jpg',         title: 'Web',              sub: 'Relatórios de qualquer lugar', slug: 'a7-web',         categoria: 'web'     },
-    { img: 'assets/images/soft/ecommerce.png',       title: 'E-commerce',          sub: 'Integrado ao A7 ERP',       slug: 'e-commerce',        categoria: 'web'     },
+    { img: 'assets/images/soft/capa_a7web.png',         title: 'Web',              sub: 'Relatórios de qualquer lugar', slug: 'a7-web',         categoria: 'web'     },
+    { img: 'assets/images/soft/capa_ecommerce.png',       title: 'E-commerce',          sub: 'Integrado ao A7 ERP',       slug: 'e-commerce',        categoria: 'web'     },
   ];
 
   get appsDesktop(): AppCard[] { return this.apps.filter(a => a.categoria === 'desktop'); }
