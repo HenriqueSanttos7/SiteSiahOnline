@@ -12,7 +12,7 @@
         </a>
       </div>
 
-      <div class="app-hero__img">
+      <div class="app-hero__img" [ngClass]="app.tipoLayout === 'mobile3D' ? 'layout-mobile' : 'layout-desktop'">
         <img [src]="app.img" [alt]="app.title">
       </div>
 
