@@ -1,6 +1,6 @@
 <!-- HERO -->
-<section class="app-hero reveal" [style.background]="'linear-gradient(135deg, ' + app.corDark + ' 0%, ' + app.cor + ' 100%)'">
-  <div class="container">
+<section class="app-hero reveal" [style.background]="app.cor">
+  <div class="container hero-flex-container">
     <div class="app-hero__grid">
 
       <div class="app-hero__content">
@@ -108,7 +108,7 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsDesktop" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.img" [alt]="a.title"></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title"></div>
           <div class="app-divider"></div>
           <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
         </div>
@@ -123,7 +123,7 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsMobile" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.img" [alt]="a.title"></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title"></div>
           <div class="app-divider"></div>
           <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
         </div>
@@ -138,7 +138,7 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsWeb" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.img" [alt]="a.title"></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title"></div>
           <div class="app-divider"></div>
           <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
         </div>

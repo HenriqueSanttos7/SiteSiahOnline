@@ -96,12 +96,12 @@
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsDesktop" class="app-card" [routerLink]="['/apps', a.slug]">
           <div class="app-thumb">
-            <img [src]="a.img" [alt]="a.title" />
+            <img [src]="a.capa" [alt]="a.title" />
           </div>
           <div class="app-divider"></div>
           <div class="app-body">
             <h6>{{ a.title }}</h6>
-            <p>{{ a.sub }}</p>
+            <p>{{ a.subtitle }}</p>
           </div>
         </div>
       </div>
@@ -116,12 +116,12 @@
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsMobile" class="app-card" [routerLink]="['/apps', a.slug]">
           <div class="app-thumb">
-            <img [src]="a.img" [alt]="a.title" />
+            <img [src]="a.capa" [alt]="a.title" />
           </div>
           <div class="app-divider"></div>
           <div class="app-body">
             <h6>{{ a.title }}</h6>
-            <p>{{ a.sub }}</p>
+            <p>{{ a.subtitle }}</p>
           </div>
         </div>
       </div>
@@ -136,12 +136,12 @@
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsWeb" class="app-card" [routerLink]="['/apps', a.slug]">
           <div class="app-thumb">
-            <img [src]="a.img" [alt]="a.title" />
+            <img [src]="a.capa" [alt]="a.title" />
           </div>
           <div class="app-divider"></div>
           <div class="app-body">
             <h6>{{ a.title }}</h6>
-            <p>{{ a.sub }}</p>
+            <p>{{ a.subtitle }}</p>
           </div>
         </div>
       </div>

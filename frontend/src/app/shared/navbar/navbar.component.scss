@@ -361,11 +361,34 @@
 
 .navbar:hover .btn-cta,
 .navbar.navbar--active .btn-cta {
-  background: #003a96;
-  border-color: #003a96;
+  background: #004BC4;
 
   &:hover {
-    background: linear-gradient(90deg, #003a96, #035be9);
+    background: #004BC4;
+  }
+}
+
+.btn-mob-cta {
+  background: #004BC4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 12px 46px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.navbar:hover .btn-mob-cta,
+.navbar.navbar--active .btn-mob-cta {
+  background: #004BC4;
+
+  &:hover {
+    background: #004BC4;
   }
 }
 
@@ -393,7 +416,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: #ffffffee;
+  background: #ffffffb9;
+  backdrop-filter: blur(8px);;
   z-index: 2000;
   transform: translateX(100%);
   visibility: hidden;

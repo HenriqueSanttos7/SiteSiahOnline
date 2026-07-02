@@ -3,24 +3,7 @@ import { ActivatedRoute, RouterLink } from "@angular/router";
 import { NgFor, NgIf, NgClass } from "@angular/common";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { EmailCtaComponent } from "../../shared/email-cta/email-cta.component";
-
-const iconeAndroid = `<img src="assets/images/soft/icon_android.svg">`;
-const iconeApple = `<img src="assets/images/soft/icon_apple.svg">`;
-const iconeWindows = `<img src="assets/images/soft/icon_windows.svg">`;
-const iconeLinux = `<img src="assets/images/soft/icon_linux.svg">`;
-
-export interface AppDetail {
-  slug: string;
-  title: string;
-  subtitle: string;
-  desc: string;
-  img: string;
-  cor: string;
-  corDark: string;
-  tipoLayout: 'mobile3D' | 'desktop3D';
-  categoria: 'desktop' | 'mobile' | 'web';
-  funcionalidades: { categoria?: "desktop" | "mobile" | "web"; icon: string; titulo: string; desc: string }[];
-}
+import { AppCatalogService, AppDetail } from "../../shared/services/app-catalog.service";
 
 @Component({
   selector: "app-detail",
@@ -31,183 +14,26 @@ export interface AppDetail {
 })
 export class DetailComponent implements OnInit, AfterViewInit {
 
+  app!: AppDetail;
   desktopModulos: any[] = [];
   mobileModulos: any[] = [];
   webModulos: any[] = [];
   temCategorias: boolean = false;
 
-  apps: AppDetail[] = [
-    {
-      slug: "sistema-a7",
-      categoria: "desktop",
-      title: "A7 ERP",
-      subtitle: "Varejo e Atacado",
-      desc: "O ERP completo para gestão do seu negócio. O sistema A7 ERP une gerenciamento de vendas, módulo fiscal, mobile e financeiro em um só lugar. Tudo integrado, tudo em tempo real.",
-      img: "assets/images/soft/tela_a7.png",
-      cor: "#0077cc",
-      corDark: "#005fa3",
-      tipoLayout: "desktop3D",
-      funcionalidades: [
-        { categoria: "desktop", icon: "fas fa-file-contract",      titulo: `ERP ${iconeWindows}`,                                        desc: "Módulo de gestão empresarial completo." },
-        { categoria: "desktop", icon: "fas fa-file-invoice-dollar", titulo: `Fiscal ${iconeWindows}`,                                     desc: "Emissão e gestão de documentos fiscais." },
-        { categoria: "desktop", icon: "fas fa-calculator",          titulo: `Contábil ${iconeWindows}`,                                   desc: "Gestão e relatórios contábeis da empresa." },
-        { categoria: "desktop", icon: "fas fa-cash-register",       titulo: `PDV Offline ${iconeWindows} ${iconeLinux}`,                  desc: "Ponto de venda com funcionamento sem internet." },
-        { categoria: "desktop", icon: "fas fa-hand-pointer",        titulo: `PDV Touch ${iconeWindows} ${iconeLinux}`,                    desc: "Ponto de venda otimizado para telas de toque." },
-        { categoria: "mobile",  icon: "fas fa-mobile-alt",          titulo: `Pré venda ${iconeAndroid}`,                                  desc: "Pré-venda ágil para dispositivos móveis (Android)." },
-        { categoria: "mobile",  icon: "fas fa-shopping-cart",       titulo: `Força de Vendas ${iconeAndroid}`,                            desc: "Ferramenta de vendas externas no A7. (Android)" },
-        { categoria: "mobile",  icon: "fas fa-boxes",               titulo: `Expedição e Estoque ${iconeAndroid}`,                        desc: "Gestão de estoque e expedição de vendas. (Android)" },
-        { categoria: "mobile",  icon: "fas fa-tachometer-alt",      titulo: `Dashboard ${iconeAndroid} ${iconeApple}`,                    desc: "Gráficos e indicadores de desempenho e vendas em tempo real. Compatível com Android e iOS." },
-        { categoria: "web",     icon: "fas fa-store-alt",           titulo: `E-commerce ${iconeWindows} ${iconeLinux} ${iconeAndroid} ${iconeApple}`, desc: "Integração completa com vendas em loja virtual, via web." },
-        { categoria: "web",     icon: "fas fa-globe",               titulo: `Web ${iconeWindows} ${iconeLinux} ${iconeAndroid} ${iconeApple}`,        desc: "Acesso web para funcionalidades do sistema A7 ERP." },
-      ],
-    },
-    {
-      slug: "pdv-touch",
-      categoria: "desktop",
-      title: "PDV Touch",
-      subtitle: "Ponto de Venda",
-      desc: "Frente de caixa integrado ao Sistema A7, design moderno, adaptado para monitores touch screen.",
-      img: "assets/images/soft/tela_pdvtouch.png",
-      cor: "#2d8c2d",
-      corDark: "#1f6b1f",
-      tipoLayout: "desktop3D",
-      funcionalidades: [
-        { icon: "fas fa-file-invoice",  titulo: "Emissão de NFC-e",              desc: "Cupom Fiscal para consumidor final emitido diretamente pelo PDV Touch." },
-        { icon: "fas fa-bolt",          titulo: "Fácil de Usar",                 desc: "Rapidez e praticidade ao atender seu cliente com interface touch intuitiva." },
-        { icon: "fas fa-palette",       titulo: "Personalizável",                desc: "Personalize as cores para melhor representar a identidade visual da sua loja." },
-        { icon: "fas fa-credit-card",   titulo: "Múltiplas Formas de Pagamento", desc: "PIX, cartão, dinheiro, vale e carteiras digitais integrados ao caixa." },
-        { icon: "fas fa-sync",          titulo: "Integrado ao A7",               desc: "Totalmente sincronizado com o Sistema A7, baixando o estoque em tempo real." },
-        { icon: "fas fa-desktop",       titulo: "Touch Screen",                  desc: "Design adaptado para monitores touch screen proporcionando agilidade no atendimento." },
-      ],
-    },
-    {
-      slug: "pre-venda",
-      categoria: "mobile",
-      title: "Pré-venda",
-      subtitle: "Vendas Internas",
-      desc: "O aplicativo é integrado ao sistema A7 ERP e sua função é realizar vendas internas, para uma interação mais próxima do cliente, com atualização de dados automática, agilizando o processo de vendas e aumentando a produtividade da equipe.",
-      img: "assets/images/soft/tela_prevenda.png",
-      cor: "#00a86b",
-      corDark: "#007a4d",
-      tipoLayout: "mobile3D",
-      funcionalidades: [
-        { icon: "fas fa-barcode",      titulo: "Consulta por Código de Barras", desc: "Consulte informações do item mais rápido usando o leitor de código de barras do celular." },
-        { icon: "fas fa-user-plus",    titulo: "Cadastro de Clientes",          desc: "Cadastre o cliente no ato da venda com integração direta ao Sistema A7." },
-        { icon: "fas fa-shield-alt",   titulo: "Autorização de Vendas",         desc: "Autorização de descontos para liberar venda com controle de alçada." },
-        { icon: "fas fa-shopping-cart", titulo: "Pré-Vendas",                   desc: "Crie e consulte pré-vendas de forma rápida e integrada ao estoque." },
-        { icon: "fas fa-dollar-sign",  titulo: "Contas a Receber",              desc: "Consulte o pagamento dos seus clientes e títulos em aberto." },
-        { icon: "fas fa-sync",         titulo: "Sincronização Automática",      desc: "Dados atualizados automaticamente com o Sistema A7 sem necessidade de ação manual." },
-      ],
-    },
-    {
-      slug: "forca-de-venda",
-      categoria: "mobile",
-      title: "Força de Vendas",
-      subtitle: "Vendas Externas",
-      desc: "O aplicativo é integrado ao Sistema A7 e sua função é realizar vendas externas e cobrança de títulos, com atualização de dados automática.",
-      img: "assets/images/soft/tela_forcadevendas.png",
-      cor: "#e6a800",
-      corDark: "#b38200",
-      tipoLayout: "mobile3D",
-      funcionalidades: [
-        { icon: "fas fa-users",           titulo: "Carteira de Clientes",      desc: "Tenha acesso apenas a seus clientes com gestão da carteira de atendimento." },
-        { icon: "fas fa-dollar-sign",     titulo: "Recebimento de Títulos",    desc: "Receba o valor da parcela do cliente diretamente pelo aplicativo." },
-        { icon: "fas fa-chart-line",      titulo: "Relatórios de Desempenho",  desc: "Vendas x Cliente, vendas diárias e outros relatórios de performance." },
-        { icon: "fas fa-shopping-cart",   titulo: "Pré-Vendas Externas",       desc: "Crie pré-vendas para clientes externos com integração ao estoque do A7." },
-        { icon: "fas fa-sync",            titulo: "Atualização Automática",    desc: "Dados atualizados automaticamente com o Sistema A7 em tempo real." },
-        { icon: "fas fa-map-marker-alt",  titulo: "Gestão de Rotas",           desc: "Organize a rota de visitas e otimize o atendimento externo." },
-      ],
-    },
-    {
-      slug: "expedicao-estoque",
-      categoria: "mobile",
-      title: "Expedição e Estoque",
-      subtitle: "Logística e Armazenagem",
-      desc: "O aplicativo é integrado ao Sistema A7 e inclui novas rotinas para agilizar os processos nos setores de expedição e estoque.",
-      img: "assets/images/soft/tela_expedicao.png",
-      cor: "#0077cc",
-      corDark: "#005fa3",
-      tipoLayout: "mobile3D",
-      funcionalidades: [
-        { icon: "fas fa-camera",    titulo: "Comprovante de Entregas",    desc: "Imagens, localização e assinaturas como comprovante de entrega integrado ao sistema." },
-        { icon: "fas fa-boxes",     titulo: "Controle de Estoque",        desc: "Consultas, inventários, validade e relatórios de estoque em tempo real." },
-        { icon: "fas fa-barcode",   titulo: "Endereçamento e Separação",  desc: "Endereço de estoque e separação via código de barras para mais agilidade." },
-        { icon: "fas fa-truck",     titulo: "Expedição",                  desc: "Coleta, devolução, entrega imediata e transferência entre empresas." },
-        { icon: "fas fa-warehouse", titulo: "Kardex",                     desc: "Armazenagem, separação, inventário e separação checkout integrados." },
-        { icon: "fas fa-sync",      titulo: "Integrado ao A7",            desc: "Todas as movimentações refletem automaticamente no Sistema A7." },
-      ],
-    },
-    {
-      slug: "navegacao",
-      categoria: "mobile",
-      title: "Dashboard",
-      subtitle: "Lançamento em breve",
-      desc: "O aplicativo é desenvolvido para atender as demandas em uma viagem de embarcação, desde passagem, carga ou encomenda e também bares e restaurantes.",
-      img: "assets/images/soft/app-navegacao.jpg",
-      cor: "#c0392b",
-      corDark: "#96281b",
-      tipoLayout: "mobile3D",
-      funcionalidades: [
-        { icon: "fas fa-ticket-alt",  titulo: "Emissão de Passagens",            desc: "Emissão e impressão imediata de passagens para viagens de embarcação." },
-        { icon: "fas fa-boxes",       titulo: "Controle de Encomendas e Cargas", desc: "Dados do emitente e destinatário, comprovação de entrega integrada." },
-        { icon: "fas fa-utensils",    titulo: "Vendas de Lanches",               desc: "Caixa e comanda em um único lugar para bares e restaurantes a bordo." },
-        { icon: "fas fa-ship",        titulo: "Gestão de Embarcações",           desc: "Controle completo de viagens, rotas e disponibilidade de cada embarcação." },
-        { icon: "fas fa-mobile-alt",  titulo: "App Mobile",                      desc: "Interface totalmente mobile, adaptada para uso em embarcações." },
-        { icon: "fas fa-sync",        titulo: "Independente do A7",              desc: "Aplicativo autônomo, desenvolvido especificamente para operações a bordo." },
-      ],
-    },
-    {
-      slug: "a7-web",
-      categoria: "web",
-      title: "Web",
-      subtitle: "Relatórios de qualquer lugar",
-      desc: "A7 Web é a versão online do A7, permite acesso rápido aos principais relatórios gerenciais. Ideal para acompanhar as informações de onde estiver, direto do navegador.",
-      img: "assets/images/soft/tela_a7web.png",
-      cor: "#0077cc",
-      corDark: "#005fa3",
-      tipoLayout: "desktop3D",
-      funcionalidades: [
-        { icon: "fas fa-chart-bar",    titulo: "Acesso aos Relatórios",      desc: "Acesse os principais relatórios do Sistema A7 de qualquer lugar, direto do navegador." },
-        { icon: "fas fa-cash-register", titulo: "Caixa de Recebimento",      desc: "Consulte detalhes sobre os caixas de recebimento e movimentações financeiras." },
-        { icon: "fas fa-boxes",        titulo: "Acompanhamento do Estoque",  desc: "Monitore o estoque para melhores tomadas de decisão sem precisar estar na loja." },
-        { icon: "fas fa-mobile-alt",   titulo: "Responsivo",                 desc: "Acesse pelo celular, tablet ou computador com total compatibilidade em qualquer dispositivo." },
-        { icon: "fas fa-lock",         titulo: "Acesso Seguro",              desc: "Login com usuário e senha vinculado ao seu cadastro no Sistema A7." },
-        { icon: "fas fa-sync",         titulo: "Dados em Tempo Real",        desc: "Informações sempre atualizadas e sincronizadas com o Sistema A7 da sua empresa." },
-      ],
-    },
-    {
-      slug: "e-commerce",
-      categoria: "web",
-      title: "E-commerce",
-      subtitle: "Integrado ao A7 ERP",
-      desc: "O e-commerce é integrado ao Sistema A7 ERP, garantindo uma gestão eficiente, centralizada e automatizada de todas as operações online — totalmente responsivo, adaptado para qualquer dispositivo.",
-      img: "assets/images/soft/ecommerce.png",
-      cor: "#c0392b",
-      corDark: "#96281b",
-      tipoLayout: "desktop3D",
-      funcionalidades: [
-        { icon: "fas fa-shopping-bag", titulo: "Pedidos Online Sincronizados",    desc: "Visualização de pedidos, status de pagamento, envio e entrega integrados ao A7." },
-        { icon: "fas fa-sync",         titulo: "Catálogo de Produtos Atualizado", desc: "Dados dos produtos atualizados de acordo com o Sistema A7 — descrição, preço e disponibilidade." },
-        { icon: "fas fa-boxes",        titulo: "Integração com Estoque",          desc: "Vendas online impactam diretamente no estoque do Sistema A7 em tempo real." },
-        { icon: "fas fa-mobile-alt",   titulo: "Totalmente Responsivo",           desc: "Adaptado para qualquer dispositivo — celular, tablet ou computador." },
-        { icon: "fas fa-credit-card",  titulo: "Múltiplas Formas de Pagamento",  desc: "PIX, cartão de crédito, boleto e outros meios de pagamento online." },
-        { icon: "fas fa-store",        titulo: "Gestão Centralizada",             desc: "Gerencie sua loja física e virtual em um único sistema integrado." },
-      ],
-    },
-  ];
+  get appsDesktop(): AppDetail[] { return this.catalogService.getAllApps().filter(a => a.categoria === 'desktop'); }
+  get appsMobile():  AppDetail[] { return this.catalogService.getAllApps().filter(a => a.categoria === 'mobile');  }
+  get appsWeb():     AppDetail[] { return this.catalogService.getAllApps().filter(a => a.categoria === 'web');     }
 
-  app!: AppDetail;
-
-  get appsDesktop(): AppDetail[] { return this.apps.filter(a => a.categoria === 'desktop'); }
-  get appsMobile():  AppDetail[] { return this.apps.filter(a => a.categoria === 'mobile');  }
-  get appsWeb():     AppDetail[] { return this.apps.filter(a => a.categoria === 'web');     }
-
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private catalogService: AppCatalogService
+  ){}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       const slug = params.get("slug") ?? "";
-      this.app = this.apps.find((a) => a.slug === slug) ?? this.apps[0];
+      const foundApp = this.catalogService.getAppBySlug(slug);
+      this.app = foundApp ?? this.catalogService.getAllApps()[0];
 
       this.desktopModulos = this.app.funcionalidades.filter((f) => f.categoria === "desktop");
       this.mobileModulos  = this.app.funcionalidades.filter((f) => f.categoria === "mobile");
