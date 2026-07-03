@@ -1,39 +1,35 @@
-// ── HERO ─────────────────────────────────────────────────
-.hero-flex-container {
+.app-hero {
+  min-height: 680px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 100px 0;
-  width: 90%;
   position: relative;
-  z-index: 2;
+  overflow: hidden;
+  padding: 0;
 
-  @media (max-width: 992px) {
-    flex-direction: column;
-    gap: 30px;
-    max-width: 90%;
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 72px 0 48px;
   }
 }
 
-.app-hero {
-  padding: 80px 0;
-  position: relative;
-  overflow: visible !important;
+.app-hero .hero-flex-container {
+  padding: 96px 0 120px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .app-hero__grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
   gap: 4rem;
   align-items: center;
-  position: relative;
-  overflow: visible !important;
-  height: 100%;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }
 
@@ -44,11 +40,11 @@
 }
 
 .app-hero__sub {
-  font-size: .85rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
 
@@ -61,29 +57,26 @@
 }
 
 .app-hero__desc {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, .85);
-  line-height: 1.75;
-  margin: 0;
-  max-width: 480px;
+  max-width: 520px;
+  color: white;
 }
 
 .app-hero__btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 0, 0, .25);
+  background: rgba(0, 0, 0, 0.25);
   color: #fff;
   font-weight: 700;
-  font-size: .95rem;
+  font-size: 0.95rem;
   padding: 13px 28px;
   border-radius: 8px;
   text-decoration: none;
   align-self: flex-start;
-  transition: background .2s;
+  transition: background 0.2s;
 
   &:hover {
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -91,72 +84,57 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  position: relative;
-  z-index: 15;
+  align-items: center;
 
   img {
     width: 100%;
-    height: auto;
     object-fit: contain;
     display: block;
-    z-index: 20;
-    filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, .25));
+    filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.25));
   }
 
-  &.layout-mobile {
-    img{
-      max-width: 440px;
-      max-height: 540px;
-      transform: translateY(130px) rotate(15deg);
-    }
+  &.layout-mobile img {
+    max-width: 360px;
+    max-height: 460px;
+    transform: translateY(60px) rotate(12deg);
+  }
 
-    @media(max-width: 768px) {
-      max-width: 250px;
-      margin: -40px auto 0;
-      overflow: visible !important;
+  &.layout-desktop img {
+    max-width: 560px;
+    max-height: 420px;
+    transform: translateY(60px);
+  }
 
-      img{
-        max-height: 380px;
-        transform: translateY(100px) rotate(15deg);
-      }
+  @media (max-width: 768px) {
+    max-width: 360px;
+    margin: 0 auto;
+
+    &.layout-mobile img,
+    &.layout-desktop img {
+      max-height: 280px;
+      transform: none !important;
     }
   }
-  &.layout-desktop {
-    img{
-      max-width: 580px;
-      max-height: 480px;
-      transform: translateY(120px) rotate(0);
-    }
 
-    @media(max-width: 768px) {
-      max-width: 420px;
-      margin: 2rem auto 0;
-      overflow: visible !important;
+  @media (max-width: 480px) {
+    max-width: 280px;
 
-      img{
-        max-height: 300px;
-        transform: translateY(80px) rotate(0) !important;
-      }
+    &.layout-mobile img,
+    &.layout-desktop img {
+      max-height: 230px;
     }
   }
 }
-
-
 
 // ── FUNCIONALIDADES ───────────────────────────────────────
 .app-func-sec {
   background: #fff;
-  padding: 160px 0 100px;
+  padding: 100px 0 100px;
 
-  @media(max-width: 768px) {
-    padding: 90px 0 80px;
+  @media (max-width: 768px) {
+    padding: 72px 0;
   }
 }
-
-// Herda modulo-header, modulo-icon-box, modulo-title,
-// modulo-grid, modulo-item, modulo-check,
-// modulo-item-title, modulo-item-sub do soft.component.scss
 
 // ── APLICAÇÕES — carrossel com dots ──────────────────────
 .white-sec {
@@ -169,68 +147,6 @@
   font-size: 48px;
   font-weight: 900;
   margin-bottom: 3rem;
-}
-
-.app-nav-card {
-  background: #fff;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  flex-direction: column;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
-  transition: all .3s;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
-  }
-}
-
-.app-thumb {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  aspect-ratio: unset;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .4s;
-  }
-
-  &:hover img {
-    transform: scale(1.05);
-  }
-}
-
-.app-divider {
-  border: none;
-  border-top: 1px solid var(--border);
-}
-
-.app-body {
-  padding: 1.4rem 1.6rem;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: .3rem;
-
-  h6 {
-    font-weight: 800;
-    font-size: 1rem;
-    color: var(--text);
-    margin: 0;
-  }
-
-  p {
-    font-size: .85rem;
-    color: var(--muted);
-    margin: 0;
-  }
 }
 
 .apps-swiper {
@@ -283,7 +199,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.8rem 4rem;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1.4rem;
   }
@@ -306,7 +222,9 @@
   flex-shrink: 0;
   margin-top: 2px;
 
-  i { font-size: 1.5rem; }
+  i {
+    font-size: 1.5rem;
+  }
 }
 
 .modulo-item-title {
@@ -327,10 +245,10 @@
 
 .modulo-item-sub {
   display: block;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #5a6480;
   line-height: 1.5;
-  margin-top: .15rem;
+  margin-top: 0.15rem;
 }
 
 .categoria-section {
