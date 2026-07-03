@@ -1,21 +1,22 @@
 .app-hero {
-  min-height: 680px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding: 0;
+  z-index: 10;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     min-height: auto;
-    padding: 72px 0 48px;
+    padding: 72px 0 56px;
   }
 }
 
 .app-hero .hero-flex-container {
-  padding: 96px 0 120px;
+  padding: 96px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     padding: 0;
   }
 }
@@ -27,9 +28,9 @@
   gap: 4rem;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 36px;
   }
 }
 
