@@ -7,14 +7,12 @@
     <div class="navbar__center">
       <!-- Segmentos -->
       <div class="nav-item" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev"
-            [class.rotated]="activeDrop === 'segmentos'"></i></a>
+        <a class="nav-link">Segmentos <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'segmentos'"></i></a>
       </div>
 
       <!-- Soluções -->
       <div class="nav-item" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev"
-            [class.rotated]="activeDrop === 'solucoes'"></i></a>
+        <a class="nav-link">Soluções <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'solucoes'"></i></a>
       </div>
 
       <!-- Sobre -->
@@ -24,12 +22,14 @@
 
       <!-- Suporte -->
       <div class="nav-item" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
-        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev"
-            [class.rotated]="activeDrop === 'suporte'"></i></a>
+        <a class="nav-link">Suporte <i class="fas fa-chevron-down chev" [class.rotated]="activeDrop === 'suporte'"></i></a>
       </div>
     </div>
     <div class="navbar__right">
-      <a routerLink="/contato" class="btn-cta" (click)="close()">Nossos Contatos</a>
+      <a routerLink="/contato" class="btn-cta btn-premium" (click)="close()">
+        <i class="fas fa-envelope btn-premium__icon"></i>
+        <span>Nossos Contatos</span>
+      </a>
     </div>
     <button class="nav-mob-toggle" (click)="toggle()" aria-label="Menu">
       <i class="fas fa-bars"></i>
@@ -37,8 +37,7 @@
   </div>
 </nav>
 
-<div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')"
-  (mouseleave)="closeDrop()">
+<div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-col">
       <p class="drop-col-title">Varejo</p>
@@ -52,8 +51,7 @@
   </div>
 </div>
 
-<div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')"
-  (mouseleave)="closeDrop()">
+<div class="nav-drop drop-solucoes" [class.show]="activeDrop === 'solucoes'" (mouseenter)="openDrop('solucoes')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <a routerLink="/siah-soft" (click)="close()" class="sc1 sol-btn">
       <img src="/assets/images/logo_siahsoft.svg" alt="SIAH Soft" class="sol-logo" />
@@ -79,8 +77,7 @@
   </div>
 </div>
 
-<div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')"
-  (mouseleave)="closeDrop()">
+<div class="nav-drop drop-sobre" [class.show]="activeDrop === 'sobre'" (mouseenter)="openDrop('sobre')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-col">
       <p class="drop-col-title">Institucional</p>
@@ -94,20 +91,26 @@
   </div>
 </div>
 
-<div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')"
-  (mouseleave)="closeDrop()">
+<div class="nav-drop drop-suporte" [class.show]="activeDrop === 'suporte'" (mouseenter)="openDrop('suporte')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-suporte-wpp">
-      <p class="drop-suporte-desc">Precisa de suporte? Nossa equipe está pronta para atender.</p>
+      <p class="drop-suporte-desc">
+        Precisa de suporte? <br />
+        Nossa equipe está pronta para atender.
+      </p>
       <a href="https://wa.me/5592981826512" target="_blank" class="sol-btn sc4">
         <i class="fab fa-whatsapp"></i>
-        <span><strong>Suporte via WhatsApp</strong><small>{{ contatos.wppNumero }}</small></span>
+        <span
+          ><strong>Suporte via WhatsApp</strong><small>{{ contatos.wppNumero }}</small></span
+        >
       </a>
     </div>
     <div class="drop-col-divider"></div>
     <div class="drop-suporte-horarios">
       <p class="drop-col-title">Horário de Atendimento</p>
-      <p><strong>{{ contatos.horario }}</strong></p>
+      <p>
+        <strong>{{ contatos.horario }}</strong>
+      </p>
     </div>
     <div class="drop-suporte-horarios">
       <p class="drop-col-title">Contatos</p>
@@ -119,13 +122,20 @@
   </div>
 </div>
 
+<!-- Sessão MOBILE  -->
+
 <div class="mob-menu" [class.open]="mobileOpen">
   <div class="mob-header">
     <div class="mob-logo-wrap">
-      <img src="/assets/images/SIAH.svg" alt="SIAH" class="mob-logo-img" onerror="
+      <img
+        src="/assets/images/SIAH.svg"
+        alt="SIAH"
+        class="mob-logo-img"
+        onerror="
           this.style.display = 'none';
           this.nextElementSibling.style.display = 'block';
-        " />
+        "
+      />
     </div>
     <button class="mob-close" (click)="close()"><i class="fas fa-times"></i></button>
   </div>
@@ -134,8 +144,7 @@
       <button class="mob-toggle" (click)="mobToggle('seg')">Segmentos <i class="fas fa-chevron-down"></i></button>
       <div class="mob-sub">
         <a *ngFor="let seg of segmentos.varejo" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
-        <a *ngFor="let seg of segmentos.industriaServicos" [routerLink]="seg.route" (click)="close()">{{ seg.label
-          }}</a>
+        <a *ngFor="let seg of segmentos.industriaServicos" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
       </div>
     </li>
 
@@ -165,5 +174,8 @@
       </div>
     </li>
   </ul>
-  <a routerLink="/contato" class="btn-mob-cta mob-cta" (click)="close()">Nossos Contatos</a>
+  <a routerLink="/contato" class="btn-mob-cta mob-cta btn-premium" (click)="close()">
+    <i class="fas fa-envelope btn-premium__icon"></i>
+    <span>Nossos Contatos</span>
+  </a>
 </div>

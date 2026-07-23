@@ -1,8 +1,7 @@
 <section class="ctt-hero">
-  <div class="container">
+  <div class="container ctt-hero-grid">
     <h1 class="reveal">Vamos conversar sobre o seu negócio?</h1>
-    <p class="reveal d1">Escolha a melhor forma de entrar em contato com nossa equipe. Estamos prontos para te atender.
-    </p>
+    <p class="reveal d1">Escolha a melhor forma de entrar em contato com nossa equipe. Estamos prontos para te atender.</p>
   </div>
 </section>
 
@@ -10,19 +9,19 @@
   <div class="container">
     <div class="canais-grid">
       <div class="canal-card reveal">
-        <div class="canal-icon" style="color:#a855f7"><i class="fas fa-phone-alt"></i></div>
+        <div class="canal-icon" style="color: #a855f7"><i class="fas fa-phone-alt"></i></div>
         <h4>Ligue pra Gente</h4>
         <p>Nossa equipe comercial está disponível de Segunda a Sexta, das 7:30 às 17:30.</p>
         <a href="tel:+559233457707" class="canal-btn pur">(92) 3345-7707</a>
       </div>
       <div class="canal-card reveal d1">
-        <div class="canal-icon" style="color:#25d366"><i class="fab fa-whatsapp"></i></div>
+        <div class="canal-icon" style="color: #25d366"><i class="fab fa-whatsapp"></i></div>
         <h4>Converse por WhatsApp</h4>
         <p>Atendimento rápido pelo WhatsApp. Chame e tire todas as suas dúvidas.</p>
         <a href="https://wa.me/5592981826512" target="_blank" class="canal-btn grn">(92) 98182-6512</a>
       </div>
       <div class="canal-card reveal d2">
-        <div class="canal-icon" style="color:#00b4d8"><i class="fas fa-envelope"></i></div>
+        <div class="canal-icon" style="color: #00b4d8"><i class="fas fa-envelope"></i></div>
         <h4>Envie um E-mail</h4>
         <p>Prefere o e-mail? Escreva para a gente e responderemos em até 24h.</p>
         <a href="mailto:contato@siahonline.com.br" class="canal-btn">contato&#64;siahonline.com.br</a>
@@ -37,23 +36,27 @@
       <div class="form-card reveal">
         <h4>Solicite uma demonstração gratuita</h4>
         <div class="form-grid">
-          <div><label>Nome</label><input type="text" placeholder="Seu nome completo" [(ngModel)]="nome"></div>
-          <div><label>E-mail</label> <input type="email" placeholder="seu@email.com" [(ngModel)]="email"></div>
-          <div><label>WhatsApp</label> <input type="tel" placeholder="(92) 9 0000-0000" [(ngModel)]="whatsapp"></div>
-          <div><label>Empresa</label> <input type="text" placeholder="Nome da empresa" [(ngModel)]="empresa"></div>
+          <div><label>Nome</label><input type="text" placeholder="Seu nome completo" [(ngModel)]="nome" /></div>
+          <div><label>E-mail</label> <input type="email" placeholder="seu@email.com" [(ngModel)]="email" /></div>
+          <div><label>WhatsApp</label> <input type="tel" placeholder="(92) 9 0000-0000" [(ngModel)]="whatsapp" /></div>
+          <div><label>Empresa</label> <input type="text" placeholder="Nome da empresa" [(ngModel)]="empresa" /></div>
           <div class="form-full">
             <label>Interesse</label>
             <select [(ngModel)]="interesse">
               <option value="">Selecione...</option>
-              <option value="SIAH Soft — Sistema A7">SIAH Soft — Sistema A7</option>
-              <option value="SIAH Cert — Certificado Digital">SIAH Cert — Certificado Digital</option>
-              <option value="SIAH Tech — Assistência Técnica">SIAH Tech — Assistência Técnica</option>
+              <option value="SIAH Soft — Sistema A7">SIAH Soft | Sistema A7 ERP</option>
+              <option value="SIAH Cert — Certificado Digital">SIAH Cert | Certificado Digital</option>
+              <option value="SIAH Tech — Assistência Técnica">SIAH Tech | Assistência Técnica</option>
               <option value="Todas as soluções">Todas as soluções</option>
             </select>
           </div>
-          <div class="form-full"><label>Mensagem (opcional)</label><textarea
-              placeholder="Conte um pouco sobre sua empresa..." [(ngModel)]="mensagem"></textarea></div>
-          <div class="form-full"><button class="btn-submit" (click)="submit()">Enviar mensagem</button></div>
+          <div class="form-full"><label>Mensagem (opcional)</label><textarea placeholder="Conte um pouco sobre sua empresa..." [(ngModel)]="mensagem"></textarea></div>
+          <div class="form-full">
+            <button class="btn-primary" type="button" (click)="submit()">
+              <span>Enviar mensagem</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
         </div>
       </div>
       <div class="info-block reveal d1">
@@ -68,21 +71,21 @@
         <div class="info-item">
           <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
           <div>
-            <h6>Suporte | SIAH Soft</h6>
+            <h6>SIAH Soft | Suporte</h6>
             <p>(92) 98182-6512</p>
           </div>
         </div>
         <div class="info-item">
           <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
           <div>
-            <h6>SIAH Tech — Assistência Técnica</h6>
+            <h6>SIAH Tech | Assistência Técnica</h6>
             <p>(92) 99394-7451</p>
           </div>
         </div>
         <div class="info-item">
-          <div class="info-icon"><i class="fas fa-certificate"></i></div>
+          <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
           <div>
-            <h6>SIAH Cert — Certificados</h6>
+            <h6>SIAH Cert | Certificado Digital</h6>
             <p>(92) 99391-9956 | (92) 99394-6188</p>
           </div>
         </div>
@@ -96,22 +99,13 @@
         <div class="info-item">
           <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div>
-            <h6>Endereço — SIAH Tech</h6>
-            <p>Av. Cláudio Portinho, 365<br>Miranda Mall, Bloco C, Sala 105, 106 e 107<br>Manaus — AM</p>
+            <h6>Endereço</h6>
+            <p>Av. Cláudio Portinho, 365<br />Miranda Mall, Bloco C, Salas 105, 106 e 107<br />Manaus — AM</p>
           </div>
         </div>
-        <!-- <div class="socials-mini">
-          <p class="socials-mini-label">Redes Sociais</p>
-          <a href="https://www.instagram.com/siahonline/" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/siahonline/" class="social-btn" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com/company/siah/?originalSubdomain=br" class="social-btn" target="_blank"><i
-              class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/5592981826512" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
-        </div> -->
       </div>
     </div>
   </div>
 </section>
 
 <app-footer></app-footer>
-

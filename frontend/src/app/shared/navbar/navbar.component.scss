@@ -374,62 +374,6 @@
   margin: 0 8px;
 }
 
-// ── CTA button ────────────────────────────────────────────
-.btn-cta {
-  background: transparent;
-  color: #fff;
-  font-weight: 700;
-  font-size: 17px;
-  padding: 12px 46px;
-  border-radius: 6px;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  cursor: pointer;
-  white-space: nowrap;
-  text-decoration: none;
-  display: inline-block;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
-}
-
-.navbar:hover .btn-cta,
-.navbar.navbar--active .btn-cta {
-  background: #004bc4;
-
-  &:hover {
-    background: #004bc4;
-  }
-}
-
-.btn-mob-cta {
-  background: #004bc4;
-  color: #fff;
-  font-weight: 700;
-  font-size: 17px;
-  padding: 12px 46px;
-  border-radius: 6px;
-  box-sizing: border-box;
-  cursor: pointer;
-  white-space: nowrap;
-  text-decoration: none;
-  display: inline-block;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
-}
-
-.navbar:hover .btn-mob-cta,
-.navbar.navbar--active .btn-mob-cta {
-  background: #004bc4;
-
-  &:hover {
-    background: #004bc4;
-  }
-}
-
 // ── Mobile toggle ─────────────────────────────────────────
 .nav-mob-toggle {
   display: none;

@@ -83,23 +83,6 @@ export class AppCatalogService {
     },
 
     {
-      slug: "granja",
-      categoria: "desktop",
-      title: "A7 Granja",
-      subtitle: "Gestão Agropecuária",
-      desc: "Módulo especializado para gestão de granjas e produção avícola, controle de lotes, ração e reprodução.",
-      img: "assets/images/soft/tela_a7granja.png",
-      capa: "assets/images/soft/capa_a7granja.png",
-      cor: "#af7e4e",
-      tipoLayout: "desktop3D",
-      funcionalidades: [
-        { categoria: "desktop", icon: "fas fa-tractor", titulo: `Controle de Lotes ${iconeWindows}`, desc: "Gestão de lotes, lotação, e histórico produtivo." },
-        { categoria: "desktop", icon: "fas fa-drumstick-bite", titulo: "Ração e Insumos", desc: "Controle de consumo de ração e insumos por lote." },
-        { categoria: "desktop", icon: "fas fa-notes-medical", titulo: "Sanidade", desc: "Registro de procedimentos sanitários e vacinação." },
-      ],
-    },
-
-    {
       slug: "pdv-offline",
       categoria: "desktop",
       title: "PDV Offline",
@@ -214,6 +197,25 @@ export class AppCatalogService {
       ],
     },
     {
+      slug: "navegacao_mob",
+      categoria: "mobile",
+      title: "Navegação",
+      subtitle: "Gestão de Embarcações",
+      desc: "Módulo especializado para gestão de navegações, permitindo controle de embarcações, rotas, tripulação e cargas, integrado ao Sistema A7 ERP.",
+      img: "assets/images/soft/tela_navegacao_mob.png",
+      capa: "assets/images/soft/capa_navegacao_mob.png",
+      cor: "#EB2E32",
+      tipoLayout: "mobile3D",
+      funcionalidades: [
+        { icon: "fas fa-route", titulo: "Gestão de Rotas", desc: "Planeje e acompanhe rotas de embarcações com informações de portos e trechos de viagem." },
+        { icon: "fas fa-ship", titulo: "Controle de Embarcações", desc: "Monitore status, horários e manutenção das embarcações em tempo real." },
+        { icon: "fas fa-boxes", titulo: "Gestão de Cargas", desc: "Registre e acompanhe cargas, documentos e movimentações de embarque integradas ao A7." },
+        { icon: "fas fa-users", titulo: "Tripulação", desc: "Gerencie escalas, cadastros e desempenho da tripulação diretamente no sistema." },
+        { icon: "fas fa-anchor", titulo: "Portos e Atracações", desc: "Controle atracações, balizamentos e informações de portos para operações seguras." },
+        { icon: "fas fa-sync", titulo: "Integrado ao A7", desc: "Todas as movimentações de navegação são sincronizadas automaticamente com o Sistema A7." },
+      ],
+    },
+    {
       slug: "a7-web",
       categoria: "web",
       title: "A7 Web",
@@ -249,6 +251,22 @@ export class AppCatalogService {
         { icon: "fas fa-mobile-alt", titulo: "Totalmente Responsivo", desc: "Adaptado para qualquer dispositivo — celular, tablet ou computador." },
         { icon: "fas fa-credit-card", titulo: "Múltiplas Formas de Pagamento", desc: "PIX, cartão de crédito, boleto e outros meios de pagamento online." },
         { icon: "fas fa-store", titulo: "Gestão Centralizada", desc: "Gerencie sua loja física e virtual em um único sistema integrado." },
+      ],
+    },
+    {
+      slug: "navegacao",
+      categoria: "web",
+      title: "A7 Navegação",
+      subtitle: "Gestão de Navegações",
+      desc: "Módulo especializado para gestão de navegações, permitindo controle de embarcações, rotas, tripulação e cargas, integrado ao Sistema A7 ERP.",
+      img: "assets/images/soft/tela_a7navegacao.png",
+      capa: "assets/images/soft/capa_a7navegacao.png",
+      cor: "#EB2E32",
+      tipoLayout: "desktop3D",
+      funcionalidades: [
+        { categoria: "web", icon: "fas fa-ship", titulo: `Gestão de Embarcações ${iconeWindows}`, desc: "Controle completo das embarcações, rotas e cargas." },
+        { categoria: "web", icon: "fas fa-users", titulo: "Gestão de Tripulação", desc: "Gerenciamento de tripulação, escalas e funções a bordo." },
+        { categoria: "web", icon: "fas fa-route", titulo: "Controle de Rotas", desc: "Planejamento e monitoramento de rotas de navegação." },
       ],
     },
   ];
