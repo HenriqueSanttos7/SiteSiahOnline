@@ -211,24 +211,6 @@
   }
 }
 
-.btn-blue {
-  display: block;
-  background: #003a96;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 16px 40px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  transition: all 0.2s;
-  float: right;
-
-  &:hover {
-    background: linear-gradient(90deg, #003a96, #035be9);
-  }
-}
-
 .seg-sec {
   background: #f4f6fb;
   padding: 90px 0;
@@ -434,7 +416,7 @@
   }
 }
 
-.sc10{
+.sc10 {
   border-color: #e00202;
 
   .si,
@@ -481,9 +463,10 @@
 }
 
 .logos-grid {
+  padding: 5rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px 50px;
   margin-bottom: 1.5rem;
 }
 
@@ -503,32 +486,11 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: grayscale(1);
-    transition: filter 0.2s;
+    transition: transform 0.3s;
   }
 
   &:hover img {
-    filter: grayscale(0);
-  }
-}
-
-.btn-ol-blue {
-  display: block;
-  border: 1.5px solid #003a96;
-  color: #003a96;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 14px 40px;
-  border-radius: 6px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.2s;
-  background: transparent;
-  float: right;
-
-  &:hover {
-    background: linear-gradient(90deg, #003a96, #035be9);
-    color: #fff;
+    transform: scale(1.05);
   }
 }
 

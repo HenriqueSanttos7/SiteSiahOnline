@@ -1,19 +1,26 @@
 .canais-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 
-    @media(max-width:768px) {
-        grid-template-columns: 1fr;
-    }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ctt-hero-grid {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .form-layout {
-    display: grid;
-    grid-template-columns: 7fr 5fr;
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 2rem;
 
-    @media(max-width:991px) {
-        grid-template-columns: 1fr;
-    }
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 }

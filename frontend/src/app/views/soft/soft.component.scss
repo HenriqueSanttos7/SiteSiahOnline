@@ -1,5 +1,5 @@
 :host {
-  --page-color: #004aad;
+  --page-color: var(--azul_soft);
   --page-color-dark: #003a96;
 }
 
@@ -15,7 +15,7 @@
   h2 {
     font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 900;
-    color: #004aad;
+    color: var(--azul_soft);
     line-height: 1.1;
     margin: 0 0 1.4rem;
   }
@@ -175,7 +175,7 @@
   padding-bottom: 3rem !important;
 
   .swiper-pagination-bullet-active {
-    background: #004aad;
+    background: var(--azul_soft);
   }
 
   .swiper-pagination-bullet {
@@ -189,7 +189,7 @@
   text-align: center;
   font-size: 48px;
   font-weight: 900;
-  color: #004aad;
+  color: var(--azul_soft);
   margin-bottom: 3rem;
 }
 
@@ -216,13 +216,13 @@
 
     i {
       font-size: 1.4rem;
-      color: #004aad;
+      color: var(--azul_soft);
     }
 
     h2 {
       font-size: 1.5rem;
       font-weight: 800;
-      color: #004aad;
+      color: var(--azul_soft);
       margin: 0;
     }
   }
