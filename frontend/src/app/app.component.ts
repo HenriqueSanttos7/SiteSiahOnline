@@ -24,12 +24,12 @@ export class AppComponent {
     const duracao = 1000;
     const inicioTempo = performance.now();
 
-    const easeInOutCubic = (progresso: number): number => (progresso < 0.5 ? 4 * progresso * progresso * progresso : 1 - Math.pow(-2 * progresso + 2, 3) / 2);
+    const easeOutQuart = (progresso: number): number => 1 - Math.pow(1 - progresso, 4);
 
     const animarRolagem = (tempoAtual: number): void => {
       const tempoDecorrido = tempoAtual - inicioTempo;
       const progresso = Math.min(tempoDecorrido / duracao, 1);
-      const suavizacao = easeInOutCubic(progresso);
+      const suavizacao = easeOutQuart(progresso);
 
       window.scrollTo(0, inicio * (1 - suavizacao));
 

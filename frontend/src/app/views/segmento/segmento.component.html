@@ -11,9 +11,12 @@
       <div class="seg-apresent__cta">
         <div class="seg-apresent__cta-text">
           <i class="fas fa-handshake"></i>
-          <span>Vamos conversar<br>sobre o seu negócio?</span>
+          <span>Vamos conversar<br />sobre o seu negócio?</span>
         </div>
-        <a routerLink="/contato" class="seg-apresent__btn">Entre em contato!</a>
+        <a routerLink="/contato" class="btn-primary seg-apresent__btn" [style.--btn-color]="segmento.corDark">
+          <span>Entre em contato</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </div>
@@ -23,13 +26,11 @@
 <section class="seg-problemas">
   <div class="container">
     <h2 class="seg-problemas__title reveal">
-      Você se identifica com algum dos desafios abaixo?<br>
-      O Sistema A7 tem a solução para cada um deles!
+      Você se identifica com algum dos desafios abaixo?<br />
+      O A7 ERP tem a solução para cada um deles!
     </h2>
 
-    <div *ngFor="let p of segmento.problemas; let i = index" class="seg-problema reveal" [class]="'d' + i"
-      [style.background]="segmento.cor">
-
+    <div *ngFor="let p of segmento.problemas; let i = index" class="seg-problema reveal" [class]="'d' + i" [style.background]="segmento.cor">
       <div class="seg-problema__top">
         <div class="seg-problema__icon"><i [class]="p.icon"></i></div>
         <h3 class="seg-problema__titulo">{{ p.titulo }}</h3>
@@ -37,10 +38,7 @@
 
       <p class="seg-problema__desc">{{ p.desc }}</p>
 
-      <p class="seg-problema__beneficio">
-        <strong>Benefício:</strong> {{ p.beneficio }}
-      </p>
-
+      <p class="seg-problema__beneficio"><strong>Benefício:</strong> {{ p.beneficio }}</p>
     </div>
   </div>
 </section>
@@ -61,11 +59,8 @@
         </div>
       </a>
     </div>
-
   </div>
 </section>
 
-<app-email-cta [title]="'Pronto para transformar a gestão do seu ' + segmento.label + '?'"
-  subtitle="Fale com nosso time e agende uma demonstração gratuita do Sistema A7." [showSelect]="false">
-</app-email-cta>
+<app-email-cta [title]="'Pronto para transformar a gestão do seu ' + segmento.label + '?'" subtitle="Fale com nosso time e agende uma demonstração gratuita do A7 ERP." [showSelect]="false"> </app-email-cta>
 <app-footer></app-footer>
