@@ -2,7 +2,6 @@ import { Component, HostListener } from "@angular/core";
 import { RouterLink, Router, NavigationEnd } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { filter } from "rxjs/operators";
-
 @Component({
   selector: "app-navbar",
   standalone: true,
@@ -16,7 +15,6 @@ export class NavbarComponent {
   activeDrop: string | null = null;
   isScrolled: boolean = false;
   forceActive: boolean = false;
-
   segmentos = {
     varejo: [
       { label: "Atacarejo", route: ["/segmentos", "atacarejo"] },
