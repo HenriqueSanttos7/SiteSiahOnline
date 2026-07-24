@@ -155,6 +155,24 @@
   font-weight: 400;
 }
 
+.sobre-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sobre-title,
+.sobre-desc {
+  width: 100%;
+  text-align: right;
+}
+
+.btn-area-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .sobre-sec {
   background: #fff;
   padding: 100px 0;
@@ -463,7 +481,7 @@
 }
 
 .logos-grid {
-  padding: 5rem 0;
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 60px 50px;
