@@ -1,7 +1,7 @@
 // ── TABS DE SEGMENTOS ─────────────────────────────────────
 .seg-tabs {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   padding: 1rem 0;
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -9,9 +9,9 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     justify-content: flex-start;
-    padding: .8rem 1rem;
+    padding: 0.8rem 1rem;
   }
 }
 
@@ -22,16 +22,16 @@
   padding: 10px 20px;
   border-radius: 8px;
   border: 2px solid;
-  font-size: .88rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #1a1f2e;
   text-decoration: none;
-  transition: all .2s;
+  transition: all 0.2s;
   white-space: nowrap;
   background: transparent;
 
   i {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   &.active,
@@ -51,7 +51,7 @@
   padding: 3rem 3.5rem 2.5rem;
   margin-top: 0;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 2rem 1.5rem;
   }
 }
@@ -66,12 +66,12 @@
 
 .seg-apresent__body {
   padding-left: 1rem;
-  border-left: 3px solid rgba(255, 255, 255, .3);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 3rem;
 
   p {
     font-size: 20px;
-    color: rgba(255, 255, 255, .92);
+    color: rgba(255, 255, 255, 0.92);
     line-height: 1.75;
     margin-bottom: 1rem;
 
@@ -104,7 +104,7 @@
 
   i {
     font-size: 2.2rem;
-    opacity: .85;
+    opacity: 0.85;
   }
 
   span {
@@ -114,21 +114,31 @@
   }
 }
 
-.seg-apresent__btn {
-  display: inline-flex;
-  align-items: center;
-  background: rgba(0, 0, 0, .28);
-  color: #fff;
-  font-weight: 700;
-  font-size: .95rem;
-  padding: 14px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background .2s;
+.seg-apresent__btn.btn-primary {
+  --btn-color: var(--azul_soft);
+
+  flex-shrink: 0;
   white-space: nowrap;
 
+  background: var(--btn-color);
+  border-color: #fff;
+  color: #fff;
+
+  &::before {
+    background: #fff;
+  }
+
   &:hover {
-    background: rgba(0, 0, 0, .45);
+    color: var(--btn-color);
+    border-color: var(--btn-color);
+  }
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:visited:hover {
+    color: var(--btn-color);
   }
 }
 
@@ -156,7 +166,7 @@
     margin-bottom: 0;
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 2rem 1.5rem;
   }
 }
@@ -178,7 +188,7 @@
 
   i {
     font-size: 3.5rem;
-    color: rgba(255, 255, 255, .9);
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -192,7 +202,7 @@
 
 .seg-problema__desc {
   font-size: 20px;
-  color: rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.75;
   margin: 0 0 1.2rem;
   max-width: 860px;
@@ -205,13 +215,13 @@
 
 .seg-problema__beneficio {
   font-size: 18px;
-  color: rgba(255, 255, 255, .85);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0;
 
   &::before {
-    content: '● ';
-    font-size: .7rem;
+    content: "● ";
+    font-size: 0.7rem;
   }
 
   strong {
@@ -252,7 +262,9 @@
   border-radius: 12px;
   background: #fff;
   text-decoration: none;
-  transition: box-shadow 0.2s, border-color 0.2s;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s;
 
   &:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -294,7 +306,9 @@
     font-size: 0.8rem;
     opacity: 0.5;
     flex-shrink: 0;
-    transition: opacity 0.2s, transform 0.2s;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
   }
 
   &:hover &__arrow {
