@@ -29,7 +29,10 @@
       <div class="reveal d1">
         <h2 class="sobre-title">Muito prazer,<br />somos a SIAH!</h2>
         <p class="sobre-desc">Há mais de <strong> 18 anos</strong>, desenvolvemos soluções que simplificam a gestão e tornam a operação das empresas mais eficiente. Já são mais de <strong>320 clientes</strong> atendidos com software, certificação digital e suporte técnico especializado.</p>
-        <a routerLink="/sobre" class="btn-primary">Conheça nossa história</a>
+        <a routerLink="/sobre" class="btn-primary">
+          <span>Conheça nossa história</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </div>
@@ -61,11 +64,11 @@
       </div>
     </div>
     <div class="logos-grid reveal d2">
-          <div *ngFor="let c of clients" class="logo-item">
-            <img [src]="'assets/images/clientes/' + c.img" [alt]="c.nome" />
-          </div>
-        </div>
-        <a routerLink="/clientes" class="btn-primary reveal">Conheça nossos clientes</a>
+      <div *ngFor="let c of clients" class="logo-item">
+        <img [src]="'assets/images/clientes/' + c.img" [alt]="c.nome" />
+      </div>
+    </div>
+    <a routerLink="/clientes" class="btn-primary reveal">Conheça nossos clientes</a>
   </div>
 </section>
 

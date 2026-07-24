@@ -11,12 +11,10 @@
         </div>
       </div>
       <h1 class="reveal d1">Conheça a empresa por trás da tecnologia</h1>
-      <p class="hdesc reveal d2">Mais de 18 anos transformando a gestão de empresas
-        em Manaus e na região Norte do Brasil.</p>
+      <p class="hdesc reveal d2">Mais de 18 anos transformando a gestão de empresas em Manaus e na região Norte do Brasil.</p>
     </div>
   </div>
 </section>
-
 
 <!-- INTRO -->
 <section class="sobre-intro-sec">
@@ -26,17 +24,12 @@
         <p class="sobre-label">Sobre</p>
         <h2 class="sobre-big-t">a SIAH</h2>
       </div>
-      <p class="sobre-pg-desc">A SIAH é uma empresa especializada no desenvolvimento de soluções de software,
-        certificação digital e suporte técnico para empresas.</p>
+      <p class="sobre-pg-desc">A SIAH é uma empresa especializada no desenvolvimento de soluções de software, certificação digital e suporte técnico para empresas.</p>
     </div>
     <div class="sobre-text reveal d1">
-      <p>Nossa atuação no mercado iniciou em 20 de junho de 2008, com vendas de licenças de uso do sistema de gestão
-        empresarial A7, nosso primeiro produto.</p>
-      <p>Hoje atuamos na área de certificação digital, através da SIAH CERT, e na área de assistência e consultoria
-        tecnológica, através da SIAH TECH.</p>
-      <p>Contamos com uma carteira de mais de 320 clientes que atuam nos segmentos de varejo em geral, distribuidoras,
-        supermercados, materiais de construção, confecções e calçados, padarias, drogarias, marinas e pequenas
-        indústrias.</p>
+      <p>Nossa atuação no mercado iniciou em 20 de junho de 2008, com vendas de licenças de uso do sistema de gestão empresarial A7, nosso primeiro produto.</p>
+      <p>Hoje atuamos na área de certificação digital, através da SIAH CERT, e na área de assistência e consultoria tecnológica, através da SIAH TECH.</p>
+      <p>Contamos com uma carteira de mais de 320 clientes que atuam nos segmentos de varejo em geral, distribuidoras, supermercados, materiais de construção, confecções e calçados, padarias, drogarias, marinas e pequenas indústrias.</p>
     </div>
   </div>
 </section>
@@ -98,7 +91,6 @@
 
     <div class="tl-wrap reveal d2">
       <div class="tl-track">
-
         <!-- Linha horizontal — fica atrás de todos os dots -->
         <div class="tl-line"></div>
 
@@ -107,8 +99,7 @@
           <div class="tl-dot-row">
             <div class="tl-dot"></div>
           </div>
-          <div class="tl-text">Fundação da SIAH em Manaus/AM,a empresa inicia sua atuação com a comercialização de
-            licenças do sistema de gestão empresarial A7, seu primeiro produto.</div>
+          <div class="tl-text">Fundação da SIAH em Manaus/AM,a empresa inicia sua atuação com a comercialização de licenças do sistema de gestão empresarial A7, seu primeiro produto.</div>
         </div>
 
         <div class="tl-col">
@@ -116,8 +107,7 @@
           <div class="tl-dot-row">
             <div class="tl-dot"></div>
           </div>
-          <div class="tl-text">Com o crescimento, amplia seu portfólio e passa a oferecer novos serviços além do sistema
-            de gestão.</div>
+          <div class="tl-text">Com o crescimento, amplia seu portfólio e passa a oferecer novos serviços além do sistema de gestão.</div>
         </div>
 
         <div class="tl-col">
@@ -125,8 +115,7 @@
           <div class="tl-dot-row">
             <div class="tl-dot"></div>
           </div>
-          <div class="tl-text">Entrada nas áreas de certificação digital (SIAH CERT) e assistência/consultoria
-            tecnológica (SIAH TECH).</div>
+          <div class="tl-text">Entrada nas áreas de certificação digital (SIAH CERT) e assistência/consultoria tecnológica (SIAH TECH).</div>
         </div>
 
         <div class="tl-col">
@@ -134,8 +123,7 @@
           <div class="tl-dot-row">
             <div class="tl-dot"></div>
           </div>
-          <div class="tl-text">Alcance de mais de 250 clientes, atendendo diversos segmentos como varejo, supermercados,
-            drogarias, entre outros.</div>
+          <div class="tl-text">Alcance de mais de 250 clientes, atendendo diversos segmentos como varejo, supermercados, drogarias, entre outros.</div>
         </div>
 
         <div class="tl-col">
@@ -145,9 +133,10 @@
           </div>
           <div class="tl-text">Presença no Amazonas e expansão para os estados do Pará, Roraima e São Paulo.</div>
         </div>
-
-      </div><!-- /tl-track -->
-    </div><!-- /tl-wrap -->
+      </div>
+      <!-- /tl-track -->
+    </div>
+    <!-- /tl-wrap -->
   </div>
 </section>
 
@@ -176,12 +165,11 @@
       <span class="tl">Nossos</span>
       <span class="tb">Segmentos</span>
     </h2>
-    <p class="seg-desc-p reveal d1">Nossos produtos e serviços são desenvolvidos para os desafios e oportunidades de
-      cada segmento de mercado.</p>
+    <p class="seg-desc-p reveal d1">Nossos produtos e serviços são desenvolvidos para os desafios e oportunidades de cada segmento de mercado.</p>
     <div class="seg-cards reveal d2">
-      <div *ngFor="let s of segments" class="seg-card {{s.cls}}" [routerLink]="['/segmentos', s.slug]">
+      <div *ngFor="let s of segments" class="seg-card {{ s.cls }}" [routerLink]="['/segmentos', s.slug]">
         <div class="si"><i [class]="s.icon"></i></div>
-        <span class="sl">{{s.label}}</span>
+        <span class="sl">{{ s.label }}</span>
       </div>
     </div>
   </div>
@@ -192,14 +180,10 @@
   <div class="container">
     <div class="onde-grid">
       <div class="onde-map reveal">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.944498493265!2d-59.9663786!3d-3.1093868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c058c70abfd71%3A0x4a76390a10acfdea!2sEliza%20Miranda%20Mall!5e0!3m2!1spt-BR!2sbr!4v1775055147164!5m2!1spt-BR!2sbr"
-          width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.944498493265!2d-59.9663786!3d-3.1093868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c058c70abfd71%3A0x4a76390a10acfdea!2sEliza%20Miranda%20Mall!5e0!3m2!1spt-BR!2sbr!4v1775055147164!5m2!1spt-BR!2sbr" width="800" height="600" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
       </div>
       <div class="onde-info reveal d1">
-        <h3 class="onde-title">Onde<br>estamos</h3>
+        <h3 class="onde-title">Onde<br />estamos</h3>
         <ul class="onde-list">
           <li><i class="fas fa-map-marker-alt"></i> Av. Prof. Cláudio Portinho, 365</li>
           <li><i class="fas fa-building"></i> Eliza Miranda Mall, Bloco C</li>
@@ -208,7 +192,7 @@
           <li><i class="fas fa-envelope"></i> CEP: 69077-738</li>
           <li><i class="fas fa-flag"></i> Manaus — AM, Brasil</li>
         </ul>
-        <a href="https://maps.google.com/?q=Av.+Prof.+Cláudio+Portinho,+365,+Manaus" target="_blank" class="btn-ol-blue">
+        <a href="https://maps.google.com/?q=Av.+Prof.+Cláudio+Portinho,+365,+Manaus" target="_blank" rel="noopener noreferrer" class="btn-primary">
           <span>Como chegar</span>
           <i class="fas fa-directions"></i>
         </a>
