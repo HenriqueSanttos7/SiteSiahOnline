@@ -2,20 +2,19 @@
 <section class="app-hero reveal" [style.background]="app.cor">
   <div class="container hero-flex-container">
     <div class="app-hero__grid">
-
       <div class="app-hero__content">
         <p class="app-hero__sub">{{ app.subtitle }}</p>
         <h1 class="app-hero__title">{{ app.title }}</h1>
         <p class="app-hero__desc">{{ app.desc }}</p>
-        <a routerLink="/contato" class="app-hero__btn">
-          <i class="fa-solid fa-phone"></i>Entre em Contato!
+        <a routerLink="/contato" class="btn-primary app-hero__btn" [style.--btn-color]="app.cor">
+          <span>Entre em contato</span>
+          <i class="fa-solid fa-phone"></i>
         </a>
       </div>
 
       <div class="app-hero__img" [ngClass]="app.tipoLayout === 'mobile3D' ? 'layout-mobile' : 'layout-desktop'">
-        <img [src]="app.img" [alt]="app.title">
+        <img [src]="app.img" [alt]="app.title" />
       </div>
-
     </div>
   </div>
 </section>
@@ -23,7 +22,6 @@
 <!-- FUNCIONALIDADES -->
 <section class="app-func-sec" *ngIf="app">
   <div class="container">
-    
     <div class="modulo-header reveal">
       <div class="modulo-icon-box" [style.border-color]="app.cor" [style.color]="app.cor">
         <i class="fas fa-star"></i>
@@ -32,7 +30,6 @@
     </div>
 
     <ng-container *ngIf="temCategorias">
-      
       <div *ngIf="desktopModulos.length > 0" class="categoria-section reveal d1">
         <h3 class="categoria-title" [style.color]="app.cor"><i class="fas fa-desktop"></i> Módulos Desktop</h3>
         <div class="modulo-grid">
@@ -77,7 +74,6 @@
           </div>
         </div>
       </div>
-
     </ng-container>
 
     <div *ngIf="!temCategorias" class="modulo-grid reveal d1">
@@ -91,7 +87,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -108,9 +103,12 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsDesktop" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title"></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" /></div>
           <div class="app-divider"></div>
-          <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
+          <div class="app-body">
+            <h6>{{ a.title }}</h6>
+            <p>{{ a.subtitle }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -123,9 +121,12 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsMobile" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title"></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" /></div>
           <div class="app-divider"></div>
-          <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
+          <div class="app-body">
+            <h6>{{ a.title }}</h6>
+            <p>{{ a.subtitle }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -138,19 +139,17 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsWeb" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title"></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" /></div>
           <div class="app-divider"></div>
-          <div class="app-body"><h6>{{ a.title }}</h6><p>{{ a.subtitle }}</p></div>
+          <div class="app-body">
+            <h6>{{ a.title }}</h6>
+            <p>{{ a.subtitle }}</p>
+          </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<app-email-cta
-  [title]="'Quer ver o ' + app.title + ' funcionando?'"
-  subtitle="Agende uma demonstração gratuita com nosso time."
-  [showSelect]="false">
-</app-email-cta>
+<app-email-cta [title]="'Quer ver o ' + app.title + ' funcionando?'" subtitle="Agende uma demonstração gratuita com nosso time." [showSelect]="false"> </app-email-cta>
 <app-footer></app-footer>
