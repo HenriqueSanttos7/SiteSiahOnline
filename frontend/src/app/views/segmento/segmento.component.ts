@@ -152,7 +152,7 @@ export class SegmentoComponent implements OnInit {
       apresentacao: {
         titulo: "Sistema de gestão para supermercados: eficiência e lucratividade em cada operação",
         p1: "A SIAH atende supermercados com um conjunto integrado de soluções — o A7 ERP na retaguarda, o PDV Touch na frente de caixa e o A7 Web para acompanhamento remoto — cobrindo do recebimento de mercadorias ao demonstrativo de resultados em um único ecossistema.",
-        p2: "O A7 gerencia estoque, fiscal e financeiro; o PDV Touch oferece uma frente de caixa moderna, adaptada para touch screen, com emissão de NFC-e e múltiplas formas de pagamento; e o A7 Web entrega relatórios e indicadores em tempo real para o gestor acompanhar de qualquer lugar.",
+        p2: "O A7 ERP gerencia estoque, fiscal e financeiro; o PDV Touch oferece uma frente de caixa moderna, adaptada para touch screen, com emissão de NFC-e e múltiplas formas de pagamento; e o A7 Web entrega relatórios e indicadores em tempo real para o gestor acompanhar de qualquer lugar.",
         p3: "O resultado é uma operação mais ágil, com caixa mais rápido, estoque sempre preciso e visibilidade total para tomar decisões estratégicas e impulsionar a lucratividade da sua loja.",
       },
       solucoes: [
@@ -202,7 +202,7 @@ export class SegmentoComponent implements OnInit {
       apresentacao: {
         titulo: "Sistema de gestão para farmácias e drogarias: conformidade, controle e agilidade no atendimento",
         p1: "A SIAH oferece para farmácias e drogarias um conjunto de soluções integradas — o A7 ERP com controle de lote, validade e medicamentos controlados, o PDV Touch na frente de caixa e o A7 Web para acompanhamento remoto — garantindo conformidade com a ANVISA e a SEFAZ em toda a operação.",
-        p2: "O A7 gerencia o estoque com controle de FEFO (primeiro a vencer, primeiro a sair) e alertas de vencimento; o PDV Touch agiliza o atendimento com emissão de NFC-e e múltiplas formas de pagamento; e o A7 Web entrega relatórios financeiros e de estoque para o gestor acompanhar de qualquer lugar.",
+        p2: "O A7 ERP gerencia o estoque com controle de FEFO (primeiro a vencer, primeiro a sair) e alertas de vencimento; o PDV Touch agiliza o atendimento com emissão de NFC-e e múltiplas formas de pagamento; e o A7 Web entrega relatórios financeiros e de estoque para o gestor acompanhar de qualquer lugar.",
         p3: "O resultado é uma farmácia com rastreabilidade total dos produtos, caixa mais ágil, menos perdas por vencimento e conformidade fiscal garantida — com mais segurança para a operação e para o cliente.",
       },
       solucoes: [
