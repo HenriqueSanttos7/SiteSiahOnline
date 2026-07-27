@@ -26,7 +26,7 @@ export class EquipeComponent implements AfterViewInit {
       ],
     },
     {
-      nome: "SIAHSoft",
+      nome: "SIAH Soft",
       cor: "#0077cc",
       departamentos: [
         {
@@ -42,11 +42,12 @@ export class EquipeComponent implements AfterViewInit {
         {
           nome: "Suporte",
           pessoas: [
+            { nome: "Neto Gonçalves", cargo: "Suporte de TI", foto: "/assets/images/equipe/Neto.png" },
+            { nome: "Lúcio Portela", cargo: "Suporte de TI", foto: "/assets/images/equipe/Lucio.png" },
             { nome: "Joab Martins", cargo: "Suporte de TI", foto: "/assets/images/equipe/Joab.png" },
             { nome: "José Souza", cargo: "Suporte de TI", foto: "/assets/images/equipe/Jose.png" },
-            { nome: "Lúcio Portela", cargo: "Suporte de TI", foto: "/assets/images/equipe/Lucio.png" },
             { nome: "Maria Eduarda", cargo: "Suporte de TI", foto: "/assets/images/equipe/Maria_Ed.png" },
-            { nome: "Neto Gonçalves", cargo: "Suporte de TI", foto: "/assets/images/equipe/Neto.png" },
+            { nome: "Ageu Oliveira", cargo: "Suporte de TI", foto: "/assets/images/equipe/Ageu.png" },
           ],
         },
         {
@@ -63,7 +64,7 @@ export class EquipeComponent implements AfterViewInit {
       ],
     },
     {
-      nome: "SIAHCert",
+      nome: "SIAH Cert",
       cor: "#7c3aed",
       departamentos: [
         {

@@ -51,7 +51,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-warehouse",
       apresentacao: {
         titulo: "Sistema de gestão para atacarejo: eficiência do atacado com a agilidade do varejo",
-        p1: "A SIAH oferece um ecossistema completo para o atacarejo — do ERP (A7 ERP) ao e-commerce integrado e força de vendas em campo — tudo pensado para quem precisa atender atacado e varejo ao mesmo tempo, com tabelas de preço distintas, alto volume de estoque e conformidade fiscal nas operações com CNPJ.",
+        p1: "A SIAH oferece um ecossistema completo para o atacarejo — do ERP ao e-commerce integrado e força de vendas em campo — tudo pensado para quem precisa atender atacado e varejo ao mesmo tempo, com tabelas de preço distintas, alto volume de estoque e conformidade fiscal nas operações com CNPJ.",
         p2: "Na prática, o A7 ERP centraliza estoque, fiscal e financeiro na retaguarda; o E-commerce sincroniza catálogo e preços automaticamente para vendas online; e o app Força de Vendas leva o pedido externo direto ao sistema, sem retrabalho. Tudo conectado, tudo em tempo real.",
         p3: "O resultado é uma operação mais ágil, com menos erros, mais canais de venda ativos e visibilidade total para tomar decisões estratégicas com segurança.",
       },
@@ -76,7 +76,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-store",
       apresentacao: {
         titulo: "Sistema de gestão para o varejo: controle total do caixa ao financeiro",
-        p1: "A SIAH oferece para o varejo em geral um ecossistema completo de soluções — o ERP A7 ERP, o PDV Touch na frente de caixa, o Pré-Venda para atendimento interno e o A7 Web para acompanhamento remoto — integrando todas as áreas do negócio em um único lugar.",
+        p1: "A SIAH oferece para o varejo em geral um ecossistema completo de soluções — o ERP A7, o PDV Touch na frente de caixa, o Pré-Venda para atendimento interno e o A7 Web para acompanhamento remoto — integrando todas as áreas do negócio em um único lugar.",
         p2: "O A7 centraliza estoque, fiscal e financeiro na retaguarda; o PDV Touch garante uma frente de caixa rápida e estável com emissão de NFC-e e múltiplas formas de pagamento; o Pré-Venda agiliza o atendimento interno; e o A7 Web entrega relatórios e indicadores em tempo real para o gestor de qualquer lugar.",
         p3: "O resultado é uma operação mais ágil, com caixa mais rápido, estoque sempre atualizado, conformidade fiscal garantida e visibilidade total para tomar decisões estratégicas e aumentar a rentabilidade do seu negócio.",
       },
@@ -101,7 +101,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-hard-hat",
       apresentacao: {
         titulo: "Sistema de gestão para materiais de construção: controle total da sua operação",
-        p1: "A SIAH atende lojas de materiais de construção com um conjunto de soluções integradas — o ERP A7 ERP, o app de Expedição e Estoque e o Pré-Venda — cobrindo desde o orçamento ao cliente até a entrega da mercadoria com comprovação digital.",
+        p1: "A SIAH atende lojas de materiais de construção com um conjunto de soluções integradas — o A7 ERP, o app de Expedição e Estoque e o Pré-Venda — cobrindo desde o orçamento ao cliente até a entrega da mercadoria com comprovação digital.",
         p2: "O A7 ERP centraliza vendas, estoque de múltiplos depósitos, fiscal e financeiro; o app Pré-Venda digitaliza orçamentos e os converte em pedido direto no sistema; e o app Expedição controla a separação, agenda entregas e registra comprovantes com foto e assinatura.",
         p3: "O resultado é uma operação mais organizada, com menos erros no processo de venda e entrega, estoque sempre atualizado e gestão financeira integrada para impulsionar os resultados da sua loja.",
       },
