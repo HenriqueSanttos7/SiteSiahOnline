@@ -40,12 +40,12 @@
 <div class="nav-drop drop-segmentos" [class.show]="activeDrop === 'segmentos'" (mouseenter)="openDrop('segmentos')" (mouseleave)="closeDrop()">
   <div class="drop-inner">
     <div class="drop-col">
-      <p class="drop-col-title">Varejo</p>
+      <!-- <p class="drop-col-title">Varejo</p> -->
       <a *ngFor="let seg of segmentos.varejo" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
     </div>
     <div class="drop-col-divider"></div>
     <div class="drop-col">
-      <p class="drop-col-title">Indústria &amp; Serviços</p>
+      <!-- <p class="drop-col-title">Indústria &amp; Serviços</p> -->
       <a *ngFor="let seg of segmentos.industriaServicos" [routerLink]="seg.route" (click)="close()">{{ seg.label }}</a>
     </div>
   </div>

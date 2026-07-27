@@ -21,14 +21,14 @@ export class NavbarComponent {
       { label: "Varejo em Geral", route: ["/segmentos", "varejo-geral"] },
       { label: "Materiais de Construção", route: ["/segmentos", "materiais-construcao"] },
       { label: "Confecções e Calçados", route: ["/segmentos", "confeccao-calcados"] },
-      { label: "Farmácias e Drogarias", route: ["/segmentos", "farmacias-drogarias"] },
-      { label: "Supermercados", route: ["/segmentos", "supermercados"] },
+      { label: "Farmácias e Drogarias", route: ["/segmentos", "farmacias-drogarias"] },      
     ],
     industriaServicos: [
+      { label: "Supermercados", route: ["/segmentos", "supermercados"] },
       { label: "Distribuidoras", route: ["/segmentos", "distribuidoras"] },
       { label: "Serviços", route: ["/segmentos", "servicos"] },
       { label: "Indústrias", route: ["/segmentos", "industrias"] },
-      { label: "Marinas", route: ["/segmentos", "marinas"] },
+      { label: "Fluviais", route: ["/segmentos", "marinas"] },
     ],
   };
 

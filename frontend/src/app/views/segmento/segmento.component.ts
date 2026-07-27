@@ -275,10 +275,10 @@ export class SegmentoComponent implements OnInit {
       corDark: "#042458",
       icon: "fas fa-ship",
       apresentacao: {
-        titulo: "Sistema de gestão para marinas: ordens de serviço, conveniência e operação náutica integradas",
-        p1: "A SIAH atende marinas com três frentes de soluções — o A7 ERP para ordens de serviço e aluguel de vagas, o PDV Touch para a conveniência e o aplicativo Navegação (independente) para as operações a bordo — cobrindo toda a operação da marina em um único ecossistema.",
+        titulo: "Sistema de gestão para empresas fluviais: ordens de serviço, conveniência e operação náutica integradas",
+        p1: "A SIAH atende empresas fluviais com três frentes de soluções — o A7 ERP para ordens de serviço e aluguel de vagas, o PDV Touch para a conveniência e o aplicativo Navegação (independente) para as operações a bordo — cobrindo toda a operação da marina em um único ecossistema.",
         p2: "O A7 digitaliza as OS de manutenção e reparo de embarcações, controla contratos de locação de vagas e integra tudo ao financeiro automaticamente; o PDV Touch garante caixa, estoque e fiscal da conveniência em tempo real; e o Navegação cuida de passagens, cargas e vendas a bordo de forma independente.",
-        p3: "O resultado é uma marina com serviços rastreáveis, aluguéis controlados, caixa sempre fechado na conveniência e visão financeira consolidada de todas as frentes do negócio.",
+        p3: "O resultado é uma empresa com serviços rastreáveis, aluguéis controlados, caixa sempre fechado na conveniência e visão financeira consolidada de todas as frentes do negócio.",
       },
       solucoes: [
         { slug: "sistema-a7", nome: "A7 ERP", icon: "fas fa-server", desc: "ERP central: OS, aluguel de vagas, fiscal e financeiro." },

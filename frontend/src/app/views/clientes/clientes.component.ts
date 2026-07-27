@@ -226,7 +226,7 @@ export class ClientesComponent implements AfterViewInit {
       ],
     },
     {
-      nome: "Marinas",
+      nome: "Fluviais",
       cor: "#003a96",
       desc: "Marinas e clubes náuticos que confiam no A7 ERP para gestão de suas operações.",
       clientes: [

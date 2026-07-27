@@ -20,7 +20,7 @@ export class HomeComponent implements AfterViewInit {
     { icon: 'fas fa-briefcase', label: 'Serviços', cls: 'sc8', slug: 'servicos' },
     { icon: 'fas fa-industry', label: 'Indústrias', cls: 'sc5', slug: 'industrias' },
     { icon: 'fas fa-shopping-cart', label: 'Supermercados', cls: 'sc6', slug: 'supermercados' },
-    { icon: 'fas fa-ship', label: 'Marinas', cls: 'sc9', slug: 'marinas' },
+    { icon: 'fas fa-ship', label: 'Fluviais', cls: 'sc9', slug: 'marinas' },
   ];
   clients = [
     { nome: 'Grupo Tintão', img: 'tintao.svg' },
