@@ -76,7 +76,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-store",
       apresentacao: {
         titulo: "Sistema de gestão para o varejo: controle total do caixa ao financeiro",
-        p1: "A SIAH oferece para o varejo em geral um ecossistema completo de soluções — o ERP A7, o PDV Touch na frente de caixa, o Pré-Venda para atendimento interno e o A7 Web para acompanhamento remoto — integrando todas as áreas do negócio em um único lugar.",
+        p1: "A SIAH oferece para o varejo em geral um ecossistema completo de soluções — o A7 ERP, o PDV Touch na frente de caixa, o Pré-Venda para atendimento interno e o A7 Web para acompanhamento remoto — integrando todas as áreas do negócio em um único lugar.",
         p2: "O A7 centraliza estoque, fiscal e financeiro na retaguarda; o PDV Touch garante uma frente de caixa rápida e estável com emissão de NFC-e e múltiplas formas de pagamento; o Pré-Venda agiliza o atendimento interno; e o A7 Web entrega relatórios e indicadores em tempo real para o gestor de qualquer lugar.",
         p3: "O resultado é uma operação mais ágil, com caixa mais rápido, estoque sempre atualizado, conformidade fiscal garantida e visibilidade total para tomar decisões estratégicas e aumentar a rentabilidade do seu negócio.",
       },
@@ -151,7 +151,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-shopping-cart",
       apresentacao: {
         titulo: "Sistema de gestão para supermercados: eficiência e lucratividade em cada operação",
-        p1: "A SIAH atende supermercados com um conjunto integrado de soluções — o ERP A7 ERP na retaguarda, o PDV Touch na frente de caixa e o A7 Web para acompanhamento remoto — cobrindo do recebimento de mercadorias ao demonstrativo de resultados em um único ecossistema.",
+        p1: "A SIAH atende supermercados com um conjunto integrado de soluções — o A7 ERP na retaguarda, o PDV Touch na frente de caixa e o A7 Web para acompanhamento remoto — cobrindo do recebimento de mercadorias ao demonstrativo de resultados em um único ecossistema.",
         p2: "O A7 gerencia estoque, fiscal e financeiro; o PDV Touch oferece uma frente de caixa moderna, adaptada para touch screen, com emissão de NFC-e e múltiplas formas de pagamento; e o A7 Web entrega relatórios e indicadores em tempo real para o gestor acompanhar de qualquer lugar.",
         p3: "O resultado é uma operação mais ágil, com caixa mais rápido, estoque sempre preciso e visibilidade total para tomar decisões estratégicas e impulsionar a lucratividade da sua loja.",
       },
@@ -176,7 +176,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-tshirt",
       apresentacao: {
         titulo: "Sistema de gestão para confecção e calçados: controle de grade, estoque e vendas em um só lugar",
-        p1: "A SIAH oferece para o setor de confecção e calçados um ecossistema completo — o ERP A7 ERP com controle de grade por tamanho e cor, o PDV Touch para a frente de caixa e o app Força de Vendas para representantes externos — integrando loja física, venda em campo e gestão de coleções.",
+        p1: "A SIAH oferece para o setor de confecção e calçados um ecossistema completo — o A7 ERP com controle de grade por tamanho e cor, o PDV Touch para a frente de caixa e o app Força de Vendas para representantes externos — integrando loja física, venda em campo e gestão de coleções.",
         p2: "O A7 controla a grade completa de cada produto com baixa automática por variação; o PDV Touch agiliza o atendimento no caixa com interface touch e emissão de NFC-e; e o Força de Vendas permite que representantes registrem pedidos de clientes externos diretamente no sistema, sem retrabalho.",
         p3: "O resultado é estoque sempre preciso por grade, caixa mais ágil, compras mais assertivas por coleção e menos encalhamento — com visibilidade total da operação para o gestor.",
       },
@@ -201,7 +201,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-pills",
       apresentacao: {
         titulo: "Sistema de gestão para farmácias e drogarias: conformidade, controle e agilidade no atendimento",
-        p1: "A SIAH oferece para farmácias e drogarias um conjunto de soluções integradas — o ERP A7 ERP com controle de lote, validade e medicamentos controlados, o PDV Touch na frente de caixa e o A7 Web para acompanhamento remoto — garantindo conformidade com a ANVISA e a SEFAZ em toda a operação.",
+        p1: "A SIAH oferece para farmácias e drogarias um conjunto de soluções integradas — o A7 ERP com controle de lote, validade e medicamentos controlados, o PDV Touch na frente de caixa e o A7 Web para acompanhamento remoto — garantindo conformidade com a ANVISA e a SEFAZ em toda a operação.",
         p2: "O A7 gerencia o estoque com controle de FEFO (primeiro a vencer, primeiro a sair) e alertas de vencimento; o PDV Touch agiliza o atendimento com emissão de NFC-e e múltiplas formas de pagamento; e o A7 Web entrega relatórios financeiros e de estoque para o gestor acompanhar de qualquer lugar.",
         p3: "O resultado é uma farmácia com rastreabilidade total dos produtos, caixa mais ágil, menos perdas por vencimento e conformidade fiscal garantida — com mais segurança para a operação e para o cliente.",
       },
@@ -226,7 +226,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-industry",
       apresentacao: {
         titulo: "Sistema de gestão para indústrias: do chão de fábrica ao financeiro em um só sistema",
-        p1: "A SIAH oferece para indústrias um ecossistema integrado — o ERP A7 ERP controlando produção, estoque e financeiro, o app Expedição e Estoque para movimentações no galpão e o app Força de Vendas para representantes externos — cobrindo do chão de fábrica ao cliente final.",
+        p1: "A SIAH oferece para indústrias um ecossistema integrado — o A7 ERP controlando produção, estoque e financeiro, o app Expedição e Estoque para movimentações no galpão e o app Força de Vendas para representantes externos — cobrindo do chão de fábrica ao cliente final.",
         p2: "O A7 registra ordens de produção, controla matéria-prima e produto acabado e apura o custo por ordem; o app Expedição gerencia a separação e expedição de produtos; e o Força de Vendas leva o catálogo e os pedidos dos representantes direto ao sistema, sem retrabalho.",
         p3: "O resultado é uma indústria com mais eficiência operacional, custo de produção visível, estoque sempre equilibrado e conformidade fiscal garantida para crescer com segurança.",
       },
@@ -251,7 +251,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-briefcase",
       apresentacao: {
         titulo: "Sistema de gestão para empresas de serviços: controle financeiro e operacional em um só lugar",
-        p1: "A SIAH atende empresas de serviços com um conjunto integrado de soluções — o ERP A7 ERP para gestão de ordens de serviço, contratos e financeiro, o app Pré-Venda para orçamentos internos e o app Força de Vendas para equipes externas — cobrindo todo o ciclo do atendimento ao faturamento.",
+        p1: "A SIAH atende empresas de serviços com um conjunto integrado de soluções — o A7 ERP para gestão de ordens de serviço, contratos e financeiro, o app Pré-Venda para orçamentos internos e o app Força de Vendas para equipes externas — cobrindo todo o ciclo do atendimento ao faturamento.",
         p2: "O A7 centraliza as OS, histórico de clientes, faturamento e emissão de NFS-e de forma automatizada; o Pré-Venda agiliza orçamentos no balcão; e o Força de Vendas permite que técnicos e vendedores externos registrem atendimentos e pedidos diretamente no sistema, sem retrabalho.",
         p3: "O resultado é uma operação mais organizada, faturamento mais rápido, conformidade fiscal garantida e visibilidade clara da rentabilidade de cada contrato e serviço prestado.",
       },
@@ -276,7 +276,7 @@ export class SegmentoComponent implements OnInit {
       icon: "fas fa-ship",
       apresentacao: {
         titulo: "Sistema de gestão para marinas: ordens de serviço, conveniência e operação náutica integradas",
-        p1: "A SIAH atende marinas com três frentes de soluções — o ERP A7 ERP para ordens de serviço e aluguel de vagas, o PDV Touch para a conveniência e o aplicativo Navegação (independente) para as operações a bordo — cobrindo toda a operação da marina em um único ecossistema.",
+        p1: "A SIAH atende marinas com três frentes de soluções — o A7 ERP para ordens de serviço e aluguel de vagas, o PDV Touch para a conveniência e o aplicativo Navegação (independente) para as operações a bordo — cobrindo toda a operação da marina em um único ecossistema.",
         p2: "O A7 digitaliza as OS de manutenção e reparo de embarcações, controla contratos de locação de vagas e integra tudo ao financeiro automaticamente; o PDV Touch garante caixa, estoque e fiscal da conveniência em tempo real; e o Navegação cuida de passagens, cargas e vendas a bordo de forma independente.",
         p3: "O resultado é uma marina com serviços rastreáveis, aluguéis controlados, caixa sempre fechado na conveniência e visão financeira consolidada de todas as frentes do negócio.",
       },
