@@ -7,16 +7,18 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
   standalone: true,
   imports: [RouterOutlet, NavbarComponent],
   template: `
-    <app-navbar></app-navbar>
+  <app-navbar></app-navbar>
+  <main>
     <router-outlet></router-outlet>
-    <a href="https://wa.me/5592981826512" target="_blank" class="wpp-float">
-      <i class="fab fa-whatsapp"></i>
-    </a>
+  </main>
+  <a href="https://wa.me/5592981826512" target="_blank" class="wpp-float" aria-label="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-    <button type="button" class="btn-topo" aria-label="Voltar ao topo" (click)="subirAoTopo()">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-  `,
+  <button type="button" class="btn-topo" aria-label="Voltar ao topo" (click)="subirAoTopo()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+`,
 })
 export class AppComponent {
   subirAoTopo(): void {

@@ -50,7 +50,7 @@
     <div class="apps-grid-cat reveal d1">
       <a *ngFor="let s of segmento.solucoes" [routerLink]="['/apps', s.slug]" class="app-card">
         <div class="app-thumb">
-          <img [src]="getAppImg(s.slug)" [alt]="s.nome" />
+          <img [src]="getAppImg(s.slug)" [alt]="s.nome" width="400" height="220" />
         </div>
         <div class="app-divider"></div>
         <div class="app-body">

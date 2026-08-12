@@ -1,8 +1,11 @@
-declare const Swiper: any;
 import { Component, AfterViewInit } from "@angular/core";
 import { NgFor } from "@angular/common";
 import { RouterLink } from "@angular/router";
 import { FooterComponent } from "../../shared/footer/footer.component";
+import Swiper from "swiper";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 @Component({
   selector: "app-clientes",
@@ -13,30 +16,6 @@ import { FooterComponent } from "../../shared/footer/footer.component";
 })
 export class ClientesComponent implements AfterViewInit {
   segmentos = [
-    // {
-    //   nome: 'Atacarejo',
-    //   cor: '#0077cc',
-    //   desc: 'Empresas de varejo que utilizam o A7 ERP para gestão completa de suas operações.',
-    //   clientes: [
-    //     {
-    //       nome: 'Lojas Baiano',
-    //       desc: 'Empresa que atua no Comércio Atacadista e Varejista do Estado do Amazonas, com mais de 40 anos de história na região.',
-    //       logo: '/assets/images/clientes/lojas_baiano.svg'
-    //     },
-    //     {
-    //       nome: 'Lojas Mirai',
-    //       desc: 'Comercialização de produtos eletrônicos, eletrodomésticos e importados. Sediada em Manaus, famosa por trazer a cultura e produtos orientais para a cidade.',
-    //       logo: '/assets/images/clientes/mirai.svg'
-    //     },
-
-    //     {
-    //       nome: 'Livraria Lira',
-    //       desc: 'A Livraria Lira atua principalmente no ramo de comércio varejista de livros, papelaria e materiais escolares.',
-    //       logo: '/assets/images/clientes/livraria_lira.svg'
-    //     },
-
-    //   ]
-    // },
     {
       nome: "Varejo em Geral",
       cor: "#0077cc",
@@ -92,7 +71,7 @@ export class ClientesComponent implements AfterViewInit {
         {
           nome: "Importadora Luanjo",
           desc: "A Importadora Luanjo é uma das empresas mais tradicionais de Manaus, com mais de 50 anos de atuação no mercado.",
-          logo: "/assets/images/clientes/imp_luanjo.png",
+          logo: "/assets/images/clientes/imp_luanjo.webp",
         },
 
         {
@@ -251,12 +230,13 @@ export class ClientesComponent implements AfterViewInit {
     document.querySelectorAll(".reveal").forEach((el) => o.observe(el));
 
     setTimeout(() => {
-      document.querySelectorAll(".parceiros-swiper").forEach((el) => {
+      document.querySelectorAll<HTMLElement>(".parceiros-swiper").forEach((el) => {
         new Swiper(el, {
+          modules: [Pagination],
           slidesPerView: 1,
           spaceBetween: 20,
           pagination: {
-            el: el.querySelector(".swiper-pagination"),
+            el: el.querySelector<HTMLElement>(".swiper-pagination"),
             clickable: true,
           },
           breakpoints: {

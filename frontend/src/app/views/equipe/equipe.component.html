@@ -25,7 +25,7 @@
       <div class="parceiros-grid colab-grid">
         <div *ngFor="let p of dept.pessoas" class="parceiro-card colab">
           <div class="parceiro-card__logo colab-logo" [style.border-color]="empresa.cor">
-            <img [src]="p.foto" [alt]="p.nome"
+            <img [src]="p.foto" [alt]="p.nome" width="110" height="110"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
             <div class="colab-fallback" [style.color]="empresa.cor">
               <i class="fas fa-user"></i>

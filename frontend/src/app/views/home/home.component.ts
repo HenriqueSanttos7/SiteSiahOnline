@@ -29,7 +29,7 @@ export class HomeComponent implements AfterViewInit {
     { nome: 'Grupo Pool', img: 'pool_eletrica.svg' },
     { nome: 'Castelinho', img: 'castelinho.svg' },
     { nome: 'Livraria Lira', img: 'livraria_lira.svg' },
-    { nome:'Import. Luanjo',  img:'imp_luanjo.png' },
+    { nome:'Import. Luanjo',  img:'imp_luanjo.webp' },
     { nome: 'Karita', img: 'karita.svg' },
   ];
   ngAfterViewInit(): void { const o = new IntersectionObserver(e => { e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }); }, { threshold: .1 }); document.querySelectorAll('.reveal').forEach(el => o.observe(el)); }

@@ -54,6 +54,8 @@ export class NavbarComponent {
     siahTech: "(92) 99394-7451",
     siahCert: "(92) 99391-9956 | (92) 99394-6188",
     horario: "Segunda a Sexta | 7:30h às 17:30h",
+    horarioPlantao: "17:30h às 22:00h",
+    diasPlantao:"Sábado, Domingo e Feriado",
   };
 
   constructor(private router: Router) {

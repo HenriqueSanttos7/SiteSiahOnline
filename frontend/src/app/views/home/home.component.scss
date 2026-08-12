@@ -513,13 +513,20 @@
 }
 
 @media (max-width: 576px) {
-  .hero-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
+  .logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 16px;
+
+    .logo-item:nth-child(n + 7) {
+      display: none;
+    }
   }
 
-  .hero-text-block {
-    text-align: center;
+  .logo-item {
+    height: 100px; // era 80px — aumenta o espaço disponível pra logo
+
+    img {
+      max-height: 100px; // era 90px
+    }
   }
 }

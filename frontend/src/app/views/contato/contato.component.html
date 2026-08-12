@@ -1,7 +1,8 @@
 <section class="ctt-hero">
   <div class="container ctt-hero-grid">
     <h1 class="reveal">Vamos conversar sobre o seu negócio?</h1>
-    <p class="reveal d1">Escolha a melhor forma de entrar em contato com nossa equipe. Estamos prontos para te atender.</p>
+    <p class="reveal d1">Escolha a melhor forma de entrar em contato com nossa equipe. Estamos prontos para te atender.
+    </p>
   </div>
 </section>
 
@@ -50,10 +51,22 @@
               <option value="Todas as soluções">Todas as soluções</option>
             </select>
           </div>
-          <div class="form-full"><label>Mensagem (opcional)</label><textarea placeholder="Conte um pouco sobre sua empresa..." [(ngModel)]="mensagem"></textarea></div>
+          <div class="form-full"><label>Mensagem (opcional)</label><textarea
+              placeholder="Conte um pouco sobre sua empresa..." [(ngModel)]="mensagem"></textarea></div>
+
+          <!-- honeypot: invisível para humanos, só bots preenchem -->
+          <div class="form-full" aria-hidden="true">
+            <label>Website</label>
+            <input type="text" name="website" [(ngModel)]="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form-full" *ngIf="erro">
+            <p class="ctt-erro">{{ erro }}</p>
+          </div>
+
           <div class="form-full">
-            <button class="btn-primary" type="button" (click)="submit()">
-              <span>Enviar mensagem</span>
+            <button class="btn-primary" type="button" (click)="submit()" [disabled]="enviando">
+              <span>{{ enviando ? 'Enviando...' : 'Enviar mensagem' }}</span>
               <i class="fas fa-paper-plane"></i>
             </button>
           </div>

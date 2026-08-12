@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 
-const iconeAndroid = `<img src="assets/images/soft/icon_android.svg">`;
-const iconeApple = `<img src="assets/images/soft/icon_apple.svg">`;
-const iconeWindows = `<img src="assets/images/soft/icon_windows.svg">`;
-const iconeLinux = `<img src="assets/images/soft/icon_linux.svg">`;
+const iconeAndroid = `<img src="assets/images/soft/icon_android.svg" width="18" height="18">`;
+const iconeApple = `<img src="assets/images/soft/icon_apple.svg" width="18" height="18">`;
+const iconeWindows = `<img src="assets/images/soft/icon_windows.svg" width="18" height="18">`;
+const iconeLinux = `<img src="assets/images/soft/icon_linux.svg" width="18" height="18">`;
 
 export interface AppDetail {
   slug: string;

@@ -1,8 +1,11 @@
-declare const Swiper: any;
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { Component, AfterViewInit} from '@angular/core';
 import { NgFor } from '@angular/common';
 import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 @Component({
   selector: 'app-tech',
@@ -24,6 +27,7 @@ export class TechComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     new Swiper('.servicos-swiper', {
+      modules: [Pagination],
       slidesPerView: 1,
       spaceBetween: 20,
       pagination: {

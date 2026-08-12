@@ -13,7 +13,8 @@
       </div>
 
       <div class="app-hero__img" [ngClass]="app.tipoLayout === 'mobile3D' ? 'layout-mobile' : 'layout-desktop'">
-        <img [src]="app.img" [alt]="app.title" />
+        <img [src]="app.img" [alt]="app.title" [attr.width]="app.tipoLayout === 'mobile3D' ? 360 : 560"
+          [attr.height]="app.tipoLayout === 'mobile3D' ? 460 : 420" />
       </div>
     </div>
   </div>
@@ -103,7 +104,7 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsDesktop" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" /></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" width="400" height="220" /></div>
           <div class="app-divider"></div>
           <div class="app-body">
             <h6>{{ a.title }}</h6>
@@ -121,7 +122,7 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsMobile" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" /></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" width="400" height="220" /></div>
           <div class="app-divider"></div>
           <div class="app-body">
             <h6>{{ a.title }}</h6>
@@ -139,7 +140,7 @@
       </div>
       <div class="apps-grid-cat">
         <div *ngFor="let a of appsWeb" class="app-nav-card" [routerLink]="['/apps', a.slug]">
-          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" /></div>
+          <div class="app-thumb"><img [src]="a.capa" [alt]="a.title" width="400" height="220" /></div>
           <div class="app-divider"></div>
           <div class="app-body">
             <h6>{{ a.title }}</h6>
@@ -151,5 +152,6 @@
   </div>
 </section>
 
-<app-email-cta [title]="'Quer ver o ' + app.title + ' funcionando?'" subtitle="Agende uma demonstração gratuita com nosso time." [showSelect]="false"> </app-email-cta>
+<app-email-cta [title]="'Quer ver o ' + app.title + ' funcionando?'"
+  subtitle="Agende uma demonstração gratuita com nosso time." [showSelect]="false"> </app-email-cta>
 <app-footer></app-footer>

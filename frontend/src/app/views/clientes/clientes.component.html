@@ -24,7 +24,7 @@
         <div *ngFor="let c of seg.clientes" class="swiper-slide">
           <div class="parceiro-card">
             <div class="parceiro-card__logo">
-              <img [src]="c.logo" [alt]="c.nome"
+              <img [src]="c.logo" [alt]="c.nome" width="160" height="160"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
               <div class="parceiro-card__logo-fallback">
                 <i class="fas fa-store"></i>

@@ -1,0 +1,28 @@
+# SIAH Software e Serviços
+
+> A SIAH é uma empresa de tecnologia sediada em Manaus (AM), fundada em 2008, especializada em sistemas de gestão empresarial (ERP), certificação digital e assistência técnica. Atende mais de 320 clientes em diversos segmentos do varejo, indústria e serviços na região Norte do Brasil.
+
+A SIAH atua através de três frentes principais: SIAH Soft (sistema de gestão ERP A7), SIAH Cert (certificação digital ICP-Brasil) e SIAH Tech (assistência técnica e consultoria em TI).
+
+## Empresa
+
+- [Sobre a SIAH](https://www.siahonline.com.br/sobre): História, missão, visão, valores e linha do tempo da empresa desde 2008.
+- [Nossa Equipe](https://www.siahonline.com.br/equipe): Colaboradores por departamento e empresa do grupo.
+- [Nossos Clientes](https://www.siahonline.com.br/clientes): Mais de 320 clientes atendidos, organizados por segmento de mercado.
+- [Contato](https://www.siahonline.com.br/contato): Canais de atendimento, formulário de contato e localização.
+
+## Soluções
+
+- [SIAH Soft](https://www.siahonline.com.br/siah-soft): Sistema de gestão empresarial ERP A7, com módulos desktop, mobile e web para varejo, atacado, indústria e serviços.
+- [SIAH Cert](https://www.siahonline.com.br/siah-cert): Emissão de certificados digitais e-CPF e e-CNPJ, Autoridade de Registro credenciada ICP-Brasil.
+- [SIAH Tech](https://www.siahonline.com.br/siah-tech): Assistência técnica, infraestrutura de redes, backup e segurança da informação.
+
+## Segmentos atendidos
+
+Atacarejo, Varejo em Geral, Materiais de Construção, Confecções e Calçados, Farmácias e Drogarias, Supermercados, Distribuidoras, Serviços, Indústrias e Fluviais (marinas).
+
+## Contato
+
+- Telefone: (92) 3345-7707
+- WhatsApp: (92) 98182-6512
+- Endereço: Av. Prof. Cláudio Portinho, 365, Eliza Miranda Mall, Bloco C, Salas 105-107, Japiim, Manaus-AM, CEP 69077-738
