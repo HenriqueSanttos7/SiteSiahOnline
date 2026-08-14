@@ -4,8 +4,7 @@ import { NgFor } from '@angular/common';
 import { EmailCtaComponent } from '../../shared/email-cta/email-cta.component';
 import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+
 
 @Component({
   selector: 'app-tech',

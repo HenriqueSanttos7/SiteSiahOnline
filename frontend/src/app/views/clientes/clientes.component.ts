@@ -4,8 +4,7 @@ import { RouterLink } from "@angular/router";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+
 
 @Component({
   selector: "app-clientes",
@@ -229,12 +228,14 @@ export class ClientesComponent implements AfterViewInit {
     );
     document.querySelectorAll(".reveal").forEach((el) => o.observe(el));
 
-    setTimeout(() => {
+    const initSwipers = () => {
       document.querySelectorAll<HTMLElement>(".parceiros-swiper").forEach((el) => {
         new Swiper(el, {
           modules: [Pagination],
           slidesPerView: 1,
           spaceBetween: 20,
+          observer: true,
+          observeParents: true,
           pagination: {
             el: el.querySelector<HTMLElement>(".swiper-pagination"),
             clickable: true,
@@ -245,6 +246,12 @@ export class ClientesComponent implements AfterViewInit {
           },
         });
       });
-    }, 100);
+    };
+
+    if (document.readyState === "complete") {
+      initSwipers();
+    } else {
+      window.addEventListener("load", initSwipers, { once: true });
+    }
   }
 }

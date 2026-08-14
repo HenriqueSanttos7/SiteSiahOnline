@@ -68,7 +68,7 @@ export class EquipeComponent implements AfterViewInit {
       cor: "#7c3aed",
       departamentos: [
         {
-          nome: "Certificação",
+          nome: "Certificação Digital",
           pessoas: [
             { nome: "Elizete Rufino", cargo: "Agente de Registro", foto: "/assets/images/equipe/Elizete.png" },
             { nome: "Maria Guadalupe", cargo: "Agente de Registro", foto: "/assets/images/equipe/Maria.png" },
@@ -77,7 +77,7 @@ export class EquipeComponent implements AfterViewInit {
       ],
     },
     {
-      nome: "SIAHTech",
+      nome: "SIAH Tech",
       cor: "#00c896",
       departamentos: [
         {
